@@ -48,14 +48,16 @@
     "typescript": "3.8.3"
   },
   "scripts": {
-    "start": "concurrently \"yarn start-frontend || npm run start-frontend\" \"yarn start-backend || npm run start-backend\"",
+    "start": "node server/server.js",
+    "start-local": "nodemon server/server.js",
     "start-frontend": "ng serve --port=3000 --o --proxy-config proxy.config.json",
     "ng": "ng",
     "build": "node ./buildScript",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start-backend": "node server/server.js"
+    "start-backend": "node server/server.js",
+    "heroku-postbuild": "node ./buildScript.js"
   },
   "proxy": "http://localhost:3001",
   "browserslist": [
