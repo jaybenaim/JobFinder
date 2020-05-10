@@ -1,7 +1,13 @@
 ﻿<main id="mainContent">
-    <div class="container">
-      <div class="row justify-content-center py-5">
-        <h3>Home</h3>
-      </div>
+  <div class="container">
+    <div class="row justify-content-center py-5">
+      <h3>Home</h3>
+      <button (click)="getJobs()">Get All Jobs</button>
+      <ul>
+        <li *ngFor="let job of jobList; index as i; first as isFirst">
+          {{ job.message }}
+        </li>
+      </ul>
     </div>
+  </div>
 </main>
