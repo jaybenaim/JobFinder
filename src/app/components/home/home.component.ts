@@ -19,12 +19,13 @@ export class HomeComponent implements OnInit {
   showTags: boolean = false;
   showlocations: boolean = false;
   showCategories: boolean = false;
-  showAllJobs: boolean = true;
 
   constructor(private jobs: JobService) {}
 
   hideJobs() {
-    this.showAllJobs = false;
+    this.jobList = [];
+    this.allJobs = [];
+    this.positions = [];
   }
 
   getAllJobs() {
