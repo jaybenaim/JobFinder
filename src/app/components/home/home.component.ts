@@ -8,11 +8,17 @@ import { JobService } from "../../services/job.service";
 })
 export class HomeComponent implements OnInit {
   jobList: any[] = [];
+  positions: any[] = [];
+  tags: any[] = [];
+  locations: any[] = [];
+  categories: any[] = [];
+  siteName: string = "";
+  description: string = "";
 
   constructor(private jobs: JobService) {}
 
-  getJobs() {
-    this.jobs.getJobs().subscribe(
+  getJobsFromFirebase() {
+    this.jobs.getJobsFromFirebase().subscribe(
       (data) => {
         // Extract the object from its id
         Object.keys(data).forEach((key: Extract<keyof typeof data, string>) => {
@@ -26,5 +32,20 @@ export class HomeComponent implements OnInit {
     );
   }
 
+  getJobsFromRemoteok() {
+    this.jobs.getJobsFromRemoteok().subscribe(
+      (data) => {
+        this.positions.push(data["positions"]);
+        this.tags.push(data["tags"]);
+        this.locations.push(data["locations"]);
+        this.categories.push(data["categories"]);
+        this.siteName = data["siteName"];
+        this.description = data["description"];
+      },
+      (err) => {
+        alert("Something went wrong");
+      }
+    );
+  }
   ngOnInit() {}
 }

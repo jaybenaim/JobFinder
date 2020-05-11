@@ -3,11 +3,60 @@
     <div class="row justify-content-center py-5">
       <h3>Home</h3>
     </div>
-    <button (click)="getJobs()">Get All Jobs</button>
-    <ul>
-      <li *ngFor="let job of jobList; index as i; first as isFirst">
-        {{ job.title }}
-      </li>
-    </ul>
+    <div class="firebase-jobs">
+      <button (click)="getJobsFromFirebase()">Get All Jobs</button>
+      <div *ngIf="jobList.length > 1">
+        <ul>
+          <strong>Job Titles </strong>
+
+          <li *ngFor="let job of jobList; index as i; first as isFirst">
+            Title: {{ job.title }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="remoteok-jobs">
+      <button (click)="getJobsFromRemoteok()">
+        Get All Jobs from Remoteok
+      </button>
+      <div *ngIf="positions[0]">
+        <strong>
+          {{ siteName }}
+        </strong>
+        <em>{{ description }}</em>
+        <ul>
+          <strong>Positions </strong>
+
+          <li
+            *ngFor="let position of positions[0]; index as i; first as isFirst"
+          >
+            {{ position }}
+          </li>
+        </ul>
+
+        <ul>
+          <strong>Tags </strong>
+          <li *ngFor="let tag of tags[0]; index as i; first as isFirst">
+            {{ tag }}
+          </li>
+        </ul>
+        <ul>
+          <strong>Locations </strong>
+          <li
+            *ngFor="let location of locations[0]; index as i; first as isFirst"
+          >
+            {{ location }}
+          </li>
+        </ul>
+        <ul>
+          <strong>Categories </strong>
+          <li
+            *ngFor="let category of categories[0]; index as i; first as isFirst"
+          >
+            {{ category }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </main>
