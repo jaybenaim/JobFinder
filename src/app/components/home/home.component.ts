@@ -7,6 +7,7 @@ import { JobService } from "../../services/job.service";
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
+  allJobs: any[] = [];
   jobList: any[] = [];
   positions: any[] = [];
   tags: any[] = [];
@@ -18,9 +19,24 @@ export class HomeComponent implements OnInit {
   showTags: boolean = false;
   showlocations: boolean = false;
   showCategories: boolean = false;
+  showAllJobs: boolean = true;
 
   constructor(private jobs: JobService) {}
 
+  hideJobs() {
+    this.showAllJobs = false;
+  }
+
+  getAllJobs() {
+    this.jobs.getAllJobs().subscribe(
+      (data) => {
+        this.allJobs.push(data);
+      },
+      (err) => {
+        alert("Something went wrong ");
+      }
+    );
+  }
   getJobsFromFirebase() {
     this.jobs.getJobsFromFirebase().subscribe(
       (data) => {

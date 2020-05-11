@@ -10,9 +10,11 @@ export class JobService {
     ? "http://localhost:3001"
     : window.location.origin;
 
-  getJobsFromFirebase() {
+  getAllJobs() {
     // from backend (scraper)
-    // return this.http.get(this.endpoint + "/api/jobs");
+    return this.http.get(this.endpoint + "/api/jobs");
+  }
+  getJobsFromFirebase() {
     // from firebaseDB (liked/saved jobs?)
     return this.http.get("https://jobfinder-95e75.firebaseio.com/jobs.json");
   }
