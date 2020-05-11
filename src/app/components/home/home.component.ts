@@ -15,6 +15,9 @@ export class HomeComponent implements OnInit {
   siteName: string = "";
   description: string = "";
   showPositions: boolean = false;
+  showTags: boolean = false;
+  showlocations: boolean = false;
+  showCategories: boolean = false;
 
   constructor(private jobs: JobService) {}
 
@@ -48,8 +51,8 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-  toggleShowPositions() {
-    this.showPositions = !this.showPositions;
+  toggleShowItem(item) {
+    this[`show${item}`] = !this[`show${item}`];
   }
   ngOnInit() {}
 }
