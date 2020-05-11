@@ -6,7 +6,7 @@
     <button (click)="getJobs()">Get All Jobs</button>
     <ul>
       <li *ngFor="let job of jobList; index as i; first as isFirst">
-        {{ job.message }}
+        {{ job.title }}
       </li>
     </ul>
   </div>

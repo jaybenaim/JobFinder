@@ -14,11 +14,14 @@ export class HomeComponent implements OnInit {
   getJobs() {
     this.jobs.getJobs().subscribe(
       (data) => {
-        this.jobList.push(data);
-        console.log(data);
+        // Extract the object from its id
+        Object.keys(data).forEach((key: Extract<keyof typeof data, string>) => {
+          const item = data[key];
+          this.jobList.push(item);
+        });
       },
       (err) => {
-        console.log(err);
+        alert("Something went wrong");
       }
     );
   }
