@@ -1,7 +1,7 @@
 ﻿const express = require("express");
 const router = express.Router();
 
-const getResultsFromRemoteok = require("../../scrapper/remoteok");
+const getResultsFromRemoteok = require("../../scraper/remoteok");
 
 router.get("/", (req, res) => {
   res.status(200).send("API Home");
