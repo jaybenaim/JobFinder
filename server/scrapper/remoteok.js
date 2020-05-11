@@ -31,8 +31,11 @@ const getResults = async () => {
     categories.add($(element).text());
   });
 
-  $('.company_and_position [itemprop="title"]').each((index, element) => {
-    positions.add($(element).text());
+  $(".company_and_position ").each((index, element) => {
+    positions.add({
+      title: $(element).text(),
+      link: siteUrl + $(element).find(".preventLink").attr("href"),
+    });
   });
 
   return {

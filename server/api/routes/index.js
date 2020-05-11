@@ -13,7 +13,6 @@ router.get("/jobs", (req, res) => {
 router.get("/jobs/remoteok", async (req, res) => {
   const results = await getResultsFromRemoteok();
   res.status(200).send(results);
-  // data.then((res) => console.log(res));
 });
 
 module.exports = router;

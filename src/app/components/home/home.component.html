@@ -10,15 +10,21 @@
           <strong>Job Titles </strong>
 
           <li *ngFor="let job of jobList; index as i; first as isFirst">
-            Title: {{ job.title }}
+            {{ job.title }}
           </li>
         </ul>
       </div>
     </div>
+
     <div class="remoteok-jobs">
       <button (click)="getJobsFromRemoteok()">
         Get All Jobs from Remoteok
       </button>
+      <br />
+      <a href="https://remoteok.io/" target="_blank"
+        >Check out jobs on Remote OK</a
+      >
+
       <div *ngIf="positions[0]">
         <strong>
           {{ siteName }}
@@ -42,7 +48,9 @@
                 first as isFirst
               "
             >
-              {{ position }}
+              <a href="{{ position.link }}">
+                {{ position.title }}
+              </a>
             </li>
           </div>
         </ul>
