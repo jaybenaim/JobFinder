@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   showTags: boolean = false;
   showlocations: boolean = false;
   showCategories: boolean = false;
+  showRemoteok: boolean = false;
 
   constructor(private jobs: JobService) {}
 
@@ -54,14 +55,14 @@ export class HomeComponent implements OnInit {
   }
 
   getJobsFromRemoteok() {
-    this.jobs.getJobsFromRemoteok().subscribe(
+    this.jobs.getAllJobs().subscribe(
       (data) => {
-        this.positions.push(data["positions"]);
-        this.tags.push(data["tags"]);
-        this.locations.push(data["locations"]);
-        this.categories.push(data["categories"]);
-        this.siteName = data["siteName"];
-        this.description = data["description"];
+        this.positions.push(data["remoteok"]["positions"]);
+        this.tags.push(data["remoteok"]["tags"]);
+        this.locations.push(data["remoteok"]["locations"]);
+        this.categories.push(data["remoteok"]["categories"]);
+        this.siteName = data["remoteok"]["siteName"];
+        this.description = data["remoteok"]["description"];
       },
       (err) => {
         alert("Something went wrong");

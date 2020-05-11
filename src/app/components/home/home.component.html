@@ -40,6 +40,7 @@
         </div>
       </div>
 
+      <!-- Remoteok -->
       <div class="remoteok-jobs">
         <button (click)="getJobsFromRemoteok()">
           Get All Jobs from Remoteok
@@ -65,17 +66,19 @@
             <button (click)="toggleShowItem('Positions')">
               Show {{ showPositions ? " Less" : " More" }}
             </button>
-            <li
-              *ngFor="
-                let position of positions[0];
-                index as i;
-                first as isFirst
-              "
-            >
-              <a href="{{ position.link }}" target="_blank">
-                {{ position.title }}
-              </a>
-            </li>
+            <div *ngIf="showPositions">
+              <li
+                *ngFor="
+                  let position of positions[0];
+                  index as i;
+                  first as isFirst
+                "
+              >
+                <a href="{{ position.link }}" target="_blank">
+                  {{ position.title }}
+                </a>
+              </li>
+            </div>
           </ul>
 
           <ul>
