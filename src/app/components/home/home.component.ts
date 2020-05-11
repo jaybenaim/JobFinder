@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   categories: any[] = [];
   siteName: string = "";
   description: string = "";
+  showPositions: boolean = false;
 
   constructor(private jobs: JobService) {}
 
@@ -46,6 +47,9 @@ export class HomeComponent implements OnInit {
         alert("Something went wrong");
       }
     );
+  }
+  toggleShowPositions() {
+    this.showPositions = !this.showPositions;
   }
   ngOnInit() {}
 }

@@ -27,11 +27,24 @@
         <ul>
           <strong>Positions </strong>
 
-          <li
-            *ngFor="let position of positions[0]; index as i; first as isFirst"
-          >
-            {{ position }}
-          </li>
+          {{
+            positions[0].length
+          }}
+          positions available
+          <button (click)="toggleShowPositions()">
+            Show {{ showPositions ? " Less" : " More" }}
+          </button>
+          <div *ngIf="showPositions">
+            <li
+              *ngFor="
+                let position of positions[0];
+                index as i;
+                first as isFirst
+              "
+            >
+              {{ position }}
+            </li>
+          </div>
         </ul>
 
         <ul>
