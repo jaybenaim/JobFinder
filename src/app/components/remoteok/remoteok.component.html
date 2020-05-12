@@ -3,87 +3,83 @@
     Get All Jobs from Remote OK
   </button>
   <br />
-  <div *ngIf="!hideAll">
-    <div *ngIf="positions[0]">
-      <a href="https://remoteok.io/" target="_blank"
-        >Check out jobs on Remote OK</a
-      >
-      <br />
-      <strong>
-        {{ siteName }}
-      </strong>
-      <em>{{ description }}</em>
-      <ul>
-        <strong>Positions </strong>
+  <div *ngIf="positions[0]">
+    <button (click)="minimize()">Minimize</button>
 
-        {{
-          positions[0].length
-        }}
-        positions available
-        <button (click)="toggleShowItem('Positions')">
-          Show {{ showPositions ? " Less" : " More" }}
-        </button>
-        <div *ngIf="showPositions">
-          <li
-            *ngFor="let position of positions[0]; index as i; first as isFirst"
-          >
-            <a href="{{ position.link }}" target="_blank">
-              {{ position.title }}
-            </a>
-          </li>
-        </div>
-      </ul>
+    <a href="https://remoteok.io/" target="_blank"
+      >Check out jobs on Remote OK</a
+    >
+    <br />
+    <strong>
+      {{ siteName }}
+    </strong>
+    <em>{{ description }}</em>
+    <ul>
+      <strong>Positions </strong>
 
-      <ul>
-        <strong>Tags </strong>
+      {{
+        positions[0].length
+      }}
+      positions available
+      <button (click)="toggleShowItem('Positions')">
+        Show {{ showPositions ? " Less" : " More" }}
+      </button>
+      <div *ngIf="showPositions">
+        <li *ngFor="let position of positions[0]; index as i; first as isFirst">
+          <a href="{{ position.link }}" target="_blank">
+            {{ position.title }}
+          </a>
+        </li>
+      </div>
+    </ul>
 
-        {{
-          tags[0].length
-        }}
-        tags available
-        <button (click)="toggleShowItem('Tags')">
-          Show {{ showTags ? " Less" : " More" }}
-        </button>
-        <div *ngIf="showTags">
-          <li *ngFor="let tag of tags[0]; index as i; first as isFirst">
-            {{ tag }}
-          </li>
-        </div>
-      </ul>
-      <ul>
-        <strong>Locations </strong>
-        {{
-          locations[0].length
-        }}
-        locations available
-        <button (click)="toggleShowItem('Locations')">
-          Show {{ showLocations ? " Less" : " More" }}
-        </button>
-        <div *ngIf="showLocations">
-          <li
-            *ngFor="let location of locations[0]; index as i; first as isFirst"
-          >
-            {{ location }}
-          </li>
-        </div>
-      </ul>
-      <ul>
-        <strong>Categories</strong>
-        {{
-          categories[0].length
-        }}
-        categories available
-        <button (click)="toggleShowItem('Categories')">
-          Show {{ showCategories ? " Less" : " More" }}
-        </button>
-        <div *ngIf="showCategories">
-          <li
-            *ngFor="let category of categories[0]; index as i; first as isFirst"
-          >
-            {{ category }}
-          </li>
-        </div>
-      </ul>
-    </div>
+    <ul>
+      <strong>Tags </strong>
+
+      {{
+        tags[0].length
+      }}
+      tags available
+      <button (click)="toggleShowItem('Tags')">
+        Show {{ showTags ? " Less" : " More" }}
+      </button>
+      <div *ngIf="showTags">
+        <li *ngFor="let tag of tags[0]; index as i; first as isFirst">
+          {{ tag }}
+        </li>
+      </div>
+    </ul>
+    <ul>
+      <strong>Locations </strong>
+      {{
+        locations[0].length
+      }}
+      locations available
+      <button (click)="toggleShowItem('Locations')">
+        Show {{ showLocations ? " Less" : " More" }}
+      </button>
+      <div *ngIf="showLocations">
+        <li *ngFor="let location of locations[0]; index as i; first as isFirst">
+          {{ location }}
+        </li>
+      </div>
+    </ul>
+    <ul>
+      <strong>Categories</strong>
+      {{
+        categories[0].length
+      }}
+      categories available
+      <button (click)="toggleShowItem('Categories')">
+        Show {{ showCategories ? " Less" : " More" }}
+      </button>
+      <div *ngIf="showCategories">
+        <li
+          *ngFor="let category of categories[0]; index as i; first as isFirst"
+        >
+          {{ category }}
+        </li>
+      </div>
+    </ul>
   </div>
 </div>

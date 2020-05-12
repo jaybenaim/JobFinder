@@ -7,12 +7,12 @@ import { JobService } from "../../services/job.service";
   styleUrls: ["./saved-jobs.component.css"],
 })
 export class SavedJobsComponent implements OnInit {
-  @Input("hideAll")
-  hideAll: boolean = false;
-
   jobList: any;
   constructor(private jobs: JobService) {}
 
+  minimize() {
+    this.jobList = [];
+  }
   getJobsFromFirebase() {
     let list = <any>[];
     this.jobs.getJobsFromFirebase().subscribe(

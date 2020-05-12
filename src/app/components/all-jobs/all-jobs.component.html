@@ -1,23 +1,24 @@
 <div class="all-jobs">
   <button (click)="getAllJobs()">Get All Jobs</button>
-  <div *ngIf="!hideAll">
-    <ul>
-      <div *ngIf="allJobs && allJobs.length >= 1">
-        <strong>All Job Listings </strong>
-        <!-- Remoteok -->
-        <li
-          *ngFor="
-            let position of allJobs[0]['remoteok']['positions'];
-            index as i;
-            first as isFirst
-          "
-        >
-          <a href="{{ position.link }}" target="_blank">
-            {{ position.title }}
-          </a>
-        </li>
-      </div>
-    </ul>
-  </div>
+
+  <ul>
+    <div *ngIf="allJobs && allJobs.length >= 1">
+      <strong>All Job Listings </strong>
+      <button (click)="minimize()">Minimize</button>
+
+      <!-- Remoteok -->
+      <li
+        *ngFor="
+          let position of allJobs[0]['remoteok']['positions'];
+          index as i;
+          first as isFirst
+        "
+      >
+        <a href="{{ position.link }}" target="_blank">
+          {{ position.title }}
+        </a>
+      </li>
+    </div>
+  </ul>
 </div>
 <router-outlet name="all-jobs"></router-outlet>

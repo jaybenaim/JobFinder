@@ -7,9 +7,6 @@ import { JobService } from "src/app/services/job.service";
   styleUrls: ["./remoteok.component.css"],
 })
 export class RemoteokComponent implements OnInit {
-  @Input("hideAll")
-  hideAll: boolean = false;
-
   positions: any[] = [];
   tags: any[] = [];
   locations: any[] = [];
@@ -23,6 +20,9 @@ export class RemoteokComponent implements OnInit {
 
   constructor(private jobs: JobService) {}
 
+  minimize() {
+    this.positions = [];
+  }
   getJobsFromRemoteok() {
     this.jobs.getAllJobs().subscribe(
       (data) => {

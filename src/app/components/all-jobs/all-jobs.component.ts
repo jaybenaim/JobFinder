@@ -7,12 +7,13 @@ import { JobService } from "../../services/job.service";
   styleUrls: ["./all-jobs.component.css"],
 })
 export class AllJobsComponent implements OnInit {
-  @Input("hideAll")
-  hideAll: boolean = false;
-
   allJobs: any[] = [];
 
   constructor(private jobs: JobService) {}
+
+  minimize() {
+    this.allJobs = [];
+  }
 
   getAllJobs() {
     this.jobs.getAllJobs().subscribe(

@@ -6,13 +6,12 @@ import { HttpClient } from "@angular/common/http";
 })
 export class JobService {
   constructor(private http: HttpClient) {}
-  endpoint = window.location.host.includes("local")
-    ? "http://localhost:3001"
-    : window.location.origin;
+  endpoint = "https://job-finder-web-scraper.herokuapp.com/";
 
   getAllJobs() {
     // from backend (scraper)
-    return this.http.get(this.endpoint + "/api/jobs");
+    console.log(this.endpoint);
+    return this.http.get(this.endpoint + "api/jobs");
   }
   getJobsFromFirebase() {
     // from firebaseDB (liked/saved jobs?)
