@@ -4,28 +4,9 @@
       <h3>Home</h3>
     </div>
     <button (click)="hideJobs()">Hide all jobs</button>
-    <div class="all-jobs">
-      <button (click)="getAllJobs()">Get All Jobs</button>
 
-      <div *ngIf="allJobs.length >= 1">
-        <ul>
-          <strong>All Job Listings </strong>
-          <div *ngIf="allJobs[0]">
-            <li
-              *ngFor="
-                let position of allJobs[0]['remoteok']['positions'];
-                index as i;
-                first as isFirst
-              "
-            >
-              <a href="{{ position.link }}" target="_blank">
-                {{ position.title }}
-              </a>
-            </li>
-          </div>
-        </ul>
-      </div>
-    </div>
+    <!-- All jobs -->
+    <app-all-jobs [hideAll]="hideAll"></app-all-jobs>
 
     <!-- Firebase saved jobs -->
     <app-saved-jobs [hideAll]="hideAll"></app-saved-jobs>

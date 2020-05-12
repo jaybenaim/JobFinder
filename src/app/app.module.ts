@@ -7,7 +7,6 @@ import { HomeModule } from "./components/home/home.module";
 import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { ServiceInterceptor } from "./service.interceptor";
-import { SavedJobsComponent } from "./components/saved-jobs/saved-jobs.component";
 
 @NgModule({
   declarations: [AppComponent, NavBarComponent, FooterComponent],
