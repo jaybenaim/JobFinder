@@ -2,33 +2,24 @@
 import { JobService } from "../../services/job.service";
 
 @Component({
-  selector: "app-blank",
+  selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
   allJobs: any[] = [];
   jobList: any[] = [];
-  positions: any[] = [];
-  tags: any[] = [];
-  locations: any[] = [];
-  categories: any[] = [];
-  siteName: string = "";
-  description: string = "";
-  showPositions: boolean = false;
-  showTags: boolean = false;
-  showlocations: boolean = false;
-  showCategories: boolean = false;
-  showRemoteok: boolean = false;
-
+  hideAll: boolean = false;
   constructor(private jobs: JobService) {}
 
   hideJobs() {
     this.jobList = [];
     this.allJobs = [];
-    this.positions = [];
+    this.setHideAll();
   }
-
+  setHideAll() {
+    this.hideAll = !this.hideAll;
+  }
   getAllJobs() {
     this.jobs.getAllJobs().subscribe(
       (data) => {
@@ -54,23 +45,5 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  getJobsFromRemoteok() {
-    this.jobs.getAllJobs().subscribe(
-      (data) => {
-        this.positions.push(data["remoteok"]["positions"]);
-        this.tags.push(data["remoteok"]["tags"]);
-        this.locations.push(data["remoteok"]["locations"]);
-        this.categories.push(data["remoteok"]["categories"]);
-        this.siteName = data["remoteok"]["siteName"];
-        this.description = data["remoteok"]["description"];
-      },
-      (err) => {
-        alert("Something went wrong");
-      }
-    );
-  }
-  toggleShowItem(item) {
-    this[`show${item}`] = !this[`show${item}`];
-  }
   ngOnInit() {}
 }

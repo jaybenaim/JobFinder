@@ -11,6 +11,7 @@ import { ServiceInterceptor } from "./service.interceptor";
 @NgModule({
   declarations: [AppComponent, NavBarComponent, FooterComponent],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, HomeModule],
+
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
