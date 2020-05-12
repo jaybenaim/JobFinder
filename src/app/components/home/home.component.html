@@ -27,23 +27,10 @@
       </div>
     </div>
 
-    <div class="firebase-jobs">
-      <button (click)="getJobsFromFirebase()">Get Saved Jobs</button>
+    <!-- Firebase saved jobs -->
+    <app-saved-jobs [hideAll]="hideAll"></app-saved-jobs>
 
-      <div *ngIf="jobList[0]">
-        <ul>
-          <strong>Job Titles </strong>
-
-          <li *ngFor="let job of jobList; index as i; first as isFirst">
-            {{ job.title }}
-          </li>
-        </ul>
-      </div>
-    </div>
     <!-- Remoteok -->
-    <app-remoteok
-      [hideAll]="hideAll"
-      (setHideAll)="($setHideAll)"
-    ></app-remoteok>
+    <app-remoteok [hideAll]="hideAll"></app-remoteok>
   </div>
 </main>

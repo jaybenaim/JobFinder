@@ -4,10 +4,11 @@ import { CommonModule } from "@angular/common";
 import { HomeComponent } from "./home.component";
 import { HomeRoutingModule } from "./home-routing.module";
 import { RemoteokComponent } from "../remoteok/remoteok.component";
+import { SavedJobsComponent } from "../saved-jobs/saved-jobs.component";
 
 @NgModule({
-  declarations: [HomeComponent, RemoteokComponent],
+  declarations: [HomeComponent, RemoteokComponent, SavedJobsComponent],
   imports: [CommonModule, HomeRoutingModule],
-  exports: [RemoteokComponent],
+  exports: [RemoteokComponent, SavedJobsComponent],
 })
 export class HomeModule {}

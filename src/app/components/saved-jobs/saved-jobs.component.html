@@ -1,0 +1,15 @@
+<div class="firebase-jobs">
+  <button (click)="getJobsFromFirebase()">Get Saved Jobs</button>
+
+  <div *ngIf="!hideAll">
+    <div *ngIf="jobList[0]">
+      <ul>
+        <strong>Job Titles </strong>
+
+        <li *ngFor="let job of jobList; index as i; first as isFirst">
+          {{ job.title }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
