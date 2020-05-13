@@ -9,6 +9,14 @@
  */
 export const environment = {
   production: false,
+  firebase: {
+    apiKey: "AIzaSyAi1LTqYI51oTyzVFgqrr4r9ZvWCBONV0c",
+    authDomain: "jobfinder-95e75.firebaseapp.com",
+    databaseURL: "https://jobfinder-95e75.firebaseio.com/",
+    projectId: "jobfinder-95e75",
+    storageBucket: "gs://jobfinder-95e75.appspot.com",
+    messagingSenderId: "658909537739",
+  },
 };
 
 /*

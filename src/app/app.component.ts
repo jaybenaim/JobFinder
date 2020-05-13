@@ -6,5 +6,5 @@
   styleUrls: ["../assets/stylesheets/app.component.css"],
 })
 export class AppComponent {
-  title = "JobFinder";
+  title = "HackerHunter";
 }

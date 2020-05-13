@@ -7,10 +7,37 @@ import { HomeModule } from "./components/home/home.module";
 import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { ServiceInterceptor } from "./service.interceptor";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { environment } from "../environments/environment";
 
+import { AuthService } from "./services/auth.service";
+import { LoginComponent } from "./components/login/login.component";
+
+import { AngularFireModule } from "angularfire2";
+import { AngularFireDatabaseModule } from "angularfire2/database";
+import { AngularFireAuthModule } from "angularfire2/auth";
+import { PrivacyComponent } from "./components/privacy/privacy.component";
+import { TermsAndConditionsComponent } from "./components/terms-and-conditions/terms-and-conditions.component";
 @NgModule({
-  declarations: [AppComponent, NavBarComponent, FooterComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, HomeModule],
+  declarations: [
+    AppComponent,
+    NavBarComponent,
+    FooterComponent,
+    LoginComponent,
+    PrivacyComponent,
+    TermsAndConditionsComponent,
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    HomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase, "devlabzapi"),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+  ],
 
   providers: [
     {
@@ -18,6 +45,7 @@ import { ServiceInterceptor } from "./service.interceptor";
       useClass: ServiceInterceptor,
       multi: true,
     },
+    AuthService,
   ],
   bootstrap: [AppComponent],
 })
