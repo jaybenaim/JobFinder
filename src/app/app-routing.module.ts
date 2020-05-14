@@ -4,6 +4,7 @@ import { AllJobsComponent } from "./components/all-jobs/all-jobs.component";
 import { LoginComponent } from "./components/login/login.component";
 import { PrivacyComponent } from "./components/privacy/privacy.component";
 import { TermsAndConditionsComponent } from "./components/terms-and-conditions/terms-and-conditions.component";
+import { AuthGuard } from "./services/auth-guard.service";
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
   {
     path: "all-jobs",
     component: AllJobsComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: "login",

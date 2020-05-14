@@ -18,6 +18,7 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AngularFireAuthModule } from "angularfire2/auth";
 import { PrivacyComponent } from "./components/privacy/privacy.component";
 import { TermsAndConditionsComponent } from "./components/terms-and-conditions/terms-and-conditions.component";
+import { AuthGuard } from "./services/auth-guard.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { TermsAndConditionsComponent } from "./components/terms-and-conditions/t
       multi: true,
     },
     AuthService,
+    AuthGuard,
   ],
   bootstrap: [AppComponent],
 })
