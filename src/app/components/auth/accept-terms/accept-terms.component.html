@@ -10,7 +10,8 @@
       >
         Choose your login method
       </button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+
+      <div ngbDropdownMenu aria-labelledby="login-selection-dropdown">
         <option
           ngbDropdownItem
           (click)="login.handleLoginMethodSelection($event.target.value)"
@@ -21,6 +22,7 @@
         </option>
       </div>
     </div>
+
     <div *ngIf="selection">
       <app-accept-terms-checkbox
         [hasAcceptedTerms]="login.checkIfUserAcceptedTerms()"

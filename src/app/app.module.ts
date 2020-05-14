@@ -19,7 +19,7 @@ import { AngularFireAuthModule } from "angularfire2/auth";
 import { PrivacyComponent } from "./components/privacyTerms/privacy/privacy.component";
 import { TermsAndConditionsComponent } from "./components/privacyTerms/terms-and-conditions/terms-and-conditions.component";
 import { AuthGuard } from "./services/auth-guard.service";
-import { AcceptTermsComponent } from "./components/privacyTerms/accept-terms/accept-terms.component";
+import { AcceptTermsComponent } from "./components/auth/accept-terms/accept-terms.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { EmailComponent } from "./components/auth/email/email.component";
 import { AcceptTermsCheckboxComponent } from "./components/auth/accept-terms-checkbox/accept-terms-checkbox.component";

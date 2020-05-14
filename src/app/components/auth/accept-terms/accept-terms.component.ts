@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { LoginComponent } from "../../auth/login/login.component";
+import { LoginComponent } from "../login/login.component";
 
 @Component({
   selector: "app-accept-terms",
