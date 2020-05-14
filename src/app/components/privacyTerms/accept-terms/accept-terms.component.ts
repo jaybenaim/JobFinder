@@ -10,6 +10,8 @@ export class AcceptTermsComponent implements OnInit {
   @Input("selection")
   selection: string = "";
 
+  methods: Array<any> = ["Email", "Facebook", "Twitter", "Github", "Google"];
+
   constructor(public login: LoginComponent) {}
 
   handleLoginMethodSelection(value: string) {

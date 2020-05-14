@@ -15,37 +15,10 @@
           ngbDropdownItem
           (click)="login.handleLoginMethodSelection($event.target.value)"
           (value)="getValue()"
+          *ngFor="let x of methods"
         >
-          <i class="fa fa-email" aria-hidden="true"></i>
-
-          Email
+          {{ x }}
         </option>
-        <option
-          ngbDropdownItem
-          (click)="login.handleLoginMethodSelection($event.target.value)"
-          (value)="getValue()"
-        >
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-          Facebook
-        </option>
-        <option
-          ngbDropdownItem
-          (click)="login.handleLoginMethodSelection($event.target.value)"
-          (value)="getValue()"
-          >Twitter</option
-        >
-        <option
-          ngbDropdownItem
-          (click)="login.handleLoginMethodSelection($event.target.value)"
-          (value)="getValue()"
-          >Github</option
-        >
-        <option
-          ngbDropdownItem
-          (click)="login.handleLoginMethodSelection($event.target.value)"
-          (value)="getValue()"
-          >Google</option
-        >
       </div>
     </div>
   </div>
