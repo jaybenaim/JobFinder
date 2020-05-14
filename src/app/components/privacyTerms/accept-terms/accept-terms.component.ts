@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
+import { LoginComponent } from "../../auth/login/login.component";
 
 @Component({
   selector: "app-accept-terms",
@@ -6,15 +7,16 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./accept-terms.component.css"],
 })
 export class AcceptTermsComponent implements OnInit {
+  @Input("selection")
   selection: string = "";
 
-  constructor() {}
+  constructor(public login: LoginComponent) {}
 
-  handleChange(value: string) {
-    this.selection = value;
+  handleLoginMethodSelection(value: string) {
+    this.login.handleLoginMethodSelection(value);
   }
   getValue() {
-    return this.selection;
+    return this.login.selection;
   }
   ngOnInit(): void {}
 }

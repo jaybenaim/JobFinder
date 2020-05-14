@@ -13,8 +13,13 @@ export class LoginComponent implements OnInit {
     password: "",
   };
 
+  selection: string = "";
   constructor(private authService: AuthService, private router: Router) {}
 
+  handleLoginMethodSelection(value: string) {
+    this.selection = value;
+    // switch handle send to auth method
+  }
   signInWithEmail() {
     this.authService
       .signInRegular(this.user.email, this.user.password)

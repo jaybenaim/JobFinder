@@ -6,33 +6,47 @@
         class="btn btn-outline-primary"
         id="login-selection-dropdown"
         ngbDropdownToggle
-        value="Choose your login method"
         (value)="getValue()"
       >
-        {{ !selection && "Choose your login method" }}
+        Choose your login method
       </button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
         <option
           ngbDropdownItem
-          (click)="handleChange($event.target.value)"
+          (click)="login.handleLoginMethodSelection($event.target.value)"
           (value)="getValue()"
         >
-          Action - 1
+          <i class="fa fa-email" aria-hidden="true"></i>
+
+          Email
         </option>
         <option
           ngbDropdownItem
-          (click)="handleChange($event.target.value)"
+          (click)="login.handleLoginMethodSelection($event.target.value)"
           (value)="getValue()"
-          >Another Action</option
+        >
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Facebook
+        </option>
+        <option
+          ngbDropdownItem
+          (click)="login.handleLoginMethodSelection($event.target.value)"
+          (value)="getValue()"
+          >Twitter</option
         >
         <option
           ngbDropdownItem
-          (click)="handleChange($event.target.value)"
+          (click)="login.handleLoginMethodSelection($event.target.value)"
           (value)="getValue()"
-          >Something else is here</option
+          >Github</option
+        >
+        <option
+          ngbDropdownItem
+          (click)="login.handleLoginMethodSelection($event.target.value)"
+          (value)="getValue()"
+          >Google</option
         >
       </div>
     </div>
-    <div>{{ selection }}</div>
   </div>
 </div>
