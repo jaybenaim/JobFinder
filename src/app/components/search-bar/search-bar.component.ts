@@ -14,7 +14,8 @@ export class SearchBarComponent implements OnInit {
   constructor(private jobs: JobService) {}
 
   handleSearch(e) {
-    this.query = e.target.value;
+    this.query = e.target.value.toLowerCase();
+
     let positionTitles = this.allJobs.map((job) =>
       job["remoteok"]["positions"].map((position) => position.title)
     );
