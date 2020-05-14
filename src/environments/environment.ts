@@ -7,6 +7,7 @@
  * printing out hints when the HTML sanitizer is stripping content
  * running deep object comparison checks to detect model changes
  */
+
 export const environment = {
   production: false,
   firebase: {

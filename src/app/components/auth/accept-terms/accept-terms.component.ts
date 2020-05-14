@@ -10,15 +10,13 @@ export class AcceptTermsComponent implements OnInit {
   @Input("selection")
   selection: string = "";
 
-  methods: Array<any> = ["Email", "Facebook", "Twitter", "Github", "Google"];
-
   constructor(public login: LoginComponent) {}
 
-  handleLoginMethodSelection(value: string) {
+  handleLoginMethodSelection(value: any) {
     this.login.handleLoginMethodSelection(value);
   }
   getValue() {
-    return this.login.selection;
+    return this.selection;
   }
   ngOnInit(): void {}
 }

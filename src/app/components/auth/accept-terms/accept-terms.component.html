@@ -1,28 +1,75 @@
 <div class="row">
-  <div class="col">
-    <div ngbDropdown class="d-inline-block">
-      <label for="login method"> </label>
+  <div ngbDropdown class="d-inline-block">
+    <button
+      class="btn btn-outline-primary"
+      id="login-selection-dropdown"
+      ngbDropdownToggle
+    >
+      Choose your login method
+    </button>
+    <div ngbDropdownMenu aria-labelledby="login-selection-dropdown">
       <button
-        class="btn btn-outline-primary"
-        id="login-selection-dropdown"
-        ngbDropdownToggle
-        (value)="getValue()"
+        (click)="handleLoginMethodSelection($event.target.value)"
+        value="Email"
+        class="dropdown-item"
+        ngbDropdownItem
       >
-        Choose your login method
+        Email
       </button>
-
-      <div ngbDropdownMenu aria-labelledby="login-selection-dropdown">
-        <option
-          ngbDropdownItem
-          (click)="login.handleLoginMethodSelection($event.target.value)"
-          (value)="getValue()"
-          *ngFor="let x of methods"
-        >
-          {{ x }}
-        </option>
-      </div>
+      <button
+        (click)="handleLoginMethodSelection($event.target.value)"
+        value="Twitter"
+        class="dropdown-item"
+        ngbDropdownItem
+      >
+        Twitter
+      </button>
+      <button
+        (click)="handleLoginMethodSelection($event.target.value)"
+        value="Facebook"
+        class="dropdown-item"
+        ngbDropdownItem
+      >
+        Facebook
+      </button>
+      <button
+        (click)="handleLoginMethodSelection($event.target.value)"
+        value="Github"
+        class="dropdown-item"
+        ngbDropdownItem
+      >
+        Github
+      </button>
+      <button
+        (click)="handleLoginMethodSelection($event.target.value)"
+        value="Google"
+        class="dropdown-item"
+        ngbDropdownItem
+      >
+        Google
+      </button>
     </div>
+  </div>
+  <div class="col">
+    <!-- <select
+      id="login-selection-dropdown"
+      class="dropdown"
+      (change)="handleLoginMethodSelection($event.target.value)"
+    >
+      <option class="btn btn-secondary dropdown-toggle" [value]="null">
+        Choose your login method
+      </option>
 
+      <option
+        (change)="handleLoginMethodSelection($event.target.value)"
+        *ngFor="let x of methods"
+        (value)="getValue()"
+        (name)="getValue()"
+        class="dropdown-item"
+      >
+        {{ x }}
+      </option>
+    </select> -->
     <div *ngIf="selection">
       <app-accept-terms-checkbox
         [hasAcceptedTerms]="login.checkIfUserAcceptedTerms()"
