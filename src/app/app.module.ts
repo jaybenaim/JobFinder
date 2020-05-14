@@ -34,7 +34,7 @@ import { TermsAndConditionsComponent } from "./components/terms-and-conditions/t
     HomeModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase, "devlabzapi"),
+    AngularFireModule.initializeApp(environment.firebase, "jobfinder"),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
   ],
