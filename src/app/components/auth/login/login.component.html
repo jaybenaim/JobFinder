@@ -9,7 +9,7 @@
                 <h3>Login Form</h3>
                 <app-accept-terms [selection]="selection"></app-accept-terms>
                 <div *ngIf="selection === 'Email'">
-                  <app-email></app-email>
+                  <app-email [hasAcceptedTerms]="hasAcceptedTerms"></app-email>
                 </div>
                 <div class="form-group">
                   <div *ngIf="selection === 'Facebook'">
@@ -17,6 +17,7 @@
                       type="buton"
                       class="btn btn-block"
                       (click)="signInWithFacebook()"
+                      [disabled]="!hasAcceptedTerms"
                     >
                       <i class="fa fa-facebook" aria-hidden="true"></i>
                       Login with Facebook
@@ -27,6 +28,7 @@
                       type="button"
                       class="btn btn-block"
                       (click)="signInWithTwitter()"
+                      [disabled]="!hasAcceptedTerms"
                     >
                       <i class="fa fa-twitter" aria-hidden="true"></i>
                       Login with Twitter
@@ -37,6 +39,7 @@
                       type="button"
                       class="btn btn-block"
                       (click)="signInWithGithub()"
+                      [disabled]="!hasAcceptedTerms"
                     >
                       <i class="fa fa-github" aria-hidden="true"></i>
                       Login with Github
@@ -47,6 +50,7 @@
                       type="button"
                       class="btn btn-block"
                       (click)="signInWithGoogle()"
+                      [disabled]="!hasAcceptedTerms"
                     >
                       <i class="fa fa-google" aria-hidden="true"></i>
                       Login with Google

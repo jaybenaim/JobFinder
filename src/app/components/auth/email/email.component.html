@@ -28,7 +28,7 @@
     class="btn btn-primary btn-block"
     style="margin-bottom: 20px;"
     (click)="signInWithEmail()"
-    [disabled]="!user.email || !user.password"
+    [disabled]="!user.email || !user.password || !isChecked()"
   >
     Login with Email
   </button>

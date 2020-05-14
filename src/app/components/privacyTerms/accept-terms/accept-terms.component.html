@@ -21,5 +21,10 @@
         </option>
       </div>
     </div>
+    <div *ngIf="selection">
+      <app-accept-terms-checkbox
+        [hasAcceptedTerms]="login.checkIfUserAcceptedTerms()"
+      ></app-accept-terms-checkbox>
+    </div>
   </div>
 </div>

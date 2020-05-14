@@ -1,6 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { AuthService } from "src/app/services/auth.service";
 import { Router } from "@angular/router";
+import { AcceptTermsCheckboxComponent } from "../accept-terms-checkbox/accept-terms-checkbox.component";
 
 @Component({
   selector: "app-email",
@@ -12,9 +13,14 @@ export class EmailComponent implements OnInit {
     email: "",
     password: "",
   };
+  @Input("hasAcceptedTerms")
+  hasAcceptedTerms: boolean = false;
 
   constructor(private authService: AuthService, private router: Router) {}
 
+  isChecked() {
+    return this.hasAcceptedTerms;
+  }
   redirect() {
     return this.authService.isLoggedIn() && this.router.navigate(["/"]);
   }
