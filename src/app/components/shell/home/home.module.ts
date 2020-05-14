@@ -3,10 +3,10 @@ import { CommonModule } from "@angular/common";
 
 import { HomeComponent } from "./home.component";
 import { HomeRoutingModule } from "./home-routing.module";
-import { RemoteokComponent } from "../remoteok/remoteok.component";
-import { SavedJobsComponent } from "../saved-jobs/saved-jobs.component";
-import { AllJobsComponent } from "../../components/all-jobs/all-jobs.component";
-import { SearchBarComponent } from "../../components/search-bar/search-bar.component";
+import { RemoteokComponent } from "../../jobs/remoteok/remoteok.component";
+import { SavedJobsComponent } from "../../jobs/saved-jobs/saved-jobs.component";
+import { AllJobsComponent } from "../../jobs/all-jobs/all-jobs.component";
+import { SearchBarComponent } from "../search-bar/search-bar.component";
 
 @NgModule({
   declarations: [
