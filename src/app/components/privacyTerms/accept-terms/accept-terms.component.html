@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <label for="login method"> </label>
+      <button
+        class="btn btn-outline-primary"
+        id="login-selection-dropdown"
+        ngbDropdownToggle
+        (value)="getValue()"
+      >
+        Choose your login method
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <option
+          ngbDropdownItem
+          (click)="login.handleLoginMethodSelection($event.target.value)"
+          (value)="getValue()"
+          *ngFor="let x of methods"
+        >
+          {{ x }}
+        </option>
+      </div>
+    </div>
+    <div *ngIf="selection">
+      <app-accept-terms-checkbox
+        [hasAcceptedTerms]="login.checkIfUserAcceptedTerms()"
+      ></app-accept-terms-checkbox>
+    </div>
+  </div>
+</div>

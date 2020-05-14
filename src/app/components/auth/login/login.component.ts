@@ -12,9 +12,20 @@ export class LoginComponent implements OnInit {
     email: "",
     password: "",
   };
+  selection: string = "";
+  hasAcceptedTerms: boolean = false;
 
   constructor(private authService: AuthService, private router: Router) {}
-
+  checkIfUserAcceptedTerms() {
+    return this.hasAcceptedTerms;
+  }
+  acceptTerms() {
+    this.hasAcceptedTerms = !this.hasAcceptedTerms;
+  }
+  handleLoginMethodSelection(value: string) {
+    this.selection = value;
+    // switch handle send to auth method
+  }
   signInWithEmail() {
     this.authService
       .signInRegular(this.user.email, this.user.password)
