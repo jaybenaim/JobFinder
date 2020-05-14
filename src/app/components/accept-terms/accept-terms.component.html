@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <label for="login method"> </label>
+      <button
+        class="btn btn-outline-primary"
+        id="login-selection-dropdown"
+        ngbDropdownToggle
+        value="Choose your login method"
+        (value)="getValue()"
+      >
+        {{ !selection && "Choose your login method" }}
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <option
+          ngbDropdownItem
+          (click)="handleChange($event.target.value)"
+          (value)="getValue()"
+        >
+          Action - 1
+        </option>
+        <option
+          ngbDropdownItem
+          (click)="handleChange($event.target.value)"
+          (value)="getValue()"
+          >Another Action</option
+        >
+        <option
+          ngbDropdownItem
+          (click)="handleChange($event.target.value)"
+          (value)="getValue()"
+          >Something else is here</option
+        >
+      </div>
+    </div>
+    <div>{{ selection }}</div>
+  </div>
+</div>

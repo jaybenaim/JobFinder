@@ -19,6 +19,8 @@ import { AngularFireAuthModule } from "angularfire2/auth";
 import { PrivacyComponent } from "./components/privacy/privacy.component";
 import { TermsAndConditionsComponent } from "./components/terms-and-conditions/terms-and-conditions.component";
 import { AuthGuard } from "./services/auth-guard.service";
+import { AcceptTermsComponent } from "./components/accept-terms/accept-terms.component";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,7 @@ import { AuthGuard } from "./services/auth-guard.service";
     LoginComponent,
     PrivacyComponent,
     TermsAndConditionsComponent,
+    AcceptTermsComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { AuthGuard } from "./services/auth-guard.service";
     AngularFireModule.initializeApp(environment.firebase, "jobfinder"),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    NgbModule,
   ],
 
   providers: [
