@@ -57,13 +57,14 @@
     "start-all": "concurrently \"yarn start-frontend || npm run start-frontend\" \"yarn start-backend || npm run start-backend\"",
     "start-local": "nodemon server/server.js",
     "start-frontend": "ng serve --port=3000 --o --proxy-config proxy.config.json",
+    "start-backend": "node server/server.js",
     "ng": "ng",
     "build": "node ./buildScript",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start-backend": "node server/server.js",
-    "heroku-postbuild": "node ./buildScript.js"
+    "heroku-postbuild": "node ./buildScript.js",
+    "deploy": "npm run build;git push origin master;git push heroku master"
   },
   "proxy": "http://localhost:3001",
   "browserslist": [

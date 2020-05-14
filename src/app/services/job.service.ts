@@ -10,7 +10,6 @@ export class JobService {
 
   getAllJobs() {
     // from backend (scraper)
-    console.log(this.endpoint);
     return this.http.get(this.endpoint + "api/jobs");
   }
   getJobsFromFirebase() {
