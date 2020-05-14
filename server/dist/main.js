@@ -171,7 +171,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_privacyTerms_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/privacyTerms/privacy/privacy.component */ "./src/app/components/privacyTerms/privacy/privacy.component.ts");
 /* harmony import */ var _components_privacyTerms_terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/privacyTerms/terms-and-conditions/terms-and-conditions.component */ "./src/app/components/privacyTerms/terms-and-conditions/terms-and-conditions.component.ts");
 /* harmony import */ var _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/auth-guard.service */ "./src/app/services/auth-guard.service.ts");
-/* harmony import */ var _components_privacyTerms_accept_terms_accept_terms_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/privacyTerms/accept-terms/accept-terms.component */ "./src/app/components/privacyTerms/accept-terms/accept-terms.component.ts");
+/* harmony import */ var _components_auth_accept_terms_accept_terms_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/auth/accept-terms/accept-terms.component */ "./src/app/components/auth/accept-terms/accept-terms.component.ts");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm5/ng-bootstrap.js");
 /* harmony import */ var _components_auth_email_email_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/auth/email/email.component */ "./src/app/components/auth/email/email.component.ts");
 /* harmony import */ var _components_auth_accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/auth/accept-terms-checkbox/accept-terms-checkbox.component */ "./src/app/components/auth/accept-terms-checkbox/accept-terms-checkbox.component.ts");
@@ -247,7 +247,7 @@ var AppModule = /** @class */ (function () {
         _components_auth_login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"],
         _components_privacyTerms_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_16__["PrivacyComponent"],
         _components_privacyTerms_terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_17__["TermsAndConditionsComponent"],
-        _components_privacyTerms_accept_terms_accept_terms_component__WEBPACK_IMPORTED_MODULE_19__["AcceptTermsComponent"],
+        _components_auth_accept_terms_accept_terms_component__WEBPACK_IMPORTED_MODULE_19__["AcceptTermsComponent"],
         _components_auth_email_email_component__WEBPACK_IMPORTED_MODULE_21__["EmailComponent"],
         _components_auth_accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_22__["AcceptTermsCheckboxComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
@@ -267,7 +267,7 @@ var AppModule = /** @class */ (function () {
                     _components_auth_login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"],
                     _components_privacyTerms_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_16__["PrivacyComponent"],
                     _components_privacyTerms_terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_17__["TermsAndConditionsComponent"],
-                    _components_privacyTerms_accept_terms_accept_terms_component__WEBPACK_IMPORTED_MODULE_19__["AcceptTermsComponent"],
+                    _components_auth_accept_terms_accept_terms_component__WEBPACK_IMPORTED_MODULE_19__["AcceptTermsComponent"],
                     _components_auth_email_email_component__WEBPACK_IMPORTED_MODULE_21__["EmailComponent"],
                     _components_auth_accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_22__["AcceptTermsCheckboxComponent"],
                 ],
@@ -301,7 +301,7 @@ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetComponentScope"](_components_
     _components_auth_login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"],
     _components_privacyTerms_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_16__["PrivacyComponent"],
     _components_privacyTerms_terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_17__["TermsAndConditionsComponent"],
-    _components_privacyTerms_accept_terms_accept_terms_component__WEBPACK_IMPORTED_MODULE_19__["AcceptTermsComponent"],
+    _components_auth_accept_terms_accept_terms_component__WEBPACK_IMPORTED_MODULE_19__["AcceptTermsComponent"],
     _components_auth_email_email_component__WEBPACK_IMPORTED_MODULE_21__["EmailComponent"],
     _components_auth_accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_22__["AcceptTermsCheckboxComponent"]], [_angular_common__WEBPACK_IMPORTED_MODULE_23__["AsyncPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["UpperCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["LowerCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["JsonPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["SlicePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["TitleCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["I18nPluralPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["I18nSelectPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_23__["KeyValuePipe"]]);
 
@@ -380,6 +380,105 @@ var AcceptTermsCheckboxComponent = /** @class */ (function () {
     }], function () { return [{ type: src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"] }, { type: _login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] }]; }, { hasAcceptedTerms: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
             args: ["hasAcceptedTerms"]
+        }] }); })();
+
+
+/***/ }),
+
+/***/ "./src/app/components/auth/accept-terms/accept-terms.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/components/auth/accept-terms/accept-terms.component.ts ***!
+  \************************************************************************/
+/*! exports provided: AcceptTermsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AcceptTermsComponent", function() { return AcceptTermsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../login/login.component */ "./src/app/components/auth/login/login.component.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm5/ng-bootstrap.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
+/* harmony import */ var _accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../accept-terms-checkbox/accept-terms-checkbox.component */ "./src/app/components/auth/accept-terms-checkbox/accept-terms-checkbox.component.ts");
+
+
+
+
+
+
+
+function AcceptTermsComponent_div_16_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-accept-terms-checkbox", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("hasAcceptedTerms", ctx_r0.login.checkIfUserAcceptedTerms());
+} }
+var AcceptTermsComponent = /** @class */ (function () {
+    function AcceptTermsComponent(login) {
+        this.login = login;
+        this.selection = "";
+    }
+    AcceptTermsComponent.prototype.handleLoginMethodSelection = function (value) {
+        this.login.handleLoginMethodSelection(value);
+    };
+    AcceptTermsComponent.prototype.getValue = function () {
+        return this.selection;
+    };
+    AcceptTermsComponent.prototype.ngOnInit = function () { };
+    AcceptTermsComponent.ɵfac = function AcceptTermsComponent_Factory(t) { return new (t || AcceptTermsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"])); };
+    AcceptTermsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AcceptTermsComponent, selectors: [["app-accept-terms"]], inputs: { selection: "selection" }, decls: 17, vars: 1, consts: [[1, "row"], ["ngbDropdown", "", 1, "d-inline-block"], ["id", "login-selection-dropdown", "ngbDropdownToggle", "", 1, "btn", "btn-outline-primary"], ["ngbDropdownMenu", "", "aria-labelledby", "login-selection-dropdown"], ["value", "Email", "ngbDropdownItem", "", 1, "dropdown-item", 3, "click"], ["value", "Twitter", "ngbDropdownItem", "", 1, "dropdown-item", 3, "click"], ["value", "Facebook", "ngbDropdownItem", "", 1, "dropdown-item", 3, "click"], ["value", "Github", "ngbDropdownItem", "", 1, "dropdown-item", 3, "click"], ["value", "Google", "ngbDropdownItem", "", 1, "dropdown-item", 3, "click"], [1, "col"], [4, "ngIf"], [3, "hasAcceptedTerms"]], template: function AcceptTermsComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "button", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " Choose your login method ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "button", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AcceptTermsComponent_Template_button_click_5_listener($event) { return ctx.handleLoginMethodSelection($event.target.value); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " Email ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "button", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AcceptTermsComponent_Template_button_click_7_listener($event) { return ctx.handleLoginMethodSelection($event.target.value); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " Twitter ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "button", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AcceptTermsComponent_Template_button_click_9_listener($event) { return ctx.handleLoginMethodSelection($event.target.value); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Facebook ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AcceptTermsComponent_Template_button_click_11_listener($event) { return ctx.handleLoginMethodSelection($event.target.value); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, " Github ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "button", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AcceptTermsComponent_Template_button_click_13_listener($event) { return ctx.handleLoginMethodSelection($event.target.value); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, " Google ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, AcceptTermsComponent_div_16_Template, 2, 1, "div", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.selection);
+        } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdown"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdownToggle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdownMenu"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdownItem"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_4__["AcceptTermsCheckboxComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYXV0aC9hY2NlcHQtdGVybXMvYWNjZXB0LXRlcm1zLmNvbXBvbmVudC5jc3MifQ== */"] });
+    return AcceptTermsComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AcceptTermsComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: "app-accept-terms",
+                templateUrl: "./accept-terms.component.html",
+                styleUrls: ["./accept-terms.component.css"],
+            }]
+    }], function () { return [{ type: _login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"] }]; }, { selection: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
+            args: ["selection"]
         }] }); })();
 
 
@@ -1157,104 +1256,6 @@ var SavedJobsComponent = /** @class */ (function () {
                 styleUrls: ["./saved-jobs.component.css"],
             }]
     }], function () { return [{ type: _services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"] }]; }, null); })();
-
-
-/***/ }),
-
-/***/ "./src/app/components/privacyTerms/accept-terms/accept-terms.component.ts":
-/*!********************************************************************************!*\
-  !*** ./src/app/components/privacyTerms/accept-terms/accept-terms.component.ts ***!
-  \********************************************************************************/
-/*! exports provided: AcceptTermsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AcceptTermsComponent", function() { return AcceptTermsComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-/* harmony import */ var _auth_login_login_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../auth/login/login.component */ "./src/app/components/auth/login/login.component.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm5/ng-bootstrap.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
-/* harmony import */ var _auth_accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../auth/accept-terms-checkbox/accept-terms-checkbox.component */ "./src/app/components/auth/accept-terms-checkbox/accept-terms-checkbox.component.ts");
-
-
-
-
-
-
-
-
-function AcceptTermsComponent_option_7_Template(rf, ctx) { if (rf & 1) {
-    var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "option", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AcceptTermsComponent_option_7_Template_option_click_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r3.login.handleLoginMethodSelection($event.target.value); })("value", function AcceptTermsComponent_option_7_Template_option_value_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r5.getValue(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    var x_r2 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", x_r2, " ");
-} }
-function AcceptTermsComponent_div_8_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-accept-terms-checkbox", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("hasAcceptedTerms", ctx_r1.login.checkIfUserAcceptedTerms());
-} }
-var AcceptTermsComponent = /** @class */ (function () {
-    function AcceptTermsComponent(login) {
-        this.login = login;
-        this.selection = "";
-        this.methods = ["Email", "Facebook", "Twitter", "Github", "Google"];
-    }
-    AcceptTermsComponent.prototype.handleLoginMethodSelection = function (value) {
-        this.login.handleLoginMethodSelection(value);
-    };
-    AcceptTermsComponent.prototype.getValue = function () {
-        return this.login.selection;
-    };
-    AcceptTermsComponent.prototype.ngOnInit = function () { };
-    AcceptTermsComponent.ɵfac = function AcceptTermsComponent_Factory(t) { return new (t || AcceptTermsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_auth_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"])); };
-    AcceptTermsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AcceptTermsComponent, selectors: [["app-accept-terms"]], inputs: { selection: "selection" }, decls: 9, vars: 2, consts: [[1, "row"], [1, "col"], ["ngbDropdown", "", 1, "d-inline-block"], ["for", "login method"], ["id", "login-selection-dropdown", "ngbDropdownToggle", "", 1, "btn", "btn-outline-primary", 3, "value"], ["ngbDropdownMenu", "", "aria-labelledby", "dropdownBasic1"], ["ngbDropdownItem", "", 3, "click", "value", 4, "ngFor", "ngForOf"], [4, "ngIf"], ["ngbDropdownItem", "", 3, "click", "value"], [3, "hasAcceptedTerms"]], template: function AcceptTermsComponent_Template(rf, ctx) { if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "label", 3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "button", 4);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("value", function AcceptTermsComponent_Template_button_value_4_listener() { return ctx.getValue(); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " Choose your login method ");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 5);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, AcceptTermsComponent_option_7_Template, 2, 1, "option", 6);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, AcceptTermsComponent_div_8_Template, 2, 1, "div", 7);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        } if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.methods);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.selection);
-        } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdown"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdownToggle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdownMenu"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_x"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdownItem"], _auth_accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_5__["AcceptTermsCheckboxComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcHJpdmFjeVRlcm1zL2FjY2VwdC10ZXJtcy9hY2NlcHQtdGVybXMuY29tcG9uZW50LmNzcyJ9 */"] });
-    return AcceptTermsComponent;
-}());
-
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AcceptTermsComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
-        args: [{
-                selector: "app-accept-terms",
-                templateUrl: "./accept-terms.component.html",
-                styleUrls: ["./accept-terms.component.css"],
-            }]
-    }], function () { return [{ type: _auth_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"] }]; }, { selection: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
-            args: ["selection"]
-        }] }); })();
 
 
 /***/ }),
@@ -2274,7 +2275,7 @@ var FooterComponent = /** @class */ (function () {
     FooterComponent.prototype.ngOnInit = function () {
     };
     FooterComponent.ɵfac = function FooterComponent_Factory(t) { return new (t || FooterComponent)(); };
-    FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FooterComponent, selectors: [["app-footer"]], decls: 16, vars: 0, consts: [[1, "footer"], [1, "container-fluid"], [1, "row", "justify-content-around"], [1, "col-8", "col-md-5"], [1, "title"], [1, "description"], [1, "col-2"], [1, "list-unstyled"], ["routerLink", "/privacy", "title", "Privacy Policy", "target", "_blank", "rel", "noopener noreferrer"], ["routerLink", "/terms-and-conditions", "title", "Terms and Conditions", "target", "_blank", "rel", "noopener noreferrer"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
+    FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FooterComponent, selectors: [["app-footer"]], decls: 16, vars: 0, consts: [[1, "footer"], [1, "container-fluid"], [1, "row", "justify-content-around"], [1, "col-8", "col-md-5"], [1, "title"], [1, "description"], [1, "col-2"], [1, "list-unstyled"], ["routerLink", "/privacy", "title", "Privacy Policy"], ["routerLink", "/terms-and-conditions", "title", "Terms and Conditions"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "footer", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
