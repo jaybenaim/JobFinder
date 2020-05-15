@@ -7,17 +7,37 @@
 
 .footer .title {
   color: #28a745;
+  margin-left: 2%;
 }
 
-.privacy-links .list-unstyled {
-  display: flex;
-  padding: 0 5%;
-  width: 100%;
-  margin-top: 10%;
+@media (max-width: 450px) {
+  .privacy-links .list-unstyled {
+    display: flex;
+    padding: 0 5%;
+    width: 100%;
+    margin-top: 10%;
+  }
+  .privacy-links .list-unstyled li {
+    padding: 0 1%;
+    width: 150px;
+  }
 }
-.privacy-links .list-unstyled li {
-  padding: 0 1%;
+@media (min-width: 451px) {
+  .privacy-links .list-unstyled {
+    display: flex;
+    padding: 0 5%;
+    width: 100%;
+    margin-top: 2%;
+  }
+  .privacy-links .list-unstyled li {
+    padding: 0 1%;
+    width: 180px;
+  }
+  .privacy-links .list-unstyled span {
+    margin-left: -4.5%;
+  }
 }
+
 .footer .privacy-links a {
   color: #fff;
 }

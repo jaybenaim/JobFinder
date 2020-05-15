@@ -7,9 +7,7 @@
     Skip to Main Content
   </a>
 </div>
-<nav
-  class="navbar navbar-expand-sm navbar-light border-bottom justify-content-between"
->
+<nav class="navbar navbar-expand-sm border-bottom justify-content-between">
   <a
     class="navbar-brand"
     routerLink="/"
@@ -44,12 +42,12 @@
       Saved Jobs <i class="fa fa-heart"></i>
     </a>
 
-    <div class="nav-item nav-link">
-      <button (click)="toggleShowAccount()">
+    <div>
+      <button (click)="toggleShowAccount()" class="nav-item nav-link">
         Account
       </button>
       <div class="auth" *ngIf="showAccount">
-        <p *ngIf="!authService.isLoggedIn()">
+        <p *ngIf="!authService.isLoggedIn()" class="nav-item nav-link">
           <a
             class="btn btn-lg btn-primary"
             routerLink="/login"

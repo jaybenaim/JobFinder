@@ -1,3 +1,13 @@
+nav {
+  background: #212529;
+}
+.nav-item,
+.nav-link,
+.navbar-brand {
+  color: #28a745 !important;
+  background: transparent;
+  border: none;
+}
 .skipLink a {
   position: absolute;
   left: -100px;
