@@ -14,7 +14,6 @@ export class LinkedInComponent implements OnInit {
     this.jobs.getJobsFromLinkedIn().subscribe(
       (data) => {
         let positions = data["positions"].map((p: any, i: number) => p);
-
         this.positions = positions;
       },
       (err) => console.log(err)
