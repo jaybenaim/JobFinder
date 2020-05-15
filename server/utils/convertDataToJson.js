@@ -3,14 +3,25 @@ const fse = require("fs-extra");
 
 const getRemoteokResults = require("../scraper/remoteok");
 const getIndeedResults = require("../scraper/indeed");
+const getLinkedInResults = require("../scraper/linkedIn");
 
 setTimeout(() => {
   (async () => {
-    let remoteokResults = await getRemoteokResults();
-    let indeedResults = await getIndeedResults();
+    // fails if one request throws error
+    let [remoteokResults, indeedResults, linkedInResults] = await Promise.all([
+      getRemoteokResults(),
+      getIndeedResults(),
+      getLinkedInResults(),
+    ]);
+
     console.log("Scraping");
+
     let results = {
-      positions: { ...remoteokResults.positions, ...indeedResults.positions },
+      positions: [
+        ...remoteokResults.positions,
+        ...indeedResults.positions,
+        ...linkedInResults.positions,
+      ],
       locations: { ...remoteokResults.locations, ...indeedResults.locations },
       categories: {
         ...remoteokResults.categories,
@@ -18,9 +29,14 @@ setTimeout(() => {
       },
 
       tags: { ...remoteokResults.tags, ...indeedResults.tags },
-      siteNames: [remoteokResults.siteName, indeedResults.siteName],
+      siteNames: [
+        remoteokResults.siteName,
+        indeedResults.siteName,
+        linkedInResults.siteName,
+      ],
       remoteok: remoteokResults,
       indeed: indeedResults,
+      linkedIn: linkedInResults,
     };
     let jsonString = JSON.stringify(results);
 

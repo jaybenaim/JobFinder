@@ -12,17 +12,15 @@ router.get("/", (req, res) => {
 
 router.get("/indeed", async (req, res) => {
   //:TODO:// change to post and accept parameters to change the search query
-  const results = await getResultsFromIndeed();
-  res.status(200).send(results);
+  res.status(200).send({ ...allJobs.indeed });
 });
 
 router.get("/remoteok", async (req, res) => {
-  const results = await getResultsFromRemoteok();
-  res.status(200).send(results);
+  res.status(200).send({ ...allJobs.remoteok });
 });
+
 router.get("/linked-in", async (req, res) => {
-  const results = await getResultsFromLinkedIn();
-  res.status(200).send(results);
+  res.status(200).send({ ...allJobs.linkedIn });
 });
 
 module.exports = router;
