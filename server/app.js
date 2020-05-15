@@ -19,7 +19,7 @@ app.use(express.static(path.resolve(__dirname, "dist")));
 
 app.use("/api", indexRouter);
 app.get("*", (req, res) => {
-  res.sendFile("build/index.html", { root: __dirname });
+  res.sendFile("dist/index.html", { root: __dirname });
 });
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
