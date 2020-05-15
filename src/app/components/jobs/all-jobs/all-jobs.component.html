@@ -8,13 +8,13 @@
 
       <!-- Remoteok -->
       <li *ngFor="let position of positions; index as i; first as isFirst">
-        <a href="{{ position.link }}" target="_blank">
-          {{ position.title }}
-          {{ position.salary }}
+        <a href="{{ positions[i].link }}" target="_blank">
+          {{ positions[i].title }}
+          {{ positions[i].salary }}
           <ul>
             <li
               *ngFor="
-                let requirement of position.requirements;
+                let requirement of positions[i].requirements;
                 index as i;
                 first as isFirst
               "

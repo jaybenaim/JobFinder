@@ -15,9 +15,9 @@ export class SearchBarComponent implements OnInit {
 
   handleSearch(e) {
     this.query = e.target.value.toLowerCase();
-
-    let positionTitles = this.allJobs.map((job) =>
-      job["positions"].map((position) => position.title)
+    console.log(this.allJobs);
+    let positionTitles = this.allJobs[0]["positions"].map((job) =>
+      job.map((position) => position.title)
     );
 
     let filteredJobs = positionTitles[0].filter((job) =>

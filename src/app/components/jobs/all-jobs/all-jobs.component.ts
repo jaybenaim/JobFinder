@@ -8,19 +8,17 @@ import { JobService } from "../../../services/job.service";
 })
 export class AllJobsComponent implements OnInit {
   positions: any[] = [];
-  requirements: any[] = [];
 
   constructor(private jobs: JobService) {}
 
   minimize() {
     this.positions = [];
-    this.requirements = [];
   }
 
   getAllJobs() {
     this.jobs.getAllJobs().subscribe(
       (data) => {
-        let positions = data["positions"];
+        let positions = data["positions"][0];
         let results = [];
         for (let key in positions) {
           let value = positions[key];
@@ -33,8 +31,6 @@ export class AllJobsComponent implements OnInit {
         }
 
         this.positions = results;
-        // this.requirements.push(data["positions"]["requirements"]);
-        console.log(results);
       },
       (err) => {
         console.log(err);
