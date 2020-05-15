@@ -15,14 +15,19 @@ export class SearchBarComponent implements OnInit {
 
   handleSearch(e) {
     this.query = e.target.value.toLowerCase();
-    console.log(this.allJobs);
-    let positionTitles = this.allJobs[0]["positions"].map((job) =>
-      job.map((position) => position.title)
-    );
+    let positions = this.allJobs[0]["positions"];
+    let titles = [];
 
-    let filteredJobs = positionTitles[0].filter((job) =>
+    for (let key in positions) {
+      let value = positions[key];
+      for (let i in value) {
+        titles.push(value[i].title);
+      }
+    }
+    let filteredJobs = titles.filter((job) =>
       job.toLowerCase().includes(this.query)
     );
+
     this.query.length <= 1
       ? (this.results = [])
       : (this.results = filteredJobs);
