@@ -75,6 +75,8 @@ export class LoginComponent implements OnInit {
       .catch((err) => {
         if (err.code === "auth/account-exists-with-different-credential") {
           alert(err.message);
+        } else {
+          alert("Something went wrong");
         }
       });
   }
