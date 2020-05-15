@@ -7,6 +7,7 @@ const cors = require("cors");
 require("./utils/convertDataToJson");
 
 const indexRouter = require("./api/routes/index");
+const allJobsRouter = require("./api/routes/allJobs");
 
 const app = express();
 
@@ -18,6 +19,8 @@ app.use(cookieParser());
 app.use(express.static(path.resolve(__dirname, "dist")));
 
 app.use("/api", indexRouter);
+app.use("/api/jobs", allJobsRouter);
+
 app.get("*", (req, res) => {
   res.sendFile("dist/index.html", { root: __dirname });
 });
