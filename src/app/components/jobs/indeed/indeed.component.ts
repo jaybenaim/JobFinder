@@ -7,11 +7,16 @@ import { JobService } from "src/app/services/job.service";
   styleUrls: ["./indeed.component.css"],
 })
 export class IndeedComponent implements OnInit {
+  positions: any[] = [];
+
   constructor(private jobs: JobService) {}
 
   getJobsFromIndeed() {
     this.jobs.getJobsFromIndeed().subscribe(
-      (data) => console.log(data),
+      (data) => {
+        this.positions = data["positions"];
+        console.log(data);
+      },
       (err) => console.log(err)
     );
   }

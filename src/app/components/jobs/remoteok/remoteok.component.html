@@ -6,7 +6,7 @@
   <div *ngIf="positions[0]">
     <button (click)="minimize()">Minimize</button>
 
-    <a href="https://remoteok.io/" target="_blank"
+    <a href="https://remoteok.io/" target="_blank" rel="noopener noreferrer"
       >Check out jobs on Remote OK</a
     >
     <br />
@@ -26,7 +26,11 @@
       </button>
       <div *ngIf="showPositions">
         <li *ngFor="let position of positions[0]; index as i; first as isFirst">
-          <a href="{{ position.link }}" target="_blank">
+          <a
+            href="{{ position.link }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {{ position.title }}
           </a>
         </li>

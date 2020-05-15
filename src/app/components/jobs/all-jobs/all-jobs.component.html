@@ -8,7 +8,11 @@
 
       <!-- Remoteok -->
       <li *ngFor="let position of positions; index as i; first as isFirst">
-        <a href="{{ positions[i].link }}" target="_blank">
+        <a
+          href="{{ positions[i].link }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {{ positions[i].title }}
           {{ positions[i].salary }}
           <ul>

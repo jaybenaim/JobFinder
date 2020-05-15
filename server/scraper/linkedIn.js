@@ -21,17 +21,11 @@ const getResults = async () => {
   siteName = "Linked In";
   description = $("title").text();
 
-  $(".jobs-search-results__list li").each((index, element) => {
+  $("h3").each((index, element) => {
     positions.add({
-      title: $(element).find("h3").text(),
-      link:
-        domain +
-        $(element).find(".job-card-search__link-wrapper ").attr("href"),
-      location: $(element).find(".job-card-search__location ").text(),
+      title: $(element).text(),
+      link: siteUrl,
     });
-  });
-  $(".job-card-search__location").each((index, element) => {
-    locations.add($(element).text());
   });
 
   return {
