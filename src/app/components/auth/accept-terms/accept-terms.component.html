@@ -1,79 +1,58 @@
 <div class="row">
-  <div ngbDropdown class="d-inline-block">
-    <button
-      class="btn btn-outline-primary"
-      id="login-selection-dropdown"
-      ngbDropdownToggle
-    >
+  <div ngbDropdown class="d-inline-block" id="login-selection-dropdown">
+    <button class="btn btn-outline-primary" ngbDropdownToggle>
       Choose your login method
     </button>
     <div ngbDropdownMenu aria-labelledby="login-selection-dropdown">
       <button
         (click)="handleLoginMethodSelection($event.target.value)"
         value="Email"
-        class="dropdown-item"
+        class="dropdown-item accept-terms--dropdown-item"
         ngbDropdownItem
       >
-        Email
+        Email &nbsp;<i class="fa fa-envelope-open" aria-hidden="true"></i>
       </button>
       <button
         (click)="handleLoginMethodSelection($event.target.value)"
         value="Twitter"
-        class="dropdown-item"
+        class="dropdown-item accept-terms--dropdown-item"
         ngbDropdownItem
       >
-        Twitter
+        Twitter &nbsp;<i class="fa fa-twitter" aria-hidden="true"></i>
       </button>
       <button
         (click)="handleLoginMethodSelection($event.target.value)"
         value="Facebook"
-        class="dropdown-item"
+        class="dropdown-item accept-terms--dropdown-item"
         ngbDropdownItem
       >
-        Facebook
+        Facebook &nbsp;<i class="fa fa-facebook" aria-hidden="true"></i>
       </button>
       <button
         (click)="handleLoginMethodSelection($event.target.value)"
         value="Github"
-        class="dropdown-item"
+        class="dropdown-item accept-terms--dropdown-item"
         ngbDropdownItem
       >
-        Github
+        Github &nbsp;<i class="fa fa-github" aria-hidden="true"></i>
       </button>
       <button
         (click)="handleLoginMethodSelection($event.target.value)"
         value="Google"
-        class="dropdown-item"
+        class="dropdown-item accept-terms--dropdown-item"
         ngbDropdownItem
       >
-        Google
+        Google &nbsp;<i class="fa fa-google" aria-hidden="true"></i>
       </button>
     </div>
   </div>
   <div class="col">
-    <!-- <select
-      id="login-selection-dropdown"
-      class="dropdown"
-      (change)="handleLoginMethodSelection($event.target.value)"
-    >
-      <option class="btn btn-secondary dropdown-toggle" [value]="null">
-        Choose your login method
-      </option>
-
-      <option
-        (change)="handleLoginMethodSelection($event.target.value)"
-        *ngFor="let x of methods"
-        (value)="getValue()"
-        (name)="getValue()"
-        class="dropdown-item"
-      >
-        {{ x }}
-      </option>
-    </select> -->
-    <div *ngIf="selection">
-      <app-accept-terms-checkbox
-        [hasAcceptedTerms]="login.checkIfUserAcceptedTerms()"
-      ></app-accept-terms-checkbox>
+    <div class="row">
+      <div *ngIf="selection" id="accept-terms-checkbox">
+        <app-accept-terms-checkbox
+          [hasAcceptedTerms]="login.checkIfUserAcceptedTerms()"
+        ></app-accept-terms-checkbox>
+      </div>
     </div>
   </div>
 </div>

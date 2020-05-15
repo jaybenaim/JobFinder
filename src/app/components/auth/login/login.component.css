@@ -1,0 +1,10 @@
+.login__page {
+  padding: 6%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.login__page .card {
+  padding: 10% 22%;
+}

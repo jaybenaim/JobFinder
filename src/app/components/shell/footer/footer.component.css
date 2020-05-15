@@ -1,19 +1,23 @@
 ﻿.footer {
-  background-color: #1d1d1d;
+  background-color: #212529;
   padding-top: 2rem;
   padding-bottom: 4rem;
-}
-  
-.title {
-  color: #fff;
+  color: #28a745;
 }
 
-.description {
-  color: #fff;
+.footer .title {
+  color: #28a745;
 }
 
-.footerlink,
-.footerlink:hover {
+.privacy-links .list-unstyled {
+  display: flex;
+  padding: 0 5%;
+  width: 100%;
+  margin-top: 10%;
+}
+.privacy-links .list-unstyled li {
+  padding: 0 1%;
+}
+.footer .privacy-links a {
   color: #fff;
 }
-  
