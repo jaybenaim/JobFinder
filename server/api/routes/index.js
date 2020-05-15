@@ -4,15 +4,14 @@ const router = express.Router();
 const getResultsFromRemoteok = require("../../scraper/remoteok");
 const getResultsFromIndeed = require("../../scraper/indeed");
 
-const remoteok = require("../../scrapedData/remoteok.json");
+const allJobs = require("../../scrapedData/allJobs.json");
 
 router.get("/", (req, res) => {
   res.status(200).send("API Home");
 });
 
 router.get("/jobs", (req, res) => {
-  const remoteokData = remoteok;
-  res.status(200).send({ remoteok: remoteokData });
+  res.status(200).send({ ...allJobs });
 });
 
 router.get("/jobs/remoteok", async (req, res) => {
