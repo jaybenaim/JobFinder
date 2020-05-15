@@ -10,7 +10,8 @@ let provinceQuery = encodeURI("ON");
 let encodedSearchQuery = `${typeQuery}&l=${cityQuery}%2C${salaryQuery}+${provinceQuery}`;
 let query = `q=${encodedSearchQuery}`;
 
-const siteUrl = "https://www.indeed.ca/jobs?" + query;
+const domain = "https://www.indeed.ca/";
+const siteUrl = domain + "jobs?" + query;
 let siteName = "";
 let description = "";
 
@@ -36,7 +37,7 @@ const getResults = async () => {
 
     positions.add({
       title: $(element).find(".title").text(),
-      link: siteUrl + $(element).find("a").attr("href"),
+      link: domain + $(element).find("h2 .jobtitle").attr("href"),
       salary: $(element).find(".salaryText").text(),
       requirements: requirements.split("."),
     });
