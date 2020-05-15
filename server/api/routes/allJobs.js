@@ -4,6 +4,7 @@ const router = express.Router();
 const allJobs = require("../../scrapedData/allJobs.json");
 const getResultsFromIndeed = require("../../scraper/indeed");
 const getResultsFromRemoteok = require("../../scraper/remoteok");
+const getResultsFromLinkedIn = require("../../scraper/linkedIn");
 
 router.get("/", (req, res) => {
   res.status(200).send({ ...allJobs });
@@ -17,6 +18,10 @@ router.get("/indeed", async (req, res) => {
 
 router.get("/remoteok", async (req, res) => {
   const results = await getResultsFromRemoteok();
+  res.status(200).send(results);
+});
+router.get("/linked-in", async (req, res) => {
+  const results = await getResultsFromLinkedIn();
   res.status(200).send(results);
 });
 
