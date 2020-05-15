@@ -8,6 +8,7 @@ import { SavedJobsComponent } from "../../jobs/saved-jobs/saved-jobs.component";
 import { AllJobsComponent } from "../../jobs/all-jobs/all-jobs.component";
 import { SearchBarComponent } from "../search-bar/search-bar.component";
 import { IndeedComponent } from "../../jobs/indeed/indeed.component";
+import { LinkedInComponent } from "../../jobs/linked-in/linked-in.component";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { IndeedComponent } from "../../jobs/indeed/indeed.component";
     AllJobsComponent,
     SearchBarComponent,
     IndeedComponent,
+    LinkedInComponent,
   ],
   imports: [CommonModule, HomeRoutingModule],
   exports: [
