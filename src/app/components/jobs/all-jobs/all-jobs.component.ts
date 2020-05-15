@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { JobService } from "../../../services/job.service";
 
 @Component({
@@ -7,21 +7,37 @@ import { JobService } from "../../../services/job.service";
   styleUrls: ["./all-jobs.component.css"],
 })
 export class AllJobsComponent implements OnInit {
-  allJobs: any[] = [];
+  positions: any[] = [];
+  requirements: any[] = [];
 
   constructor(private jobs: JobService) {}
 
   minimize() {
-    this.allJobs = [];
+    this.positions = [];
+    this.requirements = [];
   }
 
   getAllJobs() {
     this.jobs.getAllJobs().subscribe(
       (data) => {
-        this.allJobs.push(data);
-        console.log(this.allJobs[0]["remoteok"]);
+        let positions = data["positions"];
+        let results = [];
+        for (let key in positions) {
+          let value = positions[key];
+          results.push({
+            title: value.title,
+            link: value.link,
+            salary: value.salary,
+            requirements: value.requirements,
+          });
+        }
+
+        this.positions = results;
+        // this.requirements.push(data["positions"]["requirements"]);
+        console.log(results);
       },
       (err) => {
+        console.log(err);
         alert("Something went wrong ");
       }
     );

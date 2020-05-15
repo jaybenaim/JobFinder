@@ -879,8 +879,8 @@ var AllJobsComponent = /** @class */ (function () {
         var _this = this;
         this.jobs.getAllJobs().subscribe(function (data) {
             _this.allJobs.push(data);
-            console.log(_this.allJobs[0]["remoteok"]);
         }, function (err) {
+            console.log(err);
             alert("Something went wrong ");
         });
     };
@@ -912,6 +912,52 @@ var AllJobsComponent = /** @class */ (function () {
                 styleUrls: ["./all-jobs.component.css"],
             }]
     }], function () { return [{ type: _services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/components/jobs/indeed/indeed.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/components/jobs/indeed/indeed.component.ts ***!
+  \************************************************************/
+/*! exports provided: IndeedComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IndeedComponent", function() { return IndeedComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/job.service */ "./src/app/services/job.service.ts");
+
+
+
+
+var IndeedComponent = /** @class */ (function () {
+    function IndeedComponent(jobs) {
+        this.jobs = jobs;
+    }
+    IndeedComponent.prototype.getJobsFromIndeed = function () {
+        this.jobs.getJobsFromIndeed().subscribe(function (data) { return console.log(data); }, function (err) { return console.log(err); });
+    };
+    IndeedComponent.prototype.ngOnInit = function () { };
+    IndeedComponent.ɵfac = function IndeedComponent_Factory(t) { return new (t || IndeedComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"])); };
+    IndeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IndeedComponent, selectors: [["app-indeed"]], decls: 2, vars: 0, consts: [[3, "click"]], template: function IndeedComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function IndeedComponent_Template_button_click_0_listener() { return ctx.getJobsFromIndeed(); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Get All from Indeed\n");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvam9icy9pbmRlZWQvaW5kZWVkLmNvbXBvbmVudC5jc3MifQ== */"] });
+    return IndeedComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](IndeedComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: "app-indeed",
+                templateUrl: "./indeed.component.html",
+                styleUrls: ["./indeed.component.css"],
+            }]
+    }], function () { return [{ type: src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"] }]; }, null); })();
 
 
 /***/ }),
@@ -1130,6 +1176,7 @@ var RemoteokComponent = /** @class */ (function () {
             _this.siteName = data["remoteok"]["siteName"];
             _this.description = data["remoteok"]["description"];
         }, function (err) {
+            console.log(err);
             alert("Something went wrong");
         });
     };
@@ -1230,6 +1277,7 @@ var SavedJobsComponent = /** @class */ (function () {
             });
             _this.jobList = list;
         }, function (err) {
+            console.log(err);
             alert("Something went wrong");
         });
     };
@@ -2380,6 +2428,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../search-bar/search-bar.component */ "./src/app/components/shell/search-bar/search-bar.component.ts");
 /* harmony import */ var _jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../jobs/remoteok/remoteok.component */ "./src/app/components/jobs/remoteok/remoteok.component.ts");
+/* harmony import */ var _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../jobs/indeed/indeed.component */ "./src/app/components/jobs/indeed/indeed.component.ts");
+
 
 
 
@@ -2389,7 +2439,7 @@ var HomeComponent = /** @class */ (function () {
     }
     HomeComponent.prototype.ngOnInit = function () { };
     HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(); };
-    HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 7, vars: 0, consts: [["id", "mainContent"], [1, "container"], [1, "row", "justify-content-center", "py-5"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+    HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 8, vars: 0, consts: [["id", "mainContent"], [1, "container"], [1, "row", "justify-content-center", "py-5"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "main", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -2399,9 +2449,10 @@ var HomeComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "app-search-bar");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "app-remoteok");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "app-indeed");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        } }, directives: [_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_1__["SearchBarComponent"], _jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_2__["RemoteokComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2hlbGwvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MifQ== */"] });
+        } }, directives: [_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_1__["SearchBarComponent"], _jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_2__["RemoteokComponent"], _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_3__["IndeedComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2hlbGwvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MifQ== */"] });
     return HomeComponent;
 }());
 
@@ -2435,6 +2486,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _jobs_saved_jobs_saved_jobs_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../jobs/saved-jobs/saved-jobs.component */ "./src/app/components/jobs/saved-jobs/saved-jobs.component.ts");
 /* harmony import */ var _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../jobs/all-jobs/all-jobs.component */ "./src/app/components/jobs/all-jobs/all-jobs.component.ts");
 /* harmony import */ var _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../search-bar/search-bar.component */ "./src/app/components/shell/search-bar/search-bar.component.ts");
+/* harmony import */ var _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../jobs/indeed/indeed.component */ "./src/app/components/jobs/indeed/indeed.component.ts");
+
 
 
 
@@ -2456,7 +2509,8 @@ var HomeModule = /** @class */ (function () {
         _jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_4__["RemoteokComponent"],
         _jobs_saved_jobs_saved_jobs_component__WEBPACK_IMPORTED_MODULE_5__["SavedJobsComponent"],
         _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_6__["AllJobsComponent"],
-        _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_7__["SearchBarComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _home_routing_module__WEBPACK_IMPORTED_MODULE_3__["HomeRoutingModule"]], exports: [_jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_4__["RemoteokComponent"],
+        _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_7__["SearchBarComponent"],
+        _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_8__["IndeedComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _home_routing_module__WEBPACK_IMPORTED_MODULE_3__["HomeRoutingModule"]], exports: [_jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_4__["RemoteokComponent"],
         _jobs_saved_jobs_saved_jobs_component__WEBPACK_IMPORTED_MODULE_5__["SavedJobsComponent"],
         _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_6__["AllJobsComponent"],
         _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_7__["SearchBarComponent"]] }); })();
@@ -2469,6 +2523,7 @@ var HomeModule = /** @class */ (function () {
                     _jobs_saved_jobs_saved_jobs_component__WEBPACK_IMPORTED_MODULE_5__["SavedJobsComponent"],
                     _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_6__["AllJobsComponent"],
                     _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_7__["SearchBarComponent"],
+                    _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_8__["IndeedComponent"],
                 ],
                 imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _home_routing_module__WEBPACK_IMPORTED_MODULE_3__["HomeRoutingModule"]],
                 exports: [
@@ -2652,7 +2707,7 @@ var SearchBarComponent = /** @class */ (function () {
         this.jobs.getAllJobs().subscribe(function (data) {
             _this.allJobs.push(data);
         }, function (err) {
-            alert("Something went wrong");
+            console.log(err);
         });
     };
     SearchBarComponent.prototype.ngOnInit = function () {
@@ -2865,7 +2920,9 @@ __webpack_require__.r(__webpack_exports__);
 var JobService = /** @class */ (function () {
     function JobService(http) {
         this.http = http;
-        this.endpoint = "https://job-finder-web-scraper.herokuapp.com/";
+        this.endpoint = !window.location.host.includes("local")
+            ? "https://job-finder-web-scraper.herokuapp.com"
+            : "http://localhost:3001";
     }
     JobService.prototype.getAllJobs = function () {
         // from backend (scraper)
@@ -2878,6 +2935,9 @@ var JobService = /** @class */ (function () {
     JobService.prototype.getJobsFromRemoteok = function () {
         // get jobs from remoteok
         return this.http.get(this.endpoint + "/api/jobs/remoteok");
+    };
+    JobService.prototype.getJobsFromIndeed = function () {
+        return this.http.get(this.endpoint + "/api/jobs/indeed");
     };
     JobService.ɵfac = function JobService_Factory(t) { return new (t || JobService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
     JobService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: JobService, factory: JobService.ɵfac, providedIn: "root" });

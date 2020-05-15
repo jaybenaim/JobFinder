@@ -17,7 +17,7 @@ export class SearchBarComponent implements OnInit {
     this.query = e.target.value.toLowerCase();
 
     let positionTitles = this.allJobs.map((job) =>
-      job["remoteok"]["positions"].map((position) => position.title)
+      job["positions"].map((position) => position.title)
     );
 
     let filteredJobs = positionTitles[0].filter((job) =>
@@ -34,6 +34,7 @@ export class SearchBarComponent implements OnInit {
         this.allJobs.push(data);
       },
       (err) => {
+        console.log(err);
         alert("Something went wrong");
       }
     );

@@ -2,20 +2,26 @@
   <button (click)="getAllJobs()">Get All Jobs</button>
 
   <ul>
-    <div *ngIf="allJobs && allJobs.length >= 1">
+    <div *ngIf="positions && positions.length >= 1">
       <strong>All Job Listings </strong>
       <button (click)="minimize()">Minimize</button>
 
       <!-- Remoteok -->
-      <li
-        *ngFor="
-          let position of allJobs[0]['remoteok']['positions'];
-          index as i;
-          first as isFirst
-        "
-      >
+      <li *ngFor="let position of positions; index as i; first as isFirst">
         <a href="{{ position.link }}" target="_blank">
           {{ position.title }}
+          {{ position.salary }}
+          <ul>
+            <li
+              *ngFor="
+                let requirement of position.requirements;
+                index as i;
+                first as isFirst
+              "
+            >
+              {{ requirement }}
+            </li>
+          </ul>
         </a>
       </li>
     </div>

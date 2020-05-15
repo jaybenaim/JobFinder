@@ -25,6 +25,8 @@ export class SavedJobsComponent implements OnInit {
         this.jobList = list;
       },
       (err) => {
+        console.log(err);
+
         alert("Something went wrong");
       }
     );

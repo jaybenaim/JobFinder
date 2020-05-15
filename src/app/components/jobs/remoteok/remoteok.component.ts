@@ -34,6 +34,8 @@ export class RemoteokComponent implements OnInit {
         this.description = data["remoteok"]["description"];
       },
       (err) => {
+        console.log(err);
+
         alert("Something went wrong");
       }
     );
