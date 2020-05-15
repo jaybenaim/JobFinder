@@ -6,7 +6,9 @@ import { HttpClient } from "@angular/common/http";
 })
 export class JobService {
   constructor(private http: HttpClient) {}
-  endpoint = "https://job-finder-web-scraper.herokuapp.com/";
+  endpoint = !window.location.host.includes("local")
+    ? "https://job-finder-web-scraper.herokuapp.com"
+    : "http://localhost:3001";
 
   getAllJobs() {
     // from backend (scraper)
@@ -20,5 +22,8 @@ export class JobService {
   getJobsFromRemoteok() {
     // get jobs from remoteok
     return this.http.get(this.endpoint + "/api/jobs/remoteok");
+  }
+  getJobsFromIndeed() {
+    return this.http.get(this.endpoint + "/api/jobs/indeed");
   }
 }

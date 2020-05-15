@@ -23,6 +23,7 @@ import { AcceptTermsComponent } from "./components/auth/accept-terms/accept-term
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { EmailComponent } from "./components/auth/email/email.component";
 import { AcceptTermsCheckboxComponent } from "./components/auth/accept-terms-checkbox/accept-terms-checkbox.component";
+
 @NgModule({
   declarations: [
     AppComponent,

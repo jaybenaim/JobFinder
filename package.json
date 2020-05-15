@@ -53,7 +53,7 @@
   },
   "scripts": {
     "start": "node server/server.js",
-    "start-all": "concurrently \"yarn start-frontend || npm run start-frontend\" \"yarn start-backend || npm run start-backend\"",
+    "start-all": "concurrently \"yarn start-frontend || npm run start-frontend\" \"yarn start-backend || npm run start-local\"",
     "start-local": "nodemon server/server.js",
     "start-frontend": "ng serve --port=3000 --o --proxy-config proxy.config.json",
     "start-backend": "node server/server.js",

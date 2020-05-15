@@ -7,6 +7,7 @@ import { RemoteokComponent } from "../../jobs/remoteok/remoteok.component";
 import { SavedJobsComponent } from "../../jobs/saved-jobs/saved-jobs.component";
 import { AllJobsComponent } from "../../jobs/all-jobs/all-jobs.component";
 import { SearchBarComponent } from "../search-bar/search-bar.component";
+import { IndeedComponent } from "../../jobs/indeed/indeed.component";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SearchBarComponent } from "../search-bar/search-bar.component";
     SavedJobsComponent,
     AllJobsComponent,
     SearchBarComponent,
+    IndeedComponent,
   ],
   imports: [CommonModule, HomeRoutingModule],
   exports: [

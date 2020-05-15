@@ -7,7 +7,6 @@ setTimeout(() => {
   (async () => {
     let results = await getResults();
     let jsonString = JSON.stringify(results);
-    console.log("running");
 
     if (fs.existsSync("./server/scrapedData/remoteok.json")) {
       fse.removeSync("./server/scrapedData/remoteok.json");
