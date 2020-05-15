@@ -22,8 +22,7 @@ const fetchData = async () => {
   return cheerio.load(result.data);
 };
 
-const getResults = async (value) => {
-  console.log(value);
+const getResults = async () => {
   const $ = await fetchData();
   siteName = "Indeed";
   description = $("title").text();

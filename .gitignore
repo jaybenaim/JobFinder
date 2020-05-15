@@ -29,3 +29,4 @@ yarn-error.log*
 /node_modules
 node_modules/
 .env
+/server/node_modules/
