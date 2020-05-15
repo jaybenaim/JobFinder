@@ -20,9 +20,7 @@ export class SearchBarComponent implements OnInit {
 
     for (let key in positions) {
       let value = positions[key];
-      for (let i in value) {
-        titles.push(value[i].title);
-      }
+      titles.push(value.title);
     }
     let filteredJobs = titles.filter((job) =>
       job.toLowerCase().includes(this.query)

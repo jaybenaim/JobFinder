@@ -10,15 +10,14 @@ setTimeout(() => {
     let indeedResults = await getIndeedResults();
     console.log("Scraping");
     let results = {
-      positions: [{ ...remoteokResults.positions, ...indeedResults.positions }],
-      locations: [{ ...remoteokResults.locations, ...indeedResults.locations }],
-      categories: [
-        {
-          ...remoteokResults.categories,
-          ...indeedResults.categories,
-        },
-      ],
-      tags: [{ ...remoteokResults.tags, ...indeedResults.tags }],
+      positions: { ...remoteokResults.positions, ...indeedResults.positions },
+      locations: { ...remoteokResults.locations, ...indeedResults.locations },
+      categories: {
+        ...remoteokResults.categories,
+        ...indeedResults.categories,
+      },
+
+      tags: { ...remoteokResults.tags, ...indeedResults.tags },
       siteNames: [remoteokResults.siteName, indeedResults.siteName],
       remoteok: remoteokResults,
       indeed: indeedResults,

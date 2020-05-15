@@ -18,7 +18,7 @@ export class AllJobsComponent implements OnInit {
   getAllJobs() {
     this.jobs.getAllJobs().subscribe(
       (data) => {
-        let positions = data["positions"][0];
+        let positions = data["positions"];
         let results = [];
         for (let key in positions) {
           let value = positions[key];
