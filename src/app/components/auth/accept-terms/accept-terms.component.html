@@ -1,58 +1,57 @@
 <div class="row">
-  <div ngbDropdown class="d-inline-block" id="login-selection-dropdown">
-    <button class="btn btn-outline-primary" ngbDropdownToggle>
-      Choose your login method
-    </button>
-    <div ngbDropdownMenu aria-labelledby="login-selection-dropdown">
-      <button
-        (click)="handleLoginMethodSelection($event.target.value)"
-        value="Email"
-        class="dropdown-item accept-terms--dropdown-item"
-        ngbDropdownItem
-      >
-        Email &nbsp;<i class="fa fa-envelope-open" aria-hidden="true"></i>
-      </button>
-      <button
-        (click)="handleLoginMethodSelection($event.target.value)"
-        value="Twitter"
-        class="dropdown-item accept-terms--dropdown-item"
-        ngbDropdownItem
-      >
-        Twitter &nbsp;<i class="fa fa-twitter" aria-hidden="true"></i>
-      </button>
-      <button
-        (click)="handleLoginMethodSelection($event.target.value)"
-        value="Facebook"
-        class="dropdown-item accept-terms--dropdown-item"
-        ngbDropdownItem
-      >
-        Facebook &nbsp;<i class="fa fa-facebook" aria-hidden="true"></i>
-      </button>
-      <button
-        (click)="handleLoginMethodSelection($event.target.value)"
-        value="Github"
-        class="dropdown-item accept-terms--dropdown-item"
-        ngbDropdownItem
-      >
-        Github &nbsp;<i class="fa fa-github" aria-hidden="true"></i>
-      </button>
-      <button
-        (click)="handleLoginMethodSelection($event.target.value)"
-        value="Google"
-        class="dropdown-item accept-terms--dropdown-item"
-        ngbDropdownItem
-      >
-        Google &nbsp;<i class="fa fa-google" aria-hidden="true"></i>
-      </button>
-    </div>
-  </div>
   <div class="col">
-    <div class="row">
-      <div *ngIf="selection" id="accept-terms-checkbox">
-        <app-accept-terms-checkbox
-          [hasAcceptedTerms]="login.checkIfUserAcceptedTerms()"
-        ></app-accept-terms-checkbox>
+    <div ngbDropdown class="d-inline-block" id="login-selection-dropdown">
+      <button class="btn btn-outline-primary" ngbDropdownToggle>
+        Choose your login method
+      </button>
+      <div ngbDropdownMenu aria-labelledby="login-selection-dropdown">
+        <button
+          (click)="handleLoginMethodSelection($event.target.value)"
+          value="Email"
+          class="dropdown-item accept-terms--dropdown-item"
+          ngbDropdownItem
+        >
+          Email &nbsp;<i class="fa fa-envelope-open" aria-hidden="true"></i>
+        </button>
+        <button
+          (click)="handleLoginMethodSelection($event.target.value)"
+          value="Twitter"
+          class="dropdown-item accept-terms--dropdown-item"
+          ngbDropdownItem
+        >
+          Twitter &nbsp;<i class="fa fa-twitter" aria-hidden="true"></i>
+        </button>
+        <button
+          (click)="handleLoginMethodSelection($event.target.value)"
+          value="Facebook"
+          class="dropdown-item accept-terms--dropdown-item"
+          ngbDropdownItem
+        >
+          Facebook &nbsp;<i class="fa fa-facebook" aria-hidden="true"></i>
+        </button>
+        <button
+          (click)="handleLoginMethodSelection($event.target.value)"
+          value="Github"
+          class="dropdown-item accept-terms--dropdown-item"
+          ngbDropdownItem
+        >
+          Github &nbsp;<i class="fa fa-github" aria-hidden="true"></i>
+        </button>
+        <button
+          (click)="handleLoginMethodSelection($event.target.value)"
+          value="Google"
+          class="dropdown-item accept-terms--dropdown-item"
+          ngbDropdownItem
+        >
+          Google &nbsp;<i class="fa fa-google" aria-hidden="true"></i>
+        </button>
       </div>
+    </div>
+
+    <div *ngIf="selection" id="accept-terms-checkbox-container">
+      <app-accept-terms-checkbox
+        [hasAcceptedTerms]="login.checkIfUserAcceptedTerms()"
+      ></app-accept-terms-checkbox>
     </div>
   </div>
 </div>
