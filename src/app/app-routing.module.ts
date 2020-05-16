@@ -1,6 +1,5 @@
 ﻿import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { AllJobsComponent } from "./components/jobs/all-jobs/all-jobs.component";
 import { LoginComponent } from "./components/auth/login/login.component";
 import { PrivacyComponent } from "./components/privacyTerms/privacy/privacy.component";
 import { TermsAndConditionsComponent } from "./components/privacyTerms/terms-and-conditions/terms-and-conditions.component";
@@ -17,7 +16,10 @@ const routes: Routes = [
   },
   {
     path: "all-jobs",
-    component: AllJobsComponent,
+    loadChildren: () =>
+      import("./components/jobs/all-jobs/all-jobs.module").then(
+        (module) => module.AllJobsModule
+      ),
     canActivate: [AuthGuard],
   },
   {

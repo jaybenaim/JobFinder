@@ -10,6 +10,9 @@ export class LinkedInComponent implements OnInit {
 
   constructor(private jobs: JobService) {}
 
+  minimize() {
+    this.positions = [];
+  }
   getJobsFromLinkedIn() {
     this.jobs.getJobsFromLinkedIn().subscribe(
       (data) => {

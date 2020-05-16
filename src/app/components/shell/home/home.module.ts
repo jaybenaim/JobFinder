@@ -3,29 +3,13 @@ import { CommonModule } from "@angular/common";
 
 import { HomeComponent } from "./home.component";
 import { HomeRoutingModule } from "./home-routing.module";
-import { RemoteokComponent } from "../../jobs/remoteok/remoteok.component";
 import { SavedJobsComponent } from "../../jobs/saved-jobs/saved-jobs.component";
 import { AllJobsComponent } from "../../jobs/all-jobs/all-jobs.component";
 import { SearchBarComponent } from "../search-bar/search-bar.component";
-import { IndeedComponent } from "../../jobs/indeed/indeed.component";
-import { LinkedInComponent } from "../../jobs/linked-in/linked-in.component";
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    RemoteokComponent,
-    SavedJobsComponent,
-    AllJobsComponent,
-    SearchBarComponent,
-    IndeedComponent,
-    LinkedInComponent,
-  ],
+  declarations: [HomeComponent, SavedJobsComponent, SearchBarComponent],
   imports: [CommonModule, HomeRoutingModule],
-  exports: [
-    RemoteokComponent,
-    SavedJobsComponent,
-    AllJobsComponent,
-    SearchBarComponent,
-  ],
+  exports: [SavedJobsComponent, SearchBarComponent],
 })
 export class HomeModule {}
