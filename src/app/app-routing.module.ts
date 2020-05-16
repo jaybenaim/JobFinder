@@ -15,10 +15,10 @@ const routes: Routes = [
       ),
   },
   {
-    path: "all-jobs",
+    path: "jobs",
     loadChildren: () =>
-      import("./components/jobs/all-jobs/all-jobs.module").then(
-        (module) => module.AllJobsModule
+      import("./components/pages/jobs/jobs.module").then(
+        (module) => module.JobsModule
       ),
   },
   {

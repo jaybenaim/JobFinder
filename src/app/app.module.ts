@@ -23,7 +23,7 @@ import { AcceptTermsComponent } from "./components/auth/accept-terms/accept-term
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { EmailComponent } from "./components/auth/email/email.component";
 import { AcceptTermsCheckboxComponent } from "./components/auth/accept-terms-checkbox/accept-terms-checkbox.component";
-import { AllJobsModule } from "./components/jobs/all-jobs/all-jobs.module";
+import { JobsModule } from "./components/pages/jobs/jobs.module";
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { AllJobsModule } from "./components/jobs/all-jobs/all-jobs.module";
     HttpClientModule,
     AppRoutingModule,
     HomeModule,
-    AllJobsModule,
+    JobsModule,
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase, "jobfinder"),

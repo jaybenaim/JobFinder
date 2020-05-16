@@ -1,59 +1,36 @@
-<div class="all-jobs container">
-  <div class="row">
-    <div class="col">
-      <div class="job-card">
-        <button (click)="getAllJobs()" class="job-card__fetch">
-          Get All Jobs
-        </button>
-        <ul>
-          <div *ngIf="positions && positions.length >= 1">
-            <strong>All Job Listings </strong>
-            <button (click)="minimize()">Minimize</button>
+<div class="job-card">
+  <button (click)="getAllJobs()" class="job-card__fetch">
+    Get All Jobs
+  </button>
+  <ul>
+    <div *ngIf="positions && positions.length >= 1">
+      <strong>All Job Listings </strong>
+      <button (click)="minimize()">Minimize</button>
 
-            <!-- Remoteok Results -->
+      <!-- Remoteok Results -->
+      <li *ngFor="let position of positions; index as i; first as isFirst">
+        <a
+          href="{{ positions[i].link }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ positions[i].title }}
+          {{ positions[i].salary }}
+          <ul>
             <li
-              *ngFor="let position of positions; index as i; first as isFirst"
+              *ngFor="
+                let requirement of positions[i].requirements;
+                index as i;
+                first as isFirst
+              "
             >
-              <a
-                href="{{ positions[i].link }}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {{ positions[i].title }}
-                {{ positions[i].salary }}
-                <ul>
-                  <li
-                    *ngFor="
-                      let requirement of positions[i].requirements;
-                      index as i;
-                      first as isFirst
-                    "
-                  >
-                    {{ requirement }}
-                  </li>
-                </ul>
-              </a>
+              {{ requirement }}
             </li>
-          </div>
-        </ul>
-      </div>
+          </ul>
+        </a>
+      </li>
     </div>
-    <div class="col">
-      <a routerLink="/all-jobs/remoteok"> Get remote ok jobs</a>
-    </div>
-    <!-- end indeed row -->
-  </div>
-  <div class="row">
-    <div class="col">
-      <a routerLink="/all-jobs/indeed"> Get remote ok jobs</a>
-    </div>
-    <div class="col">
-      <a routerLink="/all-jobs/linked-in"> Get remote ok jobs</a>
-    </div>
-  </div>
-
-  <!-- end all-jobs-container -->
+  </ul>
 </div>
-<!-- end container -->
 
 <router-outlet name="all-jobs"></router-outlet>
