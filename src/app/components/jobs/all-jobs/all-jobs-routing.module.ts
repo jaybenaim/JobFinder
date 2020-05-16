@@ -12,15 +12,15 @@ const routes: Routes = [
     component: AllJobsComponent,
   },
   {
-    path: "remoteok",
+    path: "all-jobs/remoteok",
     component: RemoteokComponent,
   },
   {
-    path: "indeed",
+    path: "all-jobs/indeed",
     component: IndeedComponent,
   },
   {
-    path: "linked-in",
+    path: "all-jobs/linked-in",
     component: LinkedInComponent,
   },
 ];

@@ -20,7 +20,6 @@ const routes: Routes = [
       import("./components/jobs/all-jobs/all-jobs.module").then(
         (module) => module.AllJobsModule
       ),
-    canActivate: [AuthGuard],
   },
   {
     path: "login",
