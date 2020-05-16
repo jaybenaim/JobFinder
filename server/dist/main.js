@@ -749,6 +749,9 @@ var LoginComponent = /** @class */ (function () {
             if (err.code === "auth/account-exists-with-different-credential") {
                 alert(err.message);
             }
+            else {
+                alert("Something went wrong");
+            }
         });
     };
     LoginComponent.prototype.redirect = function () {
@@ -912,7 +915,7 @@ var AllJobsComponent = /** @class */ (function () {
     };
     AllJobsComponent.prototype.ngOnInit = function () { };
     AllJobsComponent.ɵfac = function AllJobsComponent_Factory(t) { return new (t || AllJobsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"])); };
-    AllJobsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AllJobsComponent, selectors: [["app-all-jobs"]], decls: 6, vars: 1, consts: [[1, "all-jobs"], [3, "click"], [4, "ngIf"], ["name", "all-jobs"], [4, "ngFor", "ngForOf"], ["target", "_blank", 3, "href"]], template: function AllJobsComponent_Template(rf, ctx) { if (rf & 1) {
+    AllJobsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AllJobsComponent, selectors: [["app-all-jobs"]], decls: 6, vars: 1, consts: [[1, "all-jobs"], [3, "click"], [4, "ngIf"], ["name", "all-jobs"], [4, "ngFor", "ngForOf"], ["target", "_blank", "rel", "noopener noreferrer", 3, "href"]], template: function AllJobsComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AllJobsComponent_Template_button_click_1_listener() { return ctx.getAllJobs(); });
@@ -961,9 +964,14 @@ __webpack_require__.r(__webpack_exports__);
 var IndeedComponent = /** @class */ (function () {
     function IndeedComponent(jobs) {
         this.jobs = jobs;
+        this.positions = [];
     }
     IndeedComponent.prototype.getJobsFromIndeed = function () {
-        this.jobs.getJobsFromIndeed().subscribe(function (data) { return console.log(data); }, function (err) { return console.log(err); });
+        var _this = this;
+        this.jobs.getJobsFromIndeed().subscribe(function (data) {
+            _this.positions = data["positions"];
+            console.log(data);
+        }, function (err) { return console.log(err); });
     };
     IndeedComponent.prototype.ngOnInit = function () { };
     IndeedComponent.ɵfac = function IndeedComponent_Factory(t) { return new (t || IndeedComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"])); };
@@ -982,6 +990,88 @@ var IndeedComponent = /** @class */ (function () {
                 selector: "app-indeed",
                 templateUrl: "./indeed.component.html",
                 styleUrls: ["./indeed.component.css"],
+            }]
+    }], function () { return [{ type: src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/components/jobs/linked-in/linked-in.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/components/jobs/linked-in/linked-in.component.ts ***!
+  \******************************************************************/
+/*! exports provided: LinkedInComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinkedInComponent", function() { return LinkedInComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/job.service */ "./src/app/services/job.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
+
+
+
+
+
+function LinkedInComponent_div_2_div_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var position_r2 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", position_r2.link, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", position_r2.title, " ");
+} }
+function LinkedInComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, LinkedInComponent_div_2_div_2_Template, 3, 2, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.positions.length, " jobs available ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.positions);
+} }
+var LinkedInComponent = /** @class */ (function () {
+    function LinkedInComponent(jobs) {
+        this.jobs = jobs;
+        this.positions = [];
+    }
+    LinkedInComponent.prototype.getJobsFromLinkedIn = function () {
+        var _this = this;
+        this.jobs.getJobsFromLinkedIn().subscribe(function (data) {
+            var positions = data["positions"].map(function (p, i) { return p; });
+            _this.positions = positions;
+        }, function (err) { return console.log(err); });
+    };
+    LinkedInComponent.prototype.ngOnInit = function () { };
+    LinkedInComponent.ɵfac = function LinkedInComponent_Factory(t) { return new (t || LinkedInComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"])); };
+    LinkedInComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LinkedInComponent, selectors: [["app-linked-in"]], decls: 3, vars: 1, consts: [[3, "click"], [4, "ngIf"], [4, "ngFor", "ngForOf"], ["rel", "noopener noreferrer", "target", "_blank", 3, "href"]], template: function LinkedInComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function LinkedInComponent_Template_button_click_0_listener() { return ctx.getJobsFromLinkedIn(); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Get All from Linked In\n");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, LinkedInComponent_div_2_Template, 3, 2, "div", 1);
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.positions && ctx.positions.length >= 1);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvam9icy9saW5rZWQtaW4vbGlua2VkLWluLmNvbXBvbmVudC5jc3MifQ== */"] });
+    return LinkedInComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](LinkedInComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: "app-linked-in",
+                templateUrl: "./linked-in.component.html",
+                styleUrls: ["./linked-in.component.css"],
             }]
     }], function () { return [{ type: src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"] }]; }, null); })();
 
@@ -1211,7 +1301,7 @@ var RemoteokComponent = /** @class */ (function () {
     };
     RemoteokComponent.prototype.ngOnInit = function () { };
     RemoteokComponent.ɵfac = function RemoteokComponent_Factory(t) { return new (t || RemoteokComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"])); };
-    RemoteokComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: RemoteokComponent, selectors: [["app-remoteok"]], decls: 5, vars: 1, consts: [[1, "remoteok-jobs"], [3, "click"], [4, "ngIf"], ["href", "https://remoteok.io/", "target", "_blank"], [4, "ngFor", "ngForOf"], ["target", "_blank", 3, "href"]], template: function RemoteokComponent_Template(rf, ctx) { if (rf & 1) {
+    RemoteokComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: RemoteokComponent, selectors: [["app-remoteok"]], decls: 5, vars: 1, consts: [[1, "remoteok-jobs"], [3, "click"], [4, "ngIf"], ["href", "https://remoteok.io/", "target", "_blank", "rel", "noopener noreferrer"], [4, "ngFor", "ngForOf"], ["target", "_blank", "rel", "noopener noreferrer", 3, "href"]], template: function RemoteokComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function RemoteokComponent_Template_button_click_1_listener() { return ctx.getJobsFromRemoteok(); });
@@ -1910,7 +2000,7 @@ var PrivacyComponent = /** @class */ (function () {
     };
     PrivacyComponent.prototype.ngOnInit = function () { };
     PrivacyComponent.ɵfac = function PrivacyComponent_Factory(t) { return new (t || PrivacyComponent)(); };
-    PrivacyComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PrivacyComponent, selectors: [["app-privacy"]], decls: 78, vars: 1, consts: [[1, "container"], [1, "row"], [1, "col-md-12"], ["href", "https://job-finder-web-scraper.herokuapp.com/"], ["href", "https://www.privacypolicytemplate.net"], ["href", "https://www.disclaimergenerator.org/"], ["href", "https://www.cookieconsent.com/what-are-cookies/"], ["title", "Privacy Policy ", 1, "iubenda-white", "iubenda-embed", 3, "click"], [4, "ngIf"], ["id", "wbars_all"], [1, "iub_container", "iub_base_container"], ["id", "wbars"], [1, "iub_content", "legal_pp"], [1, "one_line_col"], ["id", "owner_of_the_data"], ["id", "types_of_data"], ["id", "place_of_processing"], ["id", "use_collected_data"], ["id", "facebook_permissions"], ["href", "https://developers.facebook.com/docs/facebook-login/permissions", "target", "_blank", "rel", "noopener"], ["href", "https://www.facebook.com/about/privacy/", "target", "_blank", "rel", "noopener"], ["id", "data_processing_detailed_info"], [1, "for_boxes"], [1, "box_primary", "box_10", "expand", "collapsed"], [1, "expand-click", "w_icon_24", "policyicon_purpose_7122352"], [1, "expand-content"], [1, "wrap"], ["href", "https://www.facebook.com/policy.php", "target", "_blank", "rel", "noopener noreferrer"], ["href", "https://twitter.com/privacy", "target", "_blank", "rel", "noopener noreferrer"], [1, "box_primary", "box_10"], ["href", "https://policies.google.com/privacy", "target", "_blank", "rel", "noopener noreferrer"], ["href", "https://tools.google.com/dlpage/gaoptout?hl=en", "target", "_blank"], [1, "box_primary", "box_10", "expand"], ["href", "https://help.github.com/en/articles/github-privacy-statement", "target", "_blank", "rel", "noopener noreferrer"], ["id", "rights_subjects"], ["id", "further_data_processing_info"], [1, "box_primary", "box_10", "definitions", "expand", "collapsed"], ["id", "definitions_and_legal_references", 1, "expand-click", "w_icon_24", "icon_ribbon"], [1, "expand-content", 2, "display", "none"], [1, "iub_footer"], ["target", "_top", "href", "//www.iubenda.com", "title", "iubenda - Privacy Policy generator"], ["target", "_top", "href", "//www.iubenda.com/privacy-policy/65675001"], ["href", "//www.iubenda.com", "title", "iubenda", "target", "_blank", "rel", "noopener", 1, "no_border"], ["alt", "iubenda", "src", "//www.iubenda.com/assets/site/logo_min.png"], ["href", "//www.iubenda.com", "target", "_blank", "rel", "noopener", "title", "Generate a privacy policy", 1, "btn", "iubgreen"]], template: function PrivacyComponent_Template(rf, ctx) { if (rf & 1) {
+    PrivacyComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PrivacyComponent, selectors: [["app-privacy"]], decls: 78, vars: 1, consts: [[1, "container"], [1, "row"], [1, "col-md-12"], ["href", "https://job-finder-web-scraper.herokuapp.com/"], ["href", "https://www.privacypolicytemplate.net"], ["href", "https://www.disclaimergenerator.org/"], ["href", "https://www.cookieconsent.com/what-are-cookies/"], ["title", "Privacy Policy ", 1, "iubenda-white", "iubenda-embed", 3, "click"], [4, "ngIf"], ["id", "wbars_all"], [1, "iub_container", "iub_base_container"], ["id", "wbars"], [1, "iub_content", "legal_pp"], [1, "one_line_col"], ["id", "owner_of_the_data"], ["id", "types_of_data"], ["id", "place_of_processing"], ["id", "use_collected_data"], ["id", "facebook_permissions"], ["href", "https://developers.facebook.com/docs/facebook-login/permissions", "target", "_blank", "rel", "noopener"], ["href", "https://www.facebook.com/about/privacy/", "target", "_blank", "rel", "noopener"], ["id", "data_processing_detailed_info"], [1, "for_boxes"], [1, "box_primary", "box_10", "expand", "collapsed"], [1, "expand-click", "w_icon_24", "policyicon_purpose_7122352"], [1, "expand-content"], [1, "wrap"], ["href", "https://www.facebook.com/policy.php", "target", "_blank", "rel", "noopener noreferrer"], ["href", "https://twitter.com/privacy", "target", "_blank", "rel", "noopener noreferrer"], [1, "box_primary", "box_10"], ["href", "https://policies.google.com/privacy", "target", "_blank", "rel", "noopener noreferrer"], ["href", "https://tools.google.com/dlpage/gaoptout?hl=en", "target", "_blank", "rel", "noopener noreferrer"], [1, "box_primary", "box_10", "expand"], ["href", "https://help.github.com/en/articles/github-privacy-statement", "target", "_blank", "rel", "noopener noreferrer"], ["id", "rights_subjects"], ["id", "further_data_processing_info"], [1, "box_primary", "box_10", "definitions", "expand", "collapsed"], ["id", "definitions_and_legal_references", 1, "expand-click", "w_icon_24", "icon_ribbon"], [1, "expand-content", 2, "display", "none"], [1, "iub_footer"], ["target", "_top", "href", "//www.iubenda.com", "title", "iubenda - Privacy Policy generator"], ["target", "_top", "href", "//www.iubenda.com/privacy-policy/65675001"], ["href", "//www.iubenda.com", "title", "iubenda", "target", "_blank", "rel", "noopener", 1, "no_border"], ["alt", "iubenda", "src", "//www.iubenda.com/assets/site/logo_min.png"], ["href", "//www.iubenda.com", "target", "_blank", "rel", "noopener", "title", "Generate a privacy policy", 1, "btn", "iubgreen"]], template: function PrivacyComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -2455,6 +2545,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../search-bar/search-bar.component */ "./src/app/components/shell/search-bar/search-bar.component.ts");
 /* harmony import */ var _jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../jobs/remoteok/remoteok.component */ "./src/app/components/jobs/remoteok/remoteok.component.ts");
 /* harmony import */ var _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../jobs/indeed/indeed.component */ "./src/app/components/jobs/indeed/indeed.component.ts");
+/* harmony import */ var _jobs_linked_in_linked_in_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../jobs/linked-in/linked-in.component */ "./src/app/components/jobs/linked-in/linked-in.component.ts");
+
 
 
 
@@ -2465,7 +2557,7 @@ var HomeComponent = /** @class */ (function () {
     }
     HomeComponent.prototype.ngOnInit = function () { };
     HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(); };
-    HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 8, vars: 0, consts: [["id", "mainContent"], [1, "container"], [1, "row", "justify-content-center", "py-5"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+    HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 9, vars: 0, consts: [["id", "mainContent"], [1, "container"], [1, "row", "justify-content-center", "py-5"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "main", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -2476,9 +2568,10 @@ var HomeComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "app-search-bar");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "app-remoteok");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "app-indeed");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "app-linked-in");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        } }, directives: [_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_1__["SearchBarComponent"], _jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_2__["RemoteokComponent"], _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_3__["IndeedComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2hlbGwvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MifQ== */"] });
+        } }, directives: [_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_1__["SearchBarComponent"], _jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_2__["RemoteokComponent"], _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_3__["IndeedComponent"], _jobs_linked_in_linked_in_component__WEBPACK_IMPORTED_MODULE_4__["LinkedInComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2hlbGwvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MifQ== */"] });
     return HomeComponent;
 }());
 
@@ -2513,6 +2606,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../jobs/all-jobs/all-jobs.component */ "./src/app/components/jobs/all-jobs/all-jobs.component.ts");
 /* harmony import */ var _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../search-bar/search-bar.component */ "./src/app/components/shell/search-bar/search-bar.component.ts");
 /* harmony import */ var _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../jobs/indeed/indeed.component */ "./src/app/components/jobs/indeed/indeed.component.ts");
+/* harmony import */ var _jobs_linked_in_linked_in_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../jobs/linked-in/linked-in.component */ "./src/app/components/jobs/linked-in/linked-in.component.ts");
+
 
 
 
@@ -2536,7 +2631,8 @@ var HomeModule = /** @class */ (function () {
         _jobs_saved_jobs_saved_jobs_component__WEBPACK_IMPORTED_MODULE_5__["SavedJobsComponent"],
         _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_6__["AllJobsComponent"],
         _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_7__["SearchBarComponent"],
-        _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_8__["IndeedComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _home_routing_module__WEBPACK_IMPORTED_MODULE_3__["HomeRoutingModule"]], exports: [_jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_4__["RemoteokComponent"],
+        _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_8__["IndeedComponent"],
+        _jobs_linked_in_linked_in_component__WEBPACK_IMPORTED_MODULE_9__["LinkedInComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _home_routing_module__WEBPACK_IMPORTED_MODULE_3__["HomeRoutingModule"]], exports: [_jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_4__["RemoteokComponent"],
         _jobs_saved_jobs_saved_jobs_component__WEBPACK_IMPORTED_MODULE_5__["SavedJobsComponent"],
         _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_6__["AllJobsComponent"],
         _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_7__["SearchBarComponent"]] }); })();
@@ -2550,6 +2646,7 @@ var HomeModule = /** @class */ (function () {
                     _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_6__["AllJobsComponent"],
                     _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_7__["SearchBarComponent"],
                     _jobs_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_8__["IndeedComponent"],
+                    _jobs_linked_in_linked_in_component__WEBPACK_IMPORTED_MODULE_9__["LinkedInComponent"],
                 ],
                 imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _home_routing_module__WEBPACK_IMPORTED_MODULE_3__["HomeRoutingModule"]],
                 exports: [
@@ -2968,6 +3065,9 @@ var JobService = /** @class */ (function () {
     };
     JobService.prototype.getJobsFromIndeed = function () {
         return this.http.get(this.endpoint + "/api/jobs/indeed");
+    };
+    JobService.prototype.getJobsFromLinkedIn = function () {
+        return this.http.get(this.endpoint + "/api/jobs/linked-in");
     };
     JobService.ɵfac = function JobService_Factory(t) { return new (t || JobService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
     JobService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: JobService, factory: JobService.ɵfac, providedIn: "root" });

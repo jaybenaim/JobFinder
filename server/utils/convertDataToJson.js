@@ -14,7 +14,7 @@ setTimeout(() => {
       getLinkedInResults(),
     ]);
 
-    console.log("Scraping");
+    console.log("Writing data...");
 
     let results = {
       positions: [

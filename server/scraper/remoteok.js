@@ -1,5 +1,6 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
+const _ = require("lodash");
 
 const siteUrl = "https://remoteok.io/";
 let siteName = "";
@@ -31,11 +32,29 @@ const getResults = async () => {
     categories.add($(element).text());
   });
 
-  $(".company_and_position ").each((index, element) => {
-    positions.add({
-      title: $(element).text(),
-      link: siteUrl + $(element).find(".preventLink").attr("href"),
-    });
+  $("tr").each((index, element) => {
+    let title = $(element).find(".company_and_position h2").text();
+    let link =
+      siteUrl +
+      $(element).find(".company_and_position .preventLink").attr("href");
+
+    // Get Element tags
+    let elementTags = [];
+    $(element)
+      .find(".tag h3")
+      .each((i, t) => {
+        console.log("T", t);
+        elementTags.push($(t).text());
+      });
+
+    // create position item
+    title !== "" &&
+      title !== "Today " &&
+      positions.add({
+        title,
+        link,
+        tags: elementTags,
+      });
   });
 
   return {
