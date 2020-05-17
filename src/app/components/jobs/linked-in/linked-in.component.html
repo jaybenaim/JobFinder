@@ -1,17 +1,15 @@
-<div class="job-card">
-  <button (click)="getJobsFromLinkedIn()">
-    Get All from Linked In
-  </button>
-  <div *ngIf="positions && positions.length >= 1">
-    {{ positions.length }} jobs available
+<button (click)="getJobsFromLinkedIn()">
+  Get All from Linked In
+</button>
+<div *ngIf="positions && positions.length >= 1">
+  {{ positions.length }} jobs available
 
-    <button (click)="minimize()">Minimize</button>
-    <div *ngIf="positions && positions.length >= 1">
-      <div *ngFor="let position of positions">
-        <a [href]="position.link" rel="noopener noreferrer" target="_blank">
-          {{ position.title }}
-        </a>
-      </div>
+  <button (click)="minimize()">Minimize</button>
+  <div *ngIf="positions && positions.length >= 1">
+    <div *ngFor="let position of positions">
+      <a [href]="position.link" rel="noopener noreferrer" target="_blank">
+        {{ position.title }}
+      </a>
     </div>
   </div>
 </div>

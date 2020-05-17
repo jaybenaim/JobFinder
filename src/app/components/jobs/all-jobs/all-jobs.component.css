@@ -2,8 +2,4 @@
   .all-jobs {
     padding: 10%;
   }
-  .job-card {
-    height: 200px;
-    min-width: 100%;
-  }
 }

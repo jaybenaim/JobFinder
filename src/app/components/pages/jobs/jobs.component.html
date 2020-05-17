@@ -1,22 +1,35 @@
-<div class="all-jobs container">
-  <div class="row">
-    <div class="col">
-      <a routerLink="/jobs/all-jobs"> Get All</a>
+<div class="all-jobs container-fluid">
+  <div class="job-cards">
+    <div class="job-card">
+      <a routerLink="/jobs/all-jobs">
+        <p class="title">
+          All Jobs
+        </p>
+      </a>
     </div>
-    <div class="col">
-      <a routerLink="/jobs/remoteok"> Get Remote Ok jobs</a>
+    <div class="job-card">
+      <a routerLink="/jobs/remoteok">
+        <p class="title">
+          Remote Ok
+        </p>
+      </a>
     </div>
-    <!-- end  row -->
-  </div>
-  <div class="row">
-    <div class="col">
-      <a routerLink="/jobs/indeed"> Get Indeed jobs</a>
+    <div class="job-card">
+      <a routerLink="/jobs/indeed">
+        <p class="title">
+          Indeed
+        </p>
+      </a>
     </div>
-    <div class="col">
-      <a routerLink="/jobs/linked-in"> Get Linked In</a>
-    </div>
-  </div>
 
-  <!-- end all-jobs-container -->
+    <div class="job-card">
+      <a routerLink="/jobs/linked-in">
+        <p class="title">
+          Linked In
+          <!-- add amount of jobs  -->
+        </p>
+      </a>
+    </div>
+  </div>
+  <!-- end job cards -->
 </div>
-<!-- end container -->

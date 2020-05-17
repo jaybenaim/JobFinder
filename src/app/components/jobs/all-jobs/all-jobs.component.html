@@ -1,36 +1,34 @@
-<div class="job-card">
-  <button (click)="getAllJobs()" class="job-card__fetch">
-    Get All Jobs
-  </button>
-  <ul>
-    <div *ngIf="positions && positions.length >= 1">
-      <strong>All Job Listings </strong>
-      <button (click)="minimize()">Minimize</button>
+<button (click)="getAllJobs()" class="job-card__fetch">
+  Get All Jobs
+</button>
+<ul>
+  <div *ngIf="positions && positions.length >= 1">
+    <strong>All Job Listings </strong>
+    <button (click)="minimize()">Minimize</button>
 
-      <!-- Remoteok Results -->
-      <li *ngFor="let position of positions; index as i; first as isFirst">
-        <a
-          href="{{ positions[i].link }}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {{ positions[i].title }}
-          {{ positions[i].salary }}
-          <ul>
-            <li
-              *ngFor="
-                let requirement of positions[i].requirements;
-                index as i;
-                first as isFirst
-              "
-            >
-              {{ requirement }}
-            </li>
-          </ul>
-        </a>
-      </li>
-    </div>
-  </ul>
-</div>
+    <!-- Remoteok Results -->
+    <li *ngFor="let position of positions; index as i; first as isFirst">
+      <a
+        href="{{ positions[i].link }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ positions[i].title }}
+        {{ positions[i].salary }}
+        <ul>
+          <li
+            *ngFor="
+              let requirement of positions[i].requirements;
+              index as i;
+              first as isFirst
+            "
+          >
+            {{ requirement }}
+          </li>
+        </ul>
+      </a>
+    </li>
+  </div>
+</ul>
 
 <router-outlet name="all-jobs"></router-outlet>

@@ -1,5 +1,5 @@
 ﻿.footer {
-  background-color: #212529;
+  background-color: #495057;
   padding-top: 2rem;
   padding-bottom: 4rem;
   color: #28a745;
@@ -39,5 +39,5 @@
 }
 
 .footer .privacy-links a {
-  color: #fff;
+  color: #28a745;
 }

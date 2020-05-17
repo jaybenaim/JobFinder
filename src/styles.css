@@ -5,11 +5,13 @@
 html {
   position: relative;
   min-height: 100%;
+  background-color: #f6f7f9 !important;
 }
 
 body {
   margin-bottom: 160px !important; /* Height of the footer */
   padding: 0;
+  background-color: #f6f7f9 !important;
 }
 
 footer {
