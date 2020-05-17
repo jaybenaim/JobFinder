@@ -43,7 +43,6 @@ const getResults = async () => {
     $(element)
       .find(".tag h3")
       .each((i, t) => {
-        console.log("T", t);
         elementTags.push($(t).text());
       });
 

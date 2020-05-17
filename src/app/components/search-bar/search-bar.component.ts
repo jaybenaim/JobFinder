@@ -53,12 +53,12 @@ export class SearchBarComponent implements OnInit {
         res[r] = jobList[filter];
       }
     }
-
+    // todo change backend so you can loop through each as array
     this.results = res;
     console.log(this.results);
+    //
 
-    console.log(res);
-    const filteredJobs = [];
+    //  / const filteredJobs = [];
 
     // for (let result in res) {
     //   let originalJobList = jobList[result.replace("Results", "")];
