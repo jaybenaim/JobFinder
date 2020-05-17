@@ -1,0 +1,13 @@
+<div class="container">
+  <input
+    type="search"
+    placeholder="Search..."
+    (input)="handleSearch($event)"
+    class="search-bar"
+  />
+  <ul>
+    <li *ngFor="let result of results; index as i; first as isFirst">
+      {{ result }}
+    </li>
+  </ul>
+</div>
