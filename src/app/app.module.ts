@@ -24,6 +24,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { EmailComponent } from "./components/auth/email/email.component";
 import { AcceptTermsCheckboxComponent } from "./components/auth/accept-terms-checkbox/accept-terms-checkbox.component";
 import { JobsModule } from "./components/pages/jobs/jobs.module";
+import { SearchBarModule } from "./components/search-bar/search-bar.module";
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { JobsModule } from "./components/pages/jobs/jobs.module";
     AppRoutingModule,
     HomeModule,
     JobsModule,
+    SearchBarModule,
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase, "jobfinder"),

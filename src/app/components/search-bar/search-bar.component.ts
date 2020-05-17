@@ -8,29 +8,91 @@ import { JobService } from "src/app/services/job.service";
 })
 export class SearchBarComponent implements OnInit {
   query: string = "";
-  results: any[] = [];
+  results: any;
   allJobs: any[] = [];
+  filters = {
+    positions: false,
+    locations: false,
+    categories: false,
+    tags: false,
+    websites: false,
+  };
+  filter: boolean = false;
 
   constructor(private jobs: JobService) {}
 
+  setFilter(e) {
+    this.filters[e.name] = !this.filters[e.name];
+    this.handleSearch(this.query);
+  }
+  getFilter() {
+    return this.filters;
+  }
+  filterResults = (filter) => {};
   handleSearch(e) {
-    this.query = e.target.value.toLowerCase();
-    let positions = this.allJobs[0]["positions"];
-    let titles = [];
+    this.query = e.toLowerCase();
 
-    for (let key in positions) {
-      let value = positions[key];
-      titles.push(value.title);
+    let jobList = {
+      positions: this.allJobs[0]["positions"],
+      locations: this.allJobs[0]["locations"],
+      categories: this.allJobs[0]["categories"],
+      tags: this.allJobs[0]["tags"],
+      websites: this.allJobs[0]["siteNames"],
+    };
+
+    const res = {
+      positionsResults: [],
+      locationsResults: [],
+      categoriesResults: [],
+      tagsResults: [],
+      websitesResults: [],
+    };
+    for (let filter in this.filters) {
+      let r = `${filter}Results`;
+      if (this.filters[filter]) {
+        res[r] = jobList[filter];
+      }
     }
-    let filteredJobs = titles.filter((job) =>
-      job.toLowerCase().includes(this.query)
-    );
 
-    this.query.length <= 1
-      ? (this.results = [])
-      : (this.results = filteredJobs);
+    this.results = res;
+    console.log(this.results);
+
+    console.log(res);
+    const filteredJobs = [];
+
+    // for (let result in res) {
+    //   let originalJobList = jobList[result.replace("Results", "")];
+    //   if (res[result].length >= 1) {
+    //     switch (result) {
+    //       case "positionsResults":
+    //         let filteredPositions = originalJobList.filter((r) => {
+    //           return r.title.toLowerCase().includes(this.query.toLowerCase());
+    //         });
+    //         res[result] = filteredPositions;
+    //       case "locationsResults":
+    //         let locationJobs = [];
+    //         for (let job in originalJobList) {
+    //           locationJobs.push(originalJobList[job]);
+    //         }
+
+    //         let filteredLocations = locationJobs.filter((location) => {
+    //           console.log(location);
+    //           // return location.toLowerCase().includes(this.query.toLowerCase());
+    //         });
+    //         res[result] = filteredLocations;
+    //         break;
+    //       default:
+    //         res[result] = originalJobList.filter((r) => {
+    //           return r.title.toLowerCase().includes(this.query.toLowerCase());
+    //         });
+    //     }
+    //     this.results = res;
+    //     console.log(res);
+    //   }
+    // }
   }
 
+  filterJobs() {}
   getJobs() {
     this.jobs.getAllJobs().subscribe(
       (data) => {
@@ -42,6 +104,7 @@ export class SearchBarComponent implements OnInit {
       }
     );
   }
+
   ngOnInit(): void {
     this.getJobs();
   }

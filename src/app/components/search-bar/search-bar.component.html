@@ -2,12 +2,13 @@
   <input
     type="search"
     placeholder="Search..."
-    (input)="handleSearch($event)"
+    (input)="handleSearch($event.target.value)"
     class="search-bar"
   />
-  <ul>
+  <app-search-bar-filter> </app-search-bar-filter>
+  <!-- <ul>
     <li *ngFor="let result of results; index as i; first as isFirst">
       {{ result }}
     </li>
-  </ul>
+  </ul> -->
 </div>

@@ -5,10 +5,16 @@ import { HomeComponent } from "./home.component";
 import { HomeRoutingModule } from "./home-routing.module";
 import { SavedJobsComponent } from "../../jobs/saved-jobs/saved-jobs.component";
 import { SearchBarComponent } from "../../search-bar/search-bar.component";
+import { SearchBarFilterComponent } from "../../search-bar-filter/search-bar-filter.component";
 
 @NgModule({
-  declarations: [HomeComponent, SavedJobsComponent, SearchBarComponent],
+  declarations: [
+    HomeComponent,
+    SavedJobsComponent,
+    SearchBarComponent,
+    SearchBarFilterComponent,
+  ],
   imports: [CommonModule, HomeRoutingModule],
-  exports: [SavedJobsComponent, SearchBarComponent],
+  exports: [SavedJobsComponent],
 })
 export class HomeModule {}
