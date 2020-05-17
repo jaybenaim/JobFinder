@@ -8,8 +8,8 @@ import { JobService } from "src/app/services/job.service";
 })
 export class SearchBarComponent implements OnInit {
   query: string = "";
-  results: any;
   allJobs: any[] = [];
+  results: any;
   filters = {
     positions: false,
     locations: false,
@@ -28,7 +28,24 @@ export class SearchBarComponent implements OnInit {
   getFilter() {
     return this.filters;
   }
-  filterResults = (filter) => {};
+  filterResults = (filters, results) => {
+    // get active filters
+    for (let filter in filters) {
+      let convertedFilterName = `${filter}Results`;
+      let result = results[convertedFilterName];
+
+      if (filter === "positions" && filters[filter]) {
+        this.results[convertedFilterName] = result.filter((item) => {
+          let itemTitle = item.title.toLowerCase();
+          let query = this.query.toLowerCase();
+          return itemTitle.includes(query);
+        });
+      }
+    }
+
+    console.log(this.results);
+  };
+
   handleSearch(e) {
     this.query = e.toLowerCase();
 
@@ -53,43 +70,8 @@ export class SearchBarComponent implements OnInit {
         res[r] = jobList[filter];
       }
     }
-    // todo change backend so you can loop through each as array
     this.results = res;
-    console.log(this.results);
-    //
-
-    //  / const filteredJobs = [];
-
-    // for (let result in res) {
-    //   let originalJobList = jobList[result.replace("Results", "")];
-    //   if (res[result].length >= 1) {
-    //     switch (result) {
-    //       case "positionsResults":
-    //         let filteredPositions = originalJobList.filter((r) => {
-    //           return r.title.toLowerCase().includes(this.query.toLowerCase());
-    //         });
-    //         res[result] = filteredPositions;
-    //       case "locationsResults":
-    //         let locationJobs = [];
-    //         for (let job in originalJobList) {
-    //           locationJobs.push(originalJobList[job]);
-    //         }
-
-    //         let filteredLocations = locationJobs.filter((location) => {
-    //           console.log(location);
-    //           // return location.toLowerCase().includes(this.query.toLowerCase());
-    //         });
-    //         res[result] = filteredLocations;
-    //         break;
-    //       default:
-    //         res[result] = originalJobList.filter((r) => {
-    //           return r.title.toLowerCase().includes(this.query.toLowerCase());
-    //         });
-    //     }
-    //     this.results = res;
-    //     console.log(res);
-    //   }
-    // }
+    this.filterResults(this.filters, this.results);
   }
 
   filterJobs() {}
