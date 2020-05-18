@@ -45,6 +45,7 @@ export class SearchBarComponent implements OnInit {
   filterResults = (filters: any, results: any) => {
     // get active filters
     let activeFilters = [];
+
     if (activeFilters.length === 0) {
       this.resetResults();
     }
@@ -83,6 +84,7 @@ export class SearchBarComponent implements OnInit {
             tags.push({ link: item.link, tags: filteredTags });
         }
         this.results[convertedFilterName] = tags;
+        console.log(this.results["tagsResults"]);
       }
       if (filter === "websites" && filters[filter]) {
         this.results[convertedFilterName] = result.filter((siteName: string) =>

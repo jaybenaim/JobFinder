@@ -39,11 +39,11 @@ const getResults = async () => {
       $(element).find(".company_and_position .preventLink").attr("href");
 
     // Get Element tags
-    let elementTags = [];
+    let elementTags = new Set();
     $(element)
       .find(".tag h3")
       .each((i, t) => {
-        elementTags.push($(t).text());
+        elementTags.add($(t).text());
       });
 
     // create position item
@@ -52,7 +52,7 @@ const getResults = async () => {
       positions.add({
         title,
         link,
-        tags: elementTags,
+        tags: [...elementTags],
       });
   });
 
