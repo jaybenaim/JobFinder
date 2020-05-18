@@ -9,7 +9,6 @@ let description = "";
 // exclude duplicates
 const categories = new Set();
 const tags = new Set();
-const locations = new Set();
 const positions = new Set();
 
 const fetchData = async () => {
@@ -25,15 +24,15 @@ const getResults = async () => {
   $(".tags .tag").each((index, element) => {
     tags.add($(element).text());
   });
-  $(".location").each((index, element) => {
-    locations.add($(element).text());
-  });
+
   $("div.nav p").each((index, element) => {
     categories.add($(element).text());
   });
 
   $("tr").each((index, element) => {
     let title = $(element).find(".company_and_position h2").text();
+    let location = $(element).find(".location").first().text();
+
     let link =
       siteUrl +
       $(element).find(".company_and_position .preventLink").attr("href");
@@ -53,13 +52,13 @@ const getResults = async () => {
         title,
         link,
         tags: [...elementTags],
+        location: location,
       });
   });
 
   return {
     positions: [...positions].sort(),
     tags: [...tags].sort(),
-    locations: [...locations].sort(),
     categories: [...categories].sort(),
     siteName,
     description,

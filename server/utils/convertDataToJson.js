@@ -22,7 +22,6 @@ setTimeout(() => {
         ...indeedResults.positions,
         ...linkedInResults.positions,
       ],
-      locations: [...remoteokResults.locations, ...indeedResults.locations],
       categories: [...remoteokResults.categories],
 
       tags: [...remoteokResults.tags],

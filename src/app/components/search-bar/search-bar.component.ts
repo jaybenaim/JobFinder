@@ -66,8 +66,9 @@ export class SearchBarComponent implements OnInit {
       }
       if (filter === "locations" && filters[filter]) {
         this.results[convertedFilterName] = result.filter(
-          (location: string) =>
-            location.toLowerCase().includes(query) && location !== ""
+          (position: any) =>
+            position.location.toLowerCase().includes(query) &&
+            position.location !== ""
         );
       }
       if (filter === "categories" && filters[filter]) {
@@ -84,7 +85,6 @@ export class SearchBarComponent implements OnInit {
             tags.push({ link: item.link, tags: filteredTags });
         }
         this.results[convertedFilterName] = tags;
-        console.log(this.results["tagsResults"]);
       }
       if (filter === "websites" && filters[filter]) {
         this.results[convertedFilterName] = result.filter((siteName: string) =>
@@ -98,14 +98,25 @@ export class SearchBarComponent implements OnInit {
     this.query = e.toLowerCase();
     let positions = this.allJobs[0]["positions"];
     let tags = [];
+    let locations = [];
+
     let newPositions = positions.map((position) => {
-      position.tags && tags.push({ link: position.link, tags: position.tags });
+      position.location &&
+        locations.push({
+          link: position.link,
+          location: position.location,
+        });
+      position.tags &&
+        tags.push({
+          link: position.link,
+          tags: position.tags,
+        });
       return position;
     });
 
     let jobList = {
       positions: newPositions,
-      locations: this.allJobs[0]["locations"],
+      locations: locations,
       categories: this.allJobs[0]["categories"],
       tags: tags,
       websites: this.allJobs[0]["siteNames"],
@@ -117,8 +128,7 @@ export class SearchBarComponent implements OnInit {
         this.results[r] = jobList[filter];
       }
     }
-    console.log(this.results["tagsResults"]);
-
+    console.log(this.results);
     this.filterResults(this.filters, this.results);
   }
 

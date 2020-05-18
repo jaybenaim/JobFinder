@@ -22,7 +22,9 @@
     <div *ngIf="results['locationsResults'].length >= 1">
       Locations
       <li *ngFor="let location of results['locationsResults']">
-        {{ location }}
+        <a [href]="location.link">
+          {{ location.location }}
+        </a>
       </li>
     </div>
     <div *ngIf="results['categoriesResults'].length >= 1">
