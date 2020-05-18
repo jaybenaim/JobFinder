@@ -9,7 +9,13 @@ import { JobService } from "src/app/services/job.service";
 export class SearchBarComponent implements OnInit {
   query: string = "";
   allJobs: any[] = [];
-  results: any;
+  results = {
+    positionsResults: [],
+    locationsResults: [],
+    categoriesResults: [],
+    tagsResults: [],
+    websitesResults: [],
+  };
   filters = {
     positions: false,
     locations: false,
@@ -20,7 +26,15 @@ export class SearchBarComponent implements OnInit {
   filter: boolean = false;
 
   constructor(private jobs: JobService) {}
-
+  resetResults() {
+    this.results = {
+      positionsResults: [],
+      locationsResults: [],
+      categoriesResults: [],
+      tagsResults: [],
+      websitesResults: [],
+    };
+  }
   setFilter(e) {
     this.filters[e.name] = !this.filters[e.name];
     this.handleSearch(this.query);
@@ -30,10 +44,17 @@ export class SearchBarComponent implements OnInit {
   }
   filterResults = (filters: any, results: any) => {
     // get active filters
+    let activeFilters = [];
+    if (activeFilters.length === 0) {
+      this.resetResults();
+    }
     for (let filter in filters) {
       let convertedFilterName = `${filter}Results`;
       let result = results[convertedFilterName];
       let query = this.query.toLowerCase();
+
+      // resest filters when checkbox is off
+      filters[filter] && activeFilters.push(filters[filter]);
 
       if (filter === "positions" && filters[filter]) {
         this.results[
@@ -58,7 +79,6 @@ export class SearchBarComponent implements OnInit {
         );
       }
     }
-
     console.log(this.results);
   };
 
@@ -73,24 +93,16 @@ export class SearchBarComponent implements OnInit {
       websites: this.allJobs[0]["siteNames"],
     };
 
-    const res = {
-      positionsResults: [],
-      locationsResults: [],
-      categoriesResults: [],
-      tagsResults: [],
-      websitesResults: [],
-    };
     for (let filter in this.filters) {
       let r = `${filter}Results`;
       if (this.filters[filter]) {
-        res[r] = jobList[filter];
+        this.results[r] = jobList[filter];
       }
     }
-    this.results = res;
+
     this.filterResults(this.filters, this.results);
   }
 
-  filterJobs() {}
   getJobs() {
     this.jobs.getAllJobs().subscribe(
       (data) => {

@@ -6,6 +6,15 @@
     class="search-bar"
   />
   <app-search-bar-filter> </app-search-bar-filter>
+  <app-search-bar-result></app-search-bar-result>
+  <ul>
+    <div *ngIf="results['positionsResults'].length >= 1">
+      <li *ngFor="let position of results['positionsResults']">
+        {{ position.title }}
+      </li>
+    </div>
+  </ul>
+
   <!-- <ul>
     <li *ngFor="let result of results; index as i; first as isFirst">
       {{ result }}
