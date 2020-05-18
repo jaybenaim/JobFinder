@@ -75,9 +75,14 @@ export class SearchBarComponent implements OnInit {
         );
       }
       if (filter === "tags" && filters[filter]) {
-        this.results[convertedFilterName] = result.filter((tag: string) =>
-          tag.toLowerCase().includes(query)
-        );
+        let tags = [];
+
+        for (let item of result) {
+          let filteredTags = item.tags.filter((tag) => tag.includes(query));
+          filteredTags.length >= 1 &&
+            tags.push({ link: item.link, tags: filteredTags });
+        }
+        this.results[convertedFilterName] = tags;
       }
       if (filter === "websites" && filters[filter]) {
         this.results[convertedFilterName] = result.filter((siteName: string) =>
@@ -89,12 +94,18 @@ export class SearchBarComponent implements OnInit {
 
   handleSearch(e) {
     this.query = e.toLowerCase();
+    let positions = this.allJobs[0]["positions"];
+    let tags = [];
+    let newPositions = positions.map((position) => {
+      position.tags && tags.push({ link: position.link, tags: position.tags });
+      return position;
+    });
 
     let jobList = {
-      positions: this.allJobs[0]["positions"],
+      positions: newPositions,
       locations: this.allJobs[0]["locations"],
       categories: this.allJobs[0]["categories"],
-      tags: this.allJobs[0]["tags"],
+      tags: tags,
       websites: this.allJobs[0]["siteNames"],
     };
 
@@ -104,6 +115,7 @@ export class SearchBarComponent implements OnInit {
         this.results[r] = jobList[filter];
       }
     }
+    console.log(this.results["tagsResults"]);
 
     this.filterResults(this.filters, this.results);
   }

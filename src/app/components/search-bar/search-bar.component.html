@@ -12,6 +12,11 @@
       Job Titles
       <li *ngFor="let position of results['positionsResults']">
         {{ position.title }}
+        <ul *ngIf="filters['tags']">
+          <li *ngFor="let tag of position.tags">
+            {{ tag }}
+          </li>
+        </ul>
       </li>
     </div>
     <div *ngIf="results['locationsResults'].length >= 1">
@@ -26,8 +31,14 @@
       </li>
     </div>
     <div *ngIf="results['tagsResults'].length >= 1">
-      <li *ngFor="let tag of results['tagsResults']">
-        {{ tag }}
+      <li *ngFor="let result of results['tagsResults']">
+        <a [href]="result.link">
+          <ul>
+            <li *ngFor="let tag of result.tags">
+              {{ tag }}
+            </li>
+          </ul>
+        </a>
       </li>
     </div>
     <div *ngIf="results['websitesResults'].length >= 1">
