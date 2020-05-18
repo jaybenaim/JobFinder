@@ -64,13 +64,19 @@ export class SearchBarComponent implements OnInit {
         );
       }
       if (filter === "locations" && filters[filter]) {
-        this.results[convertedFilterName] = result.filter((location: string) =>
-          location.toLowerCase().includes(query)
+        this.results[convertedFilterName] = result.filter(
+          (location: string) =>
+            location.toLowerCase().includes(query) && location !== ""
         );
       }
       if (filter === "categories" && filters[filter]) {
         this.results[convertedFilterName] = result.filter((category: string) =>
           category.toLowerCase().includes(query)
+        );
+      }
+      if (filter === "tags" && filters[filter]) {
+        this.results[convertedFilterName] = result.filter((tag: string) =>
+          tag.toLowerCase().includes(query)
         );
       }
       if (filter === "websites" && filters[filter]) {
@@ -79,7 +85,6 @@ export class SearchBarComponent implements OnInit {
         );
       }
     }
-    console.log(this.results);
   };
 
   handleSearch(e) {

@@ -9,15 +9,31 @@
   <app-search-bar-result></app-search-bar-result>
   <ul>
     <div *ngIf="results['positionsResults'].length >= 1">
+      Job Titles
       <li *ngFor="let position of results['positionsResults']">
         {{ position.title }}
       </li>
     </div>
+    <div *ngIf="results['locationsResults'].length >= 1">
+      Locations
+      <li *ngFor="let location of results['locationsResults']">
+        {{ location }}
+      </li>
+    </div>
+    <div *ngIf="results['categoriesResults'].length >= 1">
+      <li *ngFor="let category of results['categoriesResults']">
+        {{ category }}
+      </li>
+    </div>
+    <div *ngIf="results['tagsResults'].length >= 1">
+      <li *ngFor="let tag of results['tagsResults']">
+        {{ tag }}
+      </li>
+    </div>
+    <div *ngIf="results['websitesResults'].length >= 1">
+      <li *ngFor="let website of results['websitesResults']">
+        {{ website }}
+      </li>
+    </div>
   </ul>
-
-  <!-- <ul>
-    <li *ngFor="let result of results; index as i; first as isFirst">
-      {{ result }}
-    </li>
-  </ul> -->
 </div>
