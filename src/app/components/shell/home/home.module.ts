@@ -6,7 +6,6 @@ import { HomeRoutingModule } from "./home-routing.module";
 import { SavedJobsComponent } from "../../jobs/saved-jobs/saved-jobs.component";
 import { SearchBarComponent } from "../../search-bar/search-bar.component";
 import { SearchBarFilterComponent } from "../../search-bar-filter/search-bar-filter.component";
-import { SearchBarResultComponent } from "../../search-bar-result/search-bar-result.component";
 
 @NgModule({
   declarations: [
@@ -14,7 +13,6 @@ import { SearchBarResultComponent } from "../../search-bar-result/search-bar-res
     SavedJobsComponent,
     SearchBarComponent,
     SearchBarFilterComponent,
-    SearchBarResultComponent,
   ],
   imports: [CommonModule, HomeRoutingModule],
   exports: [SavedJobsComponent],

@@ -103,6 +103,7 @@ export class SearchBarComponent implements OnInit {
     let newPositions = positions.map((position) => {
       position.location &&
         locations.push({
+          title: position.title,
           link: position.link,
           location: position.location,
         });
@@ -128,7 +129,6 @@ export class SearchBarComponent implements OnInit {
         this.results[r] = jobList[filter];
       }
     }
-    console.log(this.results);
     this.filterResults(this.filters, this.results);
   }
 

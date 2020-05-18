@@ -6,24 +6,25 @@
     class="search-bar"
   />
   <app-search-bar-filter> </app-search-bar-filter>
-  <app-search-bar-result></app-search-bar-result>
   <ul>
     <div *ngIf="results['positionsResults'].length >= 1">
       Job Titles
       <li *ngFor="let position of results['positionsResults']">
-        {{ position.title }}
-        <ul *ngIf="filters['tags']">
-          <li *ngFor="let tag of position.tags">
-            {{ tag }}
-          </li>
-        </ul>
+        <a [href]="position.link">
+          {{ position.title }}
+          <ul *ngIf="filters['tags']">
+            <li *ngFor="let tag of position.tags">
+              {{ tag }}
+            </li>
+          </ul>
+        </a>
       </li>
     </div>
     <div *ngIf="results['locationsResults'].length >= 1">
       Locations
       <li *ngFor="let location of results['locationsResults']">
         <a [href]="location.link">
-          {{ location.location }}
+          {{ location.location }} - {{ location.title }}
         </a>
       </li>
     </div>
