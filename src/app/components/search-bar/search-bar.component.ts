@@ -28,18 +28,29 @@ export class SearchBarComponent implements OnInit {
   getFilter() {
     return this.filters;
   }
-  filterResults = (filters, results) => {
+  filterResults = (filters: any, results: any) => {
     // get active filters
     for (let filter in filters) {
       let convertedFilterName = `${filter}Results`;
       let result = results[convertedFilterName];
 
       if (filter === "positions" && filters[filter]) {
-        this.results[convertedFilterName] = result.filter((item) => {
-          let itemTitle = item.title.toLowerCase();
-          let query = this.query.toLowerCase();
-          return itemTitle.includes(query);
-        });
+        this.results[convertedFilterName] = result.filter(
+          (item: { title: string }) => {
+            let itemTitle = item.title.toLowerCase();
+            let query = this.query.toLowerCase();
+            return itemTitle.includes(query);
+          }
+        );
+      }
+      if (filter === "locations" && filters[filter]) {
+        this.results[convertedFilterName] = result.filter(
+          (location: string) => {
+            location = location.toLowerCase();
+            let query = this.query.toLowerCase();
+            return location.includes(query);
+          }
+        );
       }
     }
 
