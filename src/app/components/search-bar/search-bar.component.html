@@ -10,18 +10,30 @@
 
   <app-search-bar-filter> </app-search-bar-filter>
 
-  <ul>
+  <ul class="search-bar__positions-results-container">
     <div *ngIf="results['positionsResults'].length >= 1">
       Job Titles
-      <li *ngFor="let position of results['positionsResults']">
-        <a [href]="position.link">
-          {{ position.title }}
-          <ul *ngIf="filters['tags']">
-            <li *ngFor="let tag of position.tags">
-              {{ tag }}
-            </li>
-          </ul>
-        </a>
+      <li
+        *ngFor="let position of results['positionsResults']"
+        class="position-result"
+      >
+        <div class="card">
+          <div class="card-body">
+            <a [href]="position.link">
+              <div class="card-title">
+                {{ position.title }}
+              </div>
+
+              <div class="card-text">
+                <ul *ngIf="filters['tags']">
+                  <li *ngFor="let tag of position.tags">
+                    {{ tag }}
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
       </li>
     </div>
     <div *ngIf="results['locationsResults'].length >= 1">

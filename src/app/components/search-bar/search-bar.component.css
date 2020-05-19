@@ -5,3 +5,7 @@
   font-size: 2em;
   padding: 15px;
 }
+.search-bar__positions-results-container .position-result {
+  margin-bottom: 1%;
+  list-style: none;
+}
