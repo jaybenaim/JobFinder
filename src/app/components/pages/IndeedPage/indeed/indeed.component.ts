@@ -18,6 +18,7 @@ export class IndeedComponent implements OnInit {
   isLoading: boolean = false;
 
   constructor(private jobService: JobService) {}
+
   nextPage() {
     this.positions = [];
     this.isLoading = true;
