@@ -1,11 +1,15 @@
 <div class="container">
-  <input
-    type="search"
-    placeholder="Search..."
-    (input)="handleSearch($event.target.value)"
-    class="search-bar"
-  />
+  <div class="row">
+    <input
+      type="search"
+      placeholder="Search..."
+      (input)="handleSearch($event.target.value)"
+      class="search-bar"
+    />
+  </div>
+
   <app-search-bar-filter> </app-search-bar-filter>
+
   <ul>
     <div *ngIf="results['positionsResults'].length >= 1">
       Job Titles

@@ -1,73 +1,74 @@
-<div class="container">
-  <div class="search-bar-filter-checkbox">
-    <div class="checkbox-item">
-      <input
-        class="search-bar-filter-input"
-        type="checkbox"
-        name="positions"
-        value="positions"
-        id="positionsCheck"
-        (change)="searchBar.setFilter($event.target)"
-      />
-      <label class="search-bar-filter-label" for="positionsCheck">
-        Positions
-      </label>
-    </div>
+<div class="container search-bar-filter__container">
+  <form>
+    <div class="search-bar-filter-checkboxes">
+      <div class="form-check checkbox-item">
+        <input
+          class="form-check-input search-bar-filter-input"
+          type="checkbox"
+          name="positions"
+          value="positions"
+          id="positionsCheck"
+          (change)="searchBar.setFilter($event.target)"
+        />
+        <label class="search-bar-filter-label" for="positionsCheck">
+          Positions
+        </label>
+      </div>
 
-    <div class="checkbox-item">
-      <input
-        class="search-bar-filter-input"
-        type="checkbox"
-        name="locations"
-        value="locations"
-        id="locationsCheck"
-        (change)="searchBar.setFilter($event.target)"
-      />
-      <label class="search-bar-filter-label" for="locationsCheck">
-        Locations
-      </label>
-    </div>
+      <div class="form-check checkbox-item">
+        <input
+          class="form-check-input search-bar-filter-input"
+          type="checkbox"
+          name="locations"
+          value="locations"
+          id="locationsCheck"
+          (change)="searchBar.setFilter($event.target)"
+        />
+        <label class="search-bar-filter-label" for="locationsCheck">
+          Locations
+        </label>
+      </div>
 
-    <div class="checkbox-item">
-      <input
-        class="search-bar-filter-input"
-        type="checkbox"
-        name="categories"
-        value="categories"
-        id="categoriesCheck"
-        (change)="searchBar.setFilter($event.target)"
-      />
-      <label class="search-bar-filter-label" for="categoriesCheck">
-        Categories
-      </label>
-    </div>
+      <div class="form-check checkbox-item">
+        <input
+          class="form-check-input search-bar-filter-input"
+          type="checkbox"
+          name="categories"
+          value="categories"
+          id="categoriesCheck"
+          (change)="searchBar.setFilter($event.target)"
+        />
+        <label class="search-bar-filter-label" for="categoriesCheck">
+          Categories
+        </label>
+      </div>
 
-    <div class="checkbox-item">
-      <input
-        class="search-bar-filter-input"
-        type="checkbox"
-        name="tags"
-        value="tags"
-        id="tagsCheck"
-        (change)="searchBar.setFilter($event.target)"
-      />
-      <label class="search-bar-filter-label" for="tagsCheck">
-        Tags
-      </label>
+      <div class="form-check checkbox-item">
+        <input
+          class="form-check-input search-bar-filter-input"
+          type="checkbox"
+          name="tags"
+          value="tags"
+          id="tagsCheck"
+          (change)="searchBar.setFilter($event.target)"
+        />
+        <label class="search-bar-filter-label" for="tagsCheck">
+          Tags
+        </label>
+      </div>
+      <div class="checkbox-item">
+        <input
+          class="search-bar-filter-input"
+          type="checkbox"
+          name="websites"
+          value="websites"
+          id="websitesCheck"
+          (change)="searchBar.setFilter($event.target)"
+        />
+        <label class="search-bar-filter-label" for="websitesCheck">
+          Websites
+        </label>
+      </div>
     </div>
-
-    <div class="checkbox-item">
-      <input
-        class="search-bar-filter-input"
-        type="checkbox"
-        name="websites"
-        value="websites"
-        id="websitesCheck"
-        (change)="searchBar.setFilter($event.target)"
-      />
-      <label class="search-bar-filter-label" for="websitesCheck">
-        Websites
-      </label>
-    </div>
-  </div>
+  </form>
 </div>
