@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
-import { HomeModule } from "./components/shell/home/home.module";
+import { HomeModule } from "./components/pages/home/home.module";
 import { NavBarComponent } from "./components/shell/nav-bar/nav-bar.component";
 import { FooterComponent } from "./components/shell/footer/footer.component";
 import { ServiceInterceptor } from "./service.interceptor";
