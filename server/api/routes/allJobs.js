@@ -15,6 +15,10 @@ router.get("/indeed", async (req, res) => {
   const results = await getResultsFromIndeed();
   res.status(200).send(results);
 });
+router.post("/indeed", async (req, res) => {
+  const results = await getResultsFromIndeed(req.body.query);
+  res.status(200).send(results);
+});
 
 router.get("/remoteok", async (req, res) => {
   const results = await getResultsFromRemoteok();

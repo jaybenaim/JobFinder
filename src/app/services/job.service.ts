@@ -26,6 +26,10 @@ export class JobService {
   getJobsFromIndeed() {
     return this.http.get(this.endpoint + "/api/jobs/indeed");
   }
+  searchJobsFromIndeed(query) {
+    return this.http.post(this.endpoint + "/api/jobs/indeed", { query });
+  }
+
   getJobsFromLinkedIn() {
     return this.http.get(this.endpoint + "/api/jobs/linked-in");
   }

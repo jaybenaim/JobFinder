@@ -1,6 +1,5 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
-const _ = require("lodash");
 
 const siteUrl = "https://remoteok.io/";
 let siteName = "";

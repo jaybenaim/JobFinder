@@ -23,7 +23,7 @@ import { AcceptTermsComponent } from "./components/auth/accept-terms/accept-term
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { EmailComponent } from "./components/auth/email/email.component";
 import { AcceptTermsCheckboxComponent } from "./components/auth/accept-terms-checkbox/accept-terms-checkbox.component";
-import { JobsModule } from "./components/pages/jobs/jobs.module";
+import { JobsModule } from "./components/pages/jobPage/jobs/jobs.module";
 import { SearchBarModule } from "./components/search-bar/search-bar.module";
 
 @NgModule({

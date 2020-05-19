@@ -1,0 +1,63 @@
+<button (click)="getJobsFromIndeed()">
+  Get All from Indeed
+</button>
+
+<form>
+  <div class="form-group">
+    <div class="form-row">
+      <div class="col">
+        <label for="Search by title">Search Indeed</label>
+        <input
+          type="text"
+          class="form-control"
+          id="searchByTitle"
+          placeholder="Search By Title..."
+          name="type"
+          (value)="getValue('type')"
+          (change)="handleSearchQuery($event)"
+        />
+      </div>
+      <div class="col">
+        <label for="Search by salary">Salary</label>
+        <input
+          type="text"
+          class="form-control"
+          id="searchBySalary"
+          placeholder="Search By Salary..."
+          name="salary"
+          (value)="getValue('type')"
+          (change)="handleSearchQuery($event)"
+        />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-7">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="City"
+          name="city"
+          (change)="handleSearchQuery($event)"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="State / Province"
+          name="province"
+          (change)="handleSearchQuery($event)"
+        />
+      </div>
+    </div>
+    <div class="form-row">
+      <button
+        type="submit"
+        class="btn btn-outline-success"
+        (click)="searchJobsFromIndeed($event)"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+</form>

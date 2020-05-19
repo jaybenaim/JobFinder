@@ -1,10 +1,10 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { RemoteokComponent } from "../../jobs/remoteok/remoteok.component";
-import { IndeedComponent } from "../../jobs/indeed/indeed.component";
-import { LinkedInComponent } from "../../jobs/linked-in/linked-in.component";
-import { AllJobsComponent } from "../../jobs/all-jobs/all-jobs.component";
+import { RemoteokComponent } from "../../../jobs/remoteok/remoteok.component";
+import { IndeedComponent } from "../../IndeedPage/indeed/indeed.component";
+import { LinkedInComponent } from "../../../jobs/linked-in/linked-in.component";
+import { AllJobsComponent } from "../../../jobs/all-jobs/all-jobs.component";
 import { JobsComponent } from "./jobs.component";
 
 const routes: Routes = [
