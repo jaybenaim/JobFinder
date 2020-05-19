@@ -1,0 +1,10 @@
+<div>
+  <a [href]="position.link">
+    <p>{{ position.title }}</p>
+    <ul>
+      <li *ngFor="let requirement of position.requirements">
+        {{ requirement }}
+      </li>
+    </ul>
+  </a>
+</div>

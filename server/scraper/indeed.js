@@ -41,13 +41,19 @@ const getResults = async (query) => {
   });
 
   $(".result").each((index, element) => {
-    let requirements = $(element).find(".summary ul li").text();
+    let requirements = [];
+    $(element)
+      .find(".summary ul li")
+      .each((i, requirement) => {
+        $(requirement).text() !== "" &&
+          requirements.push($(requirement).text());
+      });
 
     positions.add({
       title: $(element).find(".title").text(),
       link: domain + $(element).find("h2 .jobtitle").attr("href"),
       salary: $(element).find(".salaryText").text(),
-      requirements: requirements.split("."),
+      requirements: requirements,
     });
   });
 

@@ -68,6 +68,9 @@
 <div *ngIf="isLoading" class="spinner-border text-success" role="status">
   <span class="sr-only">Loading...</span>
 </div>
-<div *ngFor="let position of positions">
-  <div>{{ position.title }}</div>
+
+<div *ngIf="positions && positions.length >= 1">
+  <div *ngFor="let position of positions">
+    <app-indeed-result [position]="position"></app-indeed-result>
+  </div>
 </div>

@@ -1405,30 +1405,137 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IndeedComponent", function() { return IndeedComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/job.service */ "./src/app/services/job.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
 
 
 
 
+
+function IndeedComponent_div_23_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Loading...");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function IndeedComponent_div_24_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var position_r2 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](position_r2.title);
+} }
 var IndeedComponent = /** @class */ (function () {
-    function IndeedComponent(jobs) {
-        this.jobs = jobs;
-        this.positions = [];
+    function IndeedComponent(jobService) {
+        this.jobService = jobService;
+        this.query = {
+            type: "",
+            salary: "",
+            city: "",
+            province: "",
+            page: 20,
+        };
+        this.isLoading = false;
     }
+    IndeedComponent.prototype.nextPage = function () {
+        this.positions = [];
+        this.isLoading = true;
+        this.query["page"] += 20;
+        this.searchJobsFromIndeed({ preventDefault: function () { return null; } });
+    };
+    IndeedComponent.prototype.getValue = function (value) {
+        return this.query[value];
+    };
+    IndeedComponent.prototype.handleSearchQuery = function (event) {
+        var name = event.target.name;
+        var value = event.target.value;
+        this.query["" + name] = value;
+    };
+    IndeedComponent.prototype.searchJobsFromIndeed = function (event) {
+        var _this = this;
+        event.preventDefault();
+        this.isLoading = true;
+        var query = this.query;
+        this.jobService.searchJobsFromIndeed(query).subscribe(function (data) {
+            var positions = data["positions"];
+            var last20Positions = positions.slice(positions.length - 20, positions.length - 1);
+            _this.positions = last20Positions;
+            _this.isLoading = false;
+            console.log(_this.positions);
+        }, function (err) {
+            console.log(err);
+        });
+    };
     IndeedComponent.prototype.getJobsFromIndeed = function () {
         var _this = this;
-        this.jobs.getJobsFromIndeed().subscribe(function (data) {
+        this.jobService.getJobsFromIndeed().subscribe(function (data) {
             _this.positions = data["positions"];
             console.log(data);
         }, function (err) { return console.log(err); });
     };
     IndeedComponent.prototype.ngOnInit = function () { };
     IndeedComponent.ɵfac = function IndeedComponent_Factory(t) { return new (t || IndeedComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"])); };
-    IndeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IndeedComponent, selectors: [["app-indeed"]], decls: 2, vars: 0, consts: [[3, "click"]], template: function IndeedComponent_Template(rf, ctx) { if (rf & 1) {
+    IndeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IndeedComponent, selectors: [["app-indeed"]], decls: 25, vars: 2, consts: [[3, "click"], [1, "form-group"], [1, "form-row"], [1, "col"], ["for", "Search by title"], ["type", "text", "id", "searchByTitle", "placeholder", "Search By Title...", "name", "type", 1, "form-control", 3, "value", "change"], ["for", "Search by salary"], ["type", "text", "id", "searchBySalary", "placeholder", "Search By Salary...", "name", "salary", 1, "form-control", 3, "value", "change"], [1, "col-7"], ["type", "text", "placeholder", "City", "name", "city", 1, "form-control", 3, "change"], ["type", "text", "placeholder", "State / Province", "name", "province", 1, "form-control", 3, "change"], ["type", "submit", 1, "btn", "btn-outline-success", 3, "click"], ["class", "spinner-border text-success", "role", "status", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["role", "status", 1, "spinner-border", "text-success"], [1, "sr-only"]], template: function IndeedComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function IndeedComponent_Template_button_click_0_listener() { return ctx.getJobsFromIndeed(); });
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Get All from Indeed\n");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcGFnZXMvSW5kZWVkUGFnZS9pbmRlZWQvaW5kZWVkLmNvbXBvbmVudC5jc3MifQ== */"] });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "button", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function IndeedComponent_Template_button_click_2_listener() { return ctx.nextPage(); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " next page\n");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "form");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "label", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Search Indeed");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "input", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("value", function IndeedComponent_Template_input_value_10_listener() { return ctx.getValue("type"); })("change", function IndeedComponent_Template_input_change_10_listener($event) { return ctx.handleSearchQuery($event); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "label", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Salary");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "input", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("value", function IndeedComponent_Template_input_value_14_listener() { return ctx.getValue("type"); })("change", function IndeedComponent_Template_input_change_14_listener($event) { return ctx.handleSearchQuery($event); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "input", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("change", function IndeedComponent_Template_input_change_17_listener($event) { return ctx.handleSearchQuery($event); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "input", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("change", function IndeedComponent_Template_input_change_19_listener($event) { return ctx.handleSearchQuery($event); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "button", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function IndeedComponent_Template_button_click_21_listener($event) { return ctx.searchJobsFromIndeed($event); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " Search ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, IndeedComponent_div_23_Template, 3, 0, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, IndeedComponent_div_24_Template, 3, 1, "div", 13);
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](23);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.isLoading);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.positions);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcGFnZXMvSW5kZWVkUGFnZS9pbmRlZWQvaW5kZWVkLmNvbXBvbmVudC5jc3MifQ== */"] });
     return IndeedComponent;
 }());
 
@@ -3616,6 +3723,9 @@ var JobService = /** @class */ (function () {
     };
     JobService.prototype.getJobsFromIndeed = function () {
         return this.http.get(this.endpoint + "/api/jobs/indeed");
+    };
+    JobService.prototype.searchJobsFromIndeed = function (query) {
+        return this.http.post(this.endpoint + "/api/jobs/indeed", { query: query });
     };
     JobService.prototype.getJobsFromLinkedIn = function () {
         return this.http.get(this.endpoint + "/api/jobs/linked-in");
