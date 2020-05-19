@@ -20,7 +20,7 @@ export class IndeedComponent implements OnInit {
   constructor(private jobService: JobService) {}
 
   previousPage() {
-    this.positions = [];
+    this.clearPositions;
     this.isLoading = true;
     this.query["page"] > 20
       ? (this.query["page"] -= 20)
@@ -28,10 +28,19 @@ export class IndeedComponent implements OnInit {
     this.searchJobsFromIndeed({ preventDefault: () => null });
   }
   nextPage() {
-    this.positions = [];
+    this.clearPositions;
     this.isLoading = true;
     this.query["page"] += 20;
     this.searchJobsFromIndeed({ preventDefault: () => null });
+  }
+  selectPage(page) {
+    this.clearPositions;
+    this.isLoading = true;
+    this.query["page"] = page * 20;
+    this.searchJobsFromIndeed({ preventDefault: () => null });
+  }
+  clearPositions() {
+    this.positions = [];
   }
   getValue(value) {
     return this.query[value];
@@ -58,8 +67,7 @@ export class IndeedComponent implements OnInit {
         );
         this.positions = last20Positions;
         this.isLoading = false;
-
-        console.log(this.positions);
+        console.log(data);
       },
       (err) => {
         console.log(err);

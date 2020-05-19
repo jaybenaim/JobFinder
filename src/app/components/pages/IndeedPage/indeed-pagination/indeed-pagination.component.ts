@@ -17,6 +17,9 @@ export class IndeedPaginationComponent implements OnInit {
   nextPage() {
     this.indeedSearch.nextPage();
   }
+  selectPage(page) {
+    this.indeedSearch.selectPage(page);
+  }
   getActivePageClass(page) {
     let startAt = this.indeedSearch.query["page"];
     let pageNumber = startAt == 20 ? 1 : String(startAt / 20);
