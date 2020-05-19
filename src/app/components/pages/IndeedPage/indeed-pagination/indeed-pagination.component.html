@@ -1,0 +1,22 @@
+<ul class="pagination justify-content-center">
+  <li class="page-item">
+    <button (click)="previousPage()" class="page-link" tabindex="-1">
+      Previous
+    </button>
+  </li>
+  <li [class]="getActivePageClass(1)"><a class="page-link" href="#">1</a></li>
+  <li [class]="getActivePageClass(2)"><a class="page-link" href="#">2</a></li>
+  <li [class]="getActivePageClass(3)"><a class="page-link" href="#">3</a></li>
+  <li [class]="getActivePageClass(4)"><a class="page-link" href="#">4</a></li>
+  <li [class]="getActivePageClass(5)"><a class="page-link" href="#">5</a></li>
+  <li [class]="getActivePageClass(6)"><a class="page-link" href="#">6</a></li>
+  <li [class]="getActivePageClass(7)"><a class="page-link" href="#">7</a></li>
+  <li [class]="getActivePageClass(8)"><a class="page-link" href="#">8</a></li>
+  <li [class]="getActivePageClass(9)"><a class="page-link" href="#">9</a></li>
+  <li [class]="getActivePageClass(10)"><a class="page-link" href="#">10</a></li>
+  <li class="page-item">
+    <button (click)="nextPage()" class="page-link" tabindex="+1">
+      Next
+    </button>
+  </li>
+</ul>

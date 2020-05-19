@@ -4,12 +4,14 @@
       <p class="card-title">{{ position.title }}</p>
 
       <ul class="card-text requirements">
-        <li
-          *ngFor="let requirement of position.requirements"
-          class="requirement"
-        >
-          {{ requirement }}
-        </li>
+        <div *ngIf="position.requirements.length >= 1">
+          <li
+            *ngFor="let requirement of position.requirements"
+            class="requirement"
+          >
+            {{ requirement }}
+          </li>
+        </div>
       </ul>
     </a>
   </div>

@@ -19,6 +19,14 @@ export class IndeedComponent implements OnInit {
 
   constructor(private jobService: JobService) {}
 
+  previousPage() {
+    this.positions = [];
+    this.isLoading = true;
+    this.query["page"] > 20
+      ? (this.query["page"] -= 20)
+      : (this.query["page"] = 20);
+    this.searchJobsFromIndeed({ preventDefault: () => null });
+  }
   nextPage() {
     this.positions = [];
     this.isLoading = true;
