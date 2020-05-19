@@ -14,6 +14,12 @@
 @media (min-width: 577px) {
   .search-bar-filter__container form {
     grid-column: 1;
+    width: 65%;
+  }
+}
+@media (min-width: 1108px) {
+  .search-bar-filter__container form {
+    width: 40%;
   }
 }
 

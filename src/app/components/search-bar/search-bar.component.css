@@ -1,7 +1,14 @@
+.search-bar-container {
+  margin-bottom: 4%;
+}
 .search-bar {
   width: 100%;
   border: none;
   height: 2em;
   font-size: 2em;
   padding: 15px;
+}
+.search-bar__positions-results-container .position-result {
+  margin-bottom: 1%;
+  list-style: none;
 }
