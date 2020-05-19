@@ -20,11 +20,18 @@ export class IndeedPaginationComponent implements OnInit {
   getActivePageClass(page) {
     let startAt = this.indeedSearch.query["page"];
     let pageNumber = startAt == 20 ? 1 : String(startAt / 20);
+    let result = "";
+
     if (page == pageNumber) {
-      return "page-item active";
+      result = "page-item active";
     } else {
-      return "page-item";
+      result = "page-item";
     }
+    // only show 6 page options for mobile
+    if (page >= 7) {
+      result = result + " mobile-disabled";
+    }
+    return result;
   }
   ngOnInit(): void {}
 }

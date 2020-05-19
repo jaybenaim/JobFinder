@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="form-row">
-        <div class="col-3">
+        <div class="col-4">
           <label for="Search by City">City</label>
           <input
             type="text"
@@ -39,12 +39,12 @@
             (change)="handleSearchQuery($event)"
           />
         </div>
-        <div class="col-3">
+        <div class="col-4">
           <label for="Search by Province">Province</label>
           <input
             type="text"
             class="form-control"
-            placeholder="State / Province"
+            placeholder="Province"
             name="province"
             (change)="handleSearchQuery($event)"
           />
@@ -82,5 +82,9 @@
     </div>
   </div>
 
-  <app-indeed-pagination></app-indeed-pagination>
+  <div class="row">
+    <div class="col-12">
+      <app-indeed-pagination></app-indeed-pagination>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,5 @@
+@media (max-width: 450px) {
+  .page-item.mobile-disabled {
+    display: none;
+  }
+}
