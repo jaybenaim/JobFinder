@@ -9,9 +9,10 @@ const buildQuery = (query) => {
   let typeQuery = encodeURI(query.type);
   let cityQuery = query.city && "&l=" + encodeURI(query.city);
   let salaryQuery = query.salary && "%2C" + encodeURI(query.salary);
-  let provinceQuery = query.province && encodeURI(query.province);
+  let provinceQuery = query.province && "+" + encodeURI(query.province);
+  let page = query.page && "&start=" + encodeURI(query.page);
 
-  let encodedSearchQuery = `q=${typeQuery}${cityQuery}${salaryQuery}+${provinceQuery}`;
+  let encodedSearchQuery = `q=${typeQuery}${cityQuery}${salaryQuery}${provinceQuery}${page}`;
 
   let url = domain + "jobs?" + encodedSearchQuery;
   siteUrl = url;
