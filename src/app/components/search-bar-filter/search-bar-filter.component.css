@@ -47,7 +47,4 @@
   .search-bar-filter-checkboxes:nth-child(n + 3) {
     grid-row: 2;
   }
-  .search-bar-filter__container form .checkbox-item {
-    margin-left: 4%;
-  }
 }
