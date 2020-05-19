@@ -1,0 +1,21 @@
+.indeed__page-container h2 {
+  margin-top: 2%;
+}
+.indeed__spinner {
+  display: flex;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+}
+/* Form */
+.indeed__search-form {
+  padding: 2% 4% 4% 4%;
+}
+.indeed__search-form .form-row {
+  margin-top: 2%;
+}
+
+.indeed__search-btn {
+  width: 100%;
+}
+/* End form */

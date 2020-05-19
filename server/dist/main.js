@@ -1393,6 +1393,71 @@ var SavedJobsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/pages/IndeedPage/indeed-result/indeed-result.component.ts":
+/*!**************************************************************************************!*\
+  !*** ./src/app/components/pages/IndeedPage/indeed-result/indeed-result.component.ts ***!
+  \**************************************************************************************/
+/*! exports provided: IndeedResultComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IndeedResultComponent", function() { return IndeedResultComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
+
+
+
+function IndeedResultComponent_li_5_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var requirement_r1 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", requirement_r1, " ");
+} }
+var IndeedResultComponent = /** @class */ (function () {
+    function IndeedResultComponent() {
+    }
+    IndeedResultComponent.prototype.ngOnInit = function () { };
+    IndeedResultComponent.ɵfac = function IndeedResultComponent_Factory(t) { return new (t || IndeedResultComponent)(); };
+    IndeedResultComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IndeedResultComponent, selectors: [["app-indeed-result"]], inputs: { position: "position" }, decls: 6, vars: 3, consts: [[3, "href"], [4, "ngFor", "ngForOf"]], template: function IndeedResultComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, IndeedResultComponent_li_5_Template, 2, 1, "li", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", ctx.position.link, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.position.title);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.position.requirements);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcGFnZXMvSW5kZWVkUGFnZS9pbmRlZWQtcmVzdWx0L2luZGVlZC1yZXN1bHQuY29tcG9uZW50LmNzcyJ9 */"] });
+    return IndeedResultComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](IndeedResultComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: "app-indeed-result",
+                templateUrl: "./indeed-result.component.html",
+                styleUrls: ["./indeed-result.component.css"],
+            }]
+    }], function () { return []; }, { position: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+
+/***/ }),
+
 /***/ "./src/app/components/pages/IndeedPage/indeed/indeed.component.ts":
 /*!************************************************************************!*\
   !*** ./src/app/components/pages/IndeedPage/indeed/indeed.component.ts ***!
@@ -1406,6 +1471,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/job.service */ "./src/app/services/job.service.ts");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
+/* harmony import */ var _indeed_result_indeed_result_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../indeed-result/indeed-result.component */ "./src/app/components/pages/IndeedPage/indeed-result/indeed-result.component.ts");
+
 
 
 
@@ -1418,16 +1485,23 @@ function IndeedComponent_div_23_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function IndeedComponent_div_24_Template(rf, ctx) { if (rf & 1) {
+function IndeedComponent_div_24_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-indeed-result", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    var position_r2 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](position_r2.title);
+    var position_r3 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("position", position_r3);
+} }
+function IndeedComponent_div_24_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, IndeedComponent_div_24_div_1_Template, 2, 1, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r1.positions);
 } }
 var IndeedComponent = /** @class */ (function () {
     function IndeedComponent(jobService) {
@@ -1479,7 +1553,7 @@ var IndeedComponent = /** @class */ (function () {
     };
     IndeedComponent.prototype.ngOnInit = function () { };
     IndeedComponent.ɵfac = function IndeedComponent_Factory(t) { return new (t || IndeedComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"])); };
-    IndeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IndeedComponent, selectors: [["app-indeed"]], decls: 25, vars: 2, consts: [[3, "click"], [1, "form-group"], [1, "form-row"], [1, "col"], ["for", "Search by title"], ["type", "text", "id", "searchByTitle", "placeholder", "Search By Title...", "name", "type", 1, "form-control", 3, "value", "change"], ["for", "Search by salary"], ["type", "text", "id", "searchBySalary", "placeholder", "Search By Salary...", "name", "salary", 1, "form-control", 3, "value", "change"], [1, "col-7"], ["type", "text", "placeholder", "City", "name", "city", 1, "form-control", 3, "change"], ["type", "text", "placeholder", "State / Province", "name", "province", 1, "form-control", 3, "change"], ["type", "submit", 1, "btn", "btn-outline-success", 3, "click"], ["class", "spinner-border text-success", "role", "status", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["role", "status", 1, "spinner-border", "text-success"], [1, "sr-only"]], template: function IndeedComponent_Template(rf, ctx) { if (rf & 1) {
+    IndeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IndeedComponent, selectors: [["app-indeed"]], decls: 25, vars: 2, consts: [[3, "click"], [1, "form-group"], [1, "form-row"], [1, "col"], ["for", "Search by title"], ["type", "text", "id", "searchByTitle", "placeholder", "Search By Title...", "name", "type", 1, "form-control", 3, "value", "change"], ["for", "Search by salary"], ["type", "text", "id", "searchBySalary", "placeholder", "Search By Salary...", "name", "salary", 1, "form-control", 3, "value", "change"], [1, "col-7"], ["type", "text", "placeholder", "City", "name", "city", 1, "form-control", 3, "change"], ["type", "text", "placeholder", "State / Province", "name", "province", 1, "form-control", 3, "change"], ["type", "submit", 1, "btn", "btn-outline-success", 3, "click"], ["class", "spinner-border text-success", "role", "status", 4, "ngIf"], [4, "ngIf"], ["role", "status", 1, "spinner-border", "text-success"], [1, "sr-only"], [4, "ngFor", "ngForOf"], [3, "position"]], template: function IndeedComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function IndeedComponent_Template_button_click_0_listener() { return ctx.getJobsFromIndeed(); });
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Get All from Indeed\n");
@@ -1529,13 +1603,13 @@ var IndeedComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, IndeedComponent_div_23_Template, 3, 0, "div", 12);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, IndeedComponent_div_24_Template, 3, 1, "div", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, IndeedComponent_div_24_Template, 2, 1, "div", 13);
         } if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](23);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.isLoading);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.positions);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcGFnZXMvSW5kZWVkUGFnZS9pbmRlZWQvaW5kZWVkLmNvbXBvbmVudC5jc3MifQ== */"] });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.positions && ctx.positions.length >= 1);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _indeed_result_indeed_result_component__WEBPACK_IMPORTED_MODULE_3__["IndeedResultComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcGFnZXMvSW5kZWVkUGFnZS9pbmRlZWQvaW5kZWVkLmNvbXBvbmVudC5jc3MifQ== */"] });
     return IndeedComponent;
 }());
 
@@ -1705,6 +1779,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../jobs/remoteok/remoteok.component */ "./src/app/components/jobs/remoteok/remoteok.component.ts");
 /* harmony import */ var _jobs_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./jobs.component */ "./src/app/components/pages/jobPage/jobs/jobs.component.ts");
 /* harmony import */ var _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../jobs/all-jobs/all-jobs.component */ "./src/app/components/jobs/all-jobs/all-jobs.component.ts");
+/* harmony import */ var _IndeedPage_indeed_result_indeed_result_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../IndeedPage/indeed-result/indeed-result.component */ "./src/app/components/pages/IndeedPage/indeed-result/indeed-result.component.ts");
+
 
 
 
@@ -1725,6 +1801,7 @@ var JobsModule = /** @class */ (function () {
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](JobsModule, { declarations: [_jobs_component__WEBPACK_IMPORTED_MODULE_6__["JobsComponent"],
         _jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_5__["RemoteokComponent"],
         _IndeedPage_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_4__["IndeedComponent"],
+        _IndeedPage_indeed_result_indeed_result_component__WEBPACK_IMPORTED_MODULE_8__["IndeedResultComponent"],
         _jobs_linked_in_linked_in_component__WEBPACK_IMPORTED_MODULE_3__["LinkedInComponent"],
         _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_7__["AllJobsComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _jobs_routing_module__WEBPACK_IMPORTED_MODULE_2__["JobsRoutingModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](JobsModule, [{
@@ -1734,6 +1811,7 @@ var JobsModule = /** @class */ (function () {
                     _jobs_component__WEBPACK_IMPORTED_MODULE_6__["JobsComponent"],
                     _jobs_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_5__["RemoteokComponent"],
                     _IndeedPage_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_4__["IndeedComponent"],
+                    _IndeedPage_indeed_result_indeed_result_component__WEBPACK_IMPORTED_MODULE_8__["IndeedResultComponent"],
                     _jobs_linked_in_linked_in_component__WEBPACK_IMPORTED_MODULE_3__["LinkedInComponent"],
                     _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_7__["AllJobsComponent"],
                 ],
