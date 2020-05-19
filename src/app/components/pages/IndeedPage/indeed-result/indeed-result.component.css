@@ -1,0 +1,17 @@
+.indeed__result {
+  margin-bottom: 2%;
+}
+
+.indeed__result .card-title {
+  color: #28a745;
+  font-size: 1.3em;
+}
+.indeed__result .requirements {
+}
+.indeed__result .requirement {
+  list-style: none;
+  color: #000000;
+}
+.indeed__result a:hover {
+  text-decoration: none;
+}

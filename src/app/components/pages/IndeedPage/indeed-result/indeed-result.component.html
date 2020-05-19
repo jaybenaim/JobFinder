@@ -1,10 +1,16 @@
-<div>
-  <a [href]="position.link">
-    <p>{{ position.title }}</p>
-    <ul>
-      <li *ngFor="let requirement of position.requirements">
-        {{ requirement }}
-      </li>
-    </ul>
-  </a>
+<div class="card indeed__result">
+  <div class="card-body">
+    <a [href]="position.link">
+      <p class="card-title">{{ position.title }}</p>
+
+      <ul class="card-text requirements">
+        <li
+          *ngFor="let requirement of position.requirements"
+          class="requirement"
+        >
+          {{ requirement }}
+        </li>
+      </ul>
+    </a>
+  </div>
 </div>
