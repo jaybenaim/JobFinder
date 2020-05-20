@@ -23,10 +23,8 @@ import { AcceptTermsComponent } from "./components/auth/accept-terms/accept-term
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { EmailComponent } from "./components/auth/email/email.component";
 import { AcceptTermsCheckboxComponent } from "./components/auth/accept-terms-checkbox/accept-terms-checkbox.component";
-import { JobsModule } from "./components/pages/jobPage/jobs/jobs.module";
+import { JobsModule } from "./components/pages/jobs.module";
 import { SearchBarModule } from "./components/search-bar/search-bar.module";
-import { IndeedModule } from "./components/pages/IndeedPage/indeed.module";
-import { RemoteokModule } from "./components/pages/remoteokPage/remoteok.module";
 
 @NgModule({
   declarations: [
@@ -46,10 +44,8 @@ import { RemoteokModule } from "./components/pages/remoteokPage/remoteok.module"
     AppRoutingModule,
     HomeModule,
     JobsModule,
-    IndeedModule,
     SearchBarModule,
     FormsModule,
-    RemoteokModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase, "jobfinder"),
     AngularFireDatabaseModule,

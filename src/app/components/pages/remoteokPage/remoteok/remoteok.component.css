@@ -11,9 +11,29 @@
   margin: 0 auto;
   margin-bottom: 3%;
 }
-
+.remoteok__page-container li {
+  list-style: none;
+}
+.remoteok__page-container .card {
+  padding: 5%;
+  margin-bottom: 5px;
+}
+.grid-item {
+  padding: 0;
+}
 /* Results grid */
 @media (max-width: 450px) {
+  .remoteok__page-container h2 {
+    padding: 2%;
+    margin-bottom: 1%;
+  }
+  .remoteok__page-container h3 {
+    padding: 4%;
+  }
+  .remoteok__page-container .site-description {
+    padding: 2%;
+    text-align: center;
+  }
   .remoteok__page-container .results-grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -21,8 +41,18 @@
 }
 
 @media (min-width: 451px) {
+  .remoteok__page-container h2 {
+    margin: 3% auto;
+  }
+  .remoteok__page-container h3 {
+    margin: 3% auto;
+    margin-bottom: 1%;
+  }
   .remoteok__page-container .results-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .results-grid-container .grid-item {
+    text-align: center;
   }
 }
