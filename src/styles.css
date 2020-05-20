@@ -21,6 +21,12 @@ footer {
   height: 160px; /* Set the fixed height of the footer here */
 }
 
+.primary-font {
+  color: #28a745;
+}
+.secondary-font {
+  color: #28a745;
+}
 /* Override Bootstrap Styling */
 
 .btn-primary {

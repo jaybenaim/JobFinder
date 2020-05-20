@@ -67,7 +67,6 @@ export class IndeedComponent implements OnInit {
         );
         this.positions = last20Positions;
         this.isLoading = false;
-        console.log(data);
       },
       (err) => {
         console.log(err);

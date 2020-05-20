@@ -1,7 +1,10 @@
 <div class="card indeed__result">
   <div class="card-body">
+    <app-save-job [position]="position"></app-save-job>
     <a [href]="position.link">
-      <p class="card-title">{{ position.title }}</p>
+      <p class="card-title">
+        {{ position.title }}
+      </p>
 
       <ul class="card-text requirements">
         <div *ngIf="position.requirements.length >= 1">
