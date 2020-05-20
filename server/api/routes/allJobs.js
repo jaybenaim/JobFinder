@@ -16,8 +16,8 @@ router.get("/indeed", async (req, res) => {
   res.status(200).send(results);
 });
 router.post("/indeed", async (req, res) => {
-  const results = allJobs.indeed;
-  // const results = await getResultsFromIndeed(req.body.query);
+  // const results = allJobs.indeed;
+  const results = await getResultsFromIndeed(req.body.query);
   res.status(200).send(results);
 });
 
