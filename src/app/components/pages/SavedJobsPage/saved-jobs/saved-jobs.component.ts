@@ -15,12 +15,24 @@ export class SavedJobsComponent implements OnInit {
     let jobs = <any>[];
     this._jobService.getSavedJobs().subscribe(
       (data) => {
-        console.log(data);
-        Object.keys(data).forEach((key: Extract<keyof typeof data, string>) => {
-          const item = data[key];
-          jobs.push(item);
-        });
+        data &&
+          Object.keys(data).forEach(
+            (key: Extract<keyof typeof data, string>) => {
+              const item = data[key];
+              item["id"] = key;
+              jobs.push(item);
+            }
+          );
+
         this.jobList = jobs;
+      },
+      (err) => console.log(err)
+    );
+  }
+  removeJob(id) {
+    this._jobService.removeJob(id).subscribe(
+      (data) => {
+        this.getSavedJobs();
       },
       (err) => console.log(err)
     );

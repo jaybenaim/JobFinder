@@ -17,7 +17,11 @@ export class SaveJobService {
       job
     );
   }
-
+  removeJob(id) {
+    return this.http.delete(
+      this.endpoint + "users/" + this.userId + "/savedJobs/" + id + ".json"
+    );
+  }
   getSavedJobs() {
     return this.http.get(
       this.endpoint + "users/" + this.userId + "/savedJobs.json"
