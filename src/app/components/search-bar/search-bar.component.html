@@ -7,63 +7,72 @@
       class="search-bar"
     />
   </div>
+  <div class="row">
+    <app-search-bar-filter> </app-search-bar-filter>
+  </div>
+  <div class="row search-bar__locations-container">
+    <ul class="search-bar__positions-results-container">
+      <div *ngIf="results['positionsResults'].length >= 1">
+        Job Titles
+        <li
+          *ngFor="let position of results['positionsResults']"
+          class="position-result"
+        >
+          <div class="card">
+            <div class="card-body">
+              <a [href]="position.link">
+                <div class="card-title">
+                  {{ position.title }}
+                </div>
 
-  <app-search-bar-filter> </app-search-bar-filter>
-
-  <ul class="search-bar__positions-results-container">
-    <div *ngIf="results['positionsResults'].length >= 1">
-      Job Titles
-      <li
-        *ngFor="let position of results['positionsResults']"
-        class="position-result"
-      >
-        <div class="card">
-          <div class="card-body">
-            <a [href]="position.link">
-              <div class="card-title">
-                {{ position.title }}
-              </div>
-
-              <div class="card-text">
-                <ul *ngIf="filters['tags']">
-                  <li *ngFor="let tag of position.tags">
-                    {{ tag }}
-                  </li>
-                </ul>
-              </div>
-            </a>
+                <div class="card-text">
+                  <ul *ngIf="filters['tags']">
+                    <li *ngFor="let tag of position.tags" class="tag">
+                      {{ tag }}
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
-      </li>
-    </div>
-    <div *ngIf="results['locationsResults'].length >= 1">
-      Locations
-      <li *ngFor="let location of results['locationsResults']">
-        <a [href]="location.link">
-          {{ location.location }} - {{ location.title }}
-        </a>
-      </li>
-    </div>
-    <div *ngIf="results['categoriesResults'].length >= 1">
-      <li *ngFor="let category of results['categoriesResults']">
-        {{ category }}
-      </li>
-    </div>
-    <div *ngIf="results['tagsResults'].length >= 1">
-      <li *ngFor="let result of results['tagsResults']">
-        <a [href]="result.link">
-          <ul>
-            <li *ngFor="let tag of result.tags">
-              {{ tag }}
-            </li>
-          </ul>
-        </a>
-      </li>
-    </div>
-    <div *ngIf="results['websitesResults'].length >= 1">
-      <li *ngFor="let website of results['websitesResults']">
-        {{ website }}
-      </li>
-    </div>
-  </ul>
+        </li>
+      </div>
+      <div *ngIf="results['locationsResults'].length >= 1">
+        Locations
+        <li *ngFor="let location of results['locationsResults']">
+          <div class="card location-card">
+            <div class="card-title">
+              <a [href]="location.link">
+                {{ location.location }}
+              </a>
+            </div>
+            <div class="card-body">
+              {{ location.title }}
+            </div>
+          </div>
+        </li>
+      </div>
+      <div *ngIf="results['categoriesResults'].length >= 1">
+        <li *ngFor="let category of results['categoriesResults']">
+          {{ category }}
+        </li>
+      </div>
+      <div *ngIf="results['tagsResults'].length >= 1">
+        <li *ngFor="let result of results['tagsResults']">
+          <a [href]="result.link">
+            <ul>
+              <li *ngFor="let tag of result.tags">
+                {{ tag }}
+              </li>
+            </ul>
+          </a>
+        </li>
+      </div>
+      <div *ngIf="results['websitesResults'].length >= 1">
+        <li *ngFor="let website of results['websitesResults']">
+          {{ website }}
+        </li>
+      </div>
+    </ul>
+  </div>
 </div>

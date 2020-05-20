@@ -1,6 +1,10 @@
 .search-bar-container {
   margin-bottom: 4%;
 }
+.search-bar-container li {
+  list-style: none;
+  text-transform: capitalize;
+}
 .search-bar {
   width: 100%;
   border: none;
@@ -11,4 +15,38 @@
 .search-bar__positions-results-container .position-result {
   margin-bottom: 1%;
   list-style: none;
+}
+.search-bar__locations-container {
+  width: 100%;
+  margin-top: 4%;
+}
+.search-bar-container .location-card {
+  min-width: 375px;
+  margin-top: 2%;
+}
+.search-bar-container .location-card .card-title {
+  margin: 5%;
+}
+
+@media (max-width: 450px) {
+  .search-bar__positions-results-container {
+    margin-top: 33%;
+    padding: 0;
+  }
+  .search-bar__locations-container {
+    margin: 0 auto;
+  }
+  .search-bar-container .location-card {
+    min-width: 355px;
+    margin-top: 4%;
+  }
+  .search-bar-container .location-card .card-title {
+    margin: 5%;
+  }
+}
+@media (min-width: 451px) {
+  .search-bar__positions-results-container {
+    margin-left: 10%;
+    width: 100%;
+  }
 }
