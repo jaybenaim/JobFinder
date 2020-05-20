@@ -1,7 +1,26 @@
-<div class="remoteok-jobs">
+<div class="container remoteok-__page-container">
+  <div class="row">
+    <h2>Search Remote OK for jobs</h2>
+  </div>
+
+  <app-remoteok-form></app-remoteok-form>
+
+  <div *ngIf="positions && positions.length >= 1">
+    <!-- <div *ngFor="let position of positions"> 
+<app-indeed-result [position]="position"></app-indeed-result> 
+</div> -->
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <!-- <app-indeed-pagination></app-indeed-pagination> -->
+    </div>
+  </div>
+
   <button (click)="getJobsFromRemoteok()">
     Get All Jobs from Remote OK
   </button>
+
   <br />
   <div *ngIf="positions[0]">
     <button (click)="minimize()">Minimize</button>

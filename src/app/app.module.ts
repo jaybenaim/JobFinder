@@ -26,6 +26,7 @@ import { AcceptTermsCheckboxComponent } from "./components/auth/accept-terms-che
 import { JobsModule } from "./components/pages/jobPage/jobs/jobs.module";
 import { SearchBarModule } from "./components/search-bar/search-bar.module";
 import { IndeedModule } from "./components/pages/IndeedPage/indeed.module";
+import { RemoteokModule } from "./components/pages/remoteokPage/remoteok.module";
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { IndeedModule } from "./components/pages/IndeedPage/indeed.module";
     IndeedModule,
     SearchBarModule,
     FormsModule,
+    RemoteokModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase, "jobfinder"),
     AngularFireDatabaseModule,
