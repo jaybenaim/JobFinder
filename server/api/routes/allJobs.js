@@ -22,7 +22,8 @@ router.post("/indeed", async (req, res) => {
 });
 
 router.get("/remoteok", async (req, res) => {
-  const results = await getResultsFromRemoteok();
+  const results = allJobs.remoteok;
+  // const results = await getResultsFromRemoteok();
   res.status(200).send(results);
 });
 router.get("/linked-in", async (req, res) => {
