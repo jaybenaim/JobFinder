@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 
 import { HomeComponent } from "./home.component";
 import { HomeRoutingModule } from "./home-routing.module";
-import { SavedJobsComponent } from "../../jobs/saved-jobs/saved-jobs.component";
+import { SavedJobsComponent } from "../SavedJobsPage/saved-jobs/saved-jobs.component";
 import { SearchBarComponent } from "../../search-bar/search-bar.component";
 import { SearchBarFilterComponent } from "../../search-bar-filter/search-bar-filter.component";
 

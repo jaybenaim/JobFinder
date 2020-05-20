@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { JobService } from "../../../services/job.service";
+import { JobService } from "../../../../services/job.service";
+import { SaveJobService } from "src/app/services/save-job.service";
 
 @Component({
   selector: "app-saved-jobs",
@@ -8,10 +9,21 @@ import { JobService } from "../../../services/job.service";
 })
 export class SavedJobsComponent implements OnInit {
   jobList: any;
-  constructor(private jobs: JobService) {}
+  constructor(private jobs: JobService, private _jobService: SaveJobService) {}
 
-  minimize() {
-    this.jobList = [];
+  getSavedJobs() {
+    let jobs = <any>[];
+    this._jobService.getSavedJobs().subscribe(
+      (data) => {
+        console.log(data);
+        Object.keys(data).forEach((key: Extract<keyof typeof data, string>) => {
+          const item = data[key];
+          jobs.push(item);
+        });
+        this.jobList = jobs;
+      },
+      (err) => console.log(err)
+    );
   }
   getJobsFromFirebase() {
     let list = <any>[];
@@ -31,5 +43,7 @@ export class SavedJobsComponent implements OnInit {
       }
     );
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getSavedJobs();
+  }
 }

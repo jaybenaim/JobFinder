@@ -8,15 +8,19 @@ import { AuthService } from "./auth.service";
 export class SaveJobService {
   constructor(private http: HttpClient, private _auth: AuthService) {}
   endpoint = "https://jobfinder-95e75.firebaseio.com/";
+  userId = this._auth.getUser().uid;
 
   saveJob(job) {
-    console.log(this._auth.getUser());
     // save job to firebase user
-    let userId = this._auth.getUser().uid;
-
     return this.http.post(
-      this.endpoint + "users/" + userId + "/savedJobs.json",
+      this.endpoint + "users/" + this.userId + "/savedJobs.json",
       job
+    );
+  }
+
+  getSavedJobs() {
+    return this.http.get(
+      this.endpoint + "users/" + this.userId + "/savedJobs.json"
     );
   }
 }

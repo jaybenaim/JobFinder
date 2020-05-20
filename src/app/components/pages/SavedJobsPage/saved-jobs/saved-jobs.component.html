@@ -1,0 +1,24 @@
+<div class="firebase-jobs">
+  <div *ngIf="jobList && jobList.length >= 1">
+    <ul>
+      <strong>Job Titles </strong>
+
+      <li *ngFor="let job of jobList">
+        <a [href]="job.link">
+          <p>
+            {{ job.title }}
+          </p>
+          <p>
+            {{ job.salary }}
+          </p>
+        </a>
+        <ul *ngIf="job.requirements && job.requirements.length >= 1">
+          <li *ngFor="let requirement of job.requirements">
+            {{ requirement }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<div></div>

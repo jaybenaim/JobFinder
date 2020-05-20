@@ -4,7 +4,7 @@ import { LoginComponent } from "./components/auth/login/login.component";
 import { PrivacyComponent } from "./components/privacyTerms/privacy/privacy.component";
 import { TermsAndConditionsComponent } from "./components/privacyTerms/terms-and-conditions/terms-and-conditions.component";
 import { AuthGuard } from "./services/auth-guard.service";
-import { SavedJobsComponent } from "./components/jobs/saved-jobs/saved-jobs.component";
+import { SavedJobsComponent } from "./components/pages/SavedJobsPage/saved-jobs/saved-jobs.component";
 
 const routes: Routes = [
   {
