@@ -1,22 +1,26 @@
-<div class="firebase-jobs">
+<div class="container saved-jobs-page">
   <div *ngIf="jobList && jobList.length >= 1">
     <ul>
-      <strong>Job Titles </strong>
-
       <li *ngFor="let job of jobList">
-        <a [href]="job.link">
-          <p>
-            {{ job.title }}
-          </p>
-          <p>
-            {{ job.salary }}
-          </p>
-        </a>
-        <ul *ngIf="job.requirements && job.requirements.length >= 1">
-          <li *ngFor="let requirement of job.requirements">
-            {{ requirement }}
-          </li>
-        </ul>
+        <div class="card">
+          <a [href]="job.link">
+            <div class="card-title">
+              {{ job.title }}
+            </div>
+            <div class="card-subtitle">
+              {{ job.salary }}
+            </div>
+          </a>
+          <div class="card-body">
+            <ul *ngIf="job.requirements && job.requirements.length >= 1">
+              <li *ngFor="let requirement of job.requirements">
+                <div class="card-text">
+                  {{ requirement }}
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </li>
     </ul>
   </div>
