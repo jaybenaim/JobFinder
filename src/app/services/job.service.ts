@@ -23,6 +23,12 @@ export class JobService {
     // get jobs from remoteok
     return this.http.get(this.endpoint + "/api/jobs/remoteok");
   }
+
+  searchJobsFromRemoteok(query) {
+    // get jobs from remoteok
+    return this.http.post(this.endpoint + "/api/jobs/remoteok", { query });
+  }
+
   getJobsFromIndeed() {
     return this.http.get(this.endpoint + "/api/jobs/indeed");
   }

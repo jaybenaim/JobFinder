@@ -10,13 +10,13 @@ const categories = new Set();
 const tags = new Set();
 const positions = new Set();
 
-const fetchData = async () => {
-  const result = await axios.get(siteUrl);
+const fetchData = async (query) => {
+  const result = await axios.get(siteUrl + "remote-" + query + "-jobs");
   return cheerio.load(result.data);
 };
 
-const getResults = async () => {
-  const $ = await fetchData();
+const getResults = async (query) => {
+  const $ = await fetchData(query);
   siteName = $("h1").text();
   description = $("title").text();
 

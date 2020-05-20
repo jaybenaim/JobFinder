@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { JobService } from "src/app/services/job.service";
+import { SearchRemoteokService } from "src/app/services/search-remoteok.service";
 
 @Component({
   selector: "app-remoteok",
@@ -9,7 +10,6 @@ import { JobService } from "src/app/services/job.service";
 export class RemoteokComponent implements OnInit {
   positions: any[] = [];
   tags: any[] = [];
-  locations: any[] = [];
   categories: any[] = [];
   siteName: string = "";
   description: string = "";
@@ -17,18 +17,21 @@ export class RemoteokComponent implements OnInit {
   showTags: boolean = false;
   showlocations: boolean = false;
   showCategories: boolean = false;
+  isLoading: boolean = false;
 
-  constructor(private jobs: JobService) {}
+  constructor(
+    private _jobService: JobService,
+    private _searchRemote: SearchRemoteokService
+  ) {}
 
   minimize() {
     this.positions = [];
   }
   getJobsFromRemoteok() {
-    this.jobs.getAllJobs().subscribe(
+    this._jobService.getAllJobs().subscribe(
       (data) => {
         this.positions.push(data["remoteok"]["positions"]);
         this.tags.push(data["remoteok"]["tags"]);
-        this.locations.push(data["remoteok"]["locations"]);
         this.categories.push(data["remoteok"]["categories"]);
         this.siteName = data["remoteok"]["siteName"];
         this.description = data["remoteok"]["description"];
@@ -38,6 +41,23 @@ export class RemoteokComponent implements OnInit {
 
         alert("Something went wrong");
       }
+    );
+  }
+  searchJobsFromRemoteok(query) {
+    this.isLoading = true;
+
+    this._searchRemote.searchJobsFromRemoteok(query).subscribe(
+      (data) => {
+        this.isLoading = false;
+
+        this.positions = data["positions"];
+        this.tags = data["tags"];
+        this.categories = data["categories"];
+        this.siteName = data["siteName"];
+        this.description = data["description"];
+        console.log(data["positions"]);
+      },
+      (err) => console.log(err)
     );
   }
   toggleShowItem(item) {
