@@ -38,7 +38,6 @@ export class RemoteokComponent implements OnInit {
       },
       (err) => {
         console.log(err);
-
         alert("Something went wrong");
       }
     );
@@ -53,9 +52,10 @@ export class RemoteokComponent implements OnInit {
         this.positions = data["positions"];
         this.tags = data["tags"];
         this.categories = data["categories"];
-        this.siteName = data["siteName"];
+        let sitename = data["siteName"];
+        sitename = sitename.slice(0, sitename.indexOf("jobwork") + 3);
+        this.siteName = sitename.replace("®", "® - ");
         this.description = data["description"];
-        console.log(data["positions"]);
       },
       (err) => console.log(err)
     );

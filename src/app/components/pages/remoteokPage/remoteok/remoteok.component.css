@@ -1,0 +1,28 @@
+.remoteok__page-container h2 {
+  margin: 10% auto;
+  text-align: center;
+}
+.remoteok__page-container h3 {
+  margin: 0 auto;
+  margin-bottom: 1%;
+  text-align: center;
+}
+.remoteok__page-container .site-description {
+  margin: 0 auto;
+  margin-bottom: 3%;
+}
+
+/* Results grid */
+@media (max-width: 450px) {
+  .remoteok__page-container .results-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 451px) {
+  .remoteok__page-container .results-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,8 @@
+.remoteok__search-form input {
+  margin-bottom: 5%;
+}
+
+.remoteok__spinner {
+  display: flex;
+  justify-content: center;
+}
