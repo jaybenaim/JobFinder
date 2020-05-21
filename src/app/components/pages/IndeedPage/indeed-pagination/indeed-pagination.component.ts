@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { IndeedComponent } from "../indeed/indeed.component";
-import { start } from "repl";
+import { SearchIndeedService } from "src/app/services/search-indeed.service";
 
 @Component({
   selector: "app-indeed-pagination",
@@ -8,12 +7,11 @@ import { start } from "repl";
   styleUrls: ["./indeed-pagination.component.css"],
 })
 export class IndeedPaginationComponent implements OnInit {
-  constructor(public indeedSearch: IndeedComponent) {}
+  constructor(public indeedSearch: SearchIndeedService) {}
 
   previousPage() {
     this.indeedSearch.previousPage();
   }
-
   nextPage() {
     this.indeedSearch.nextPage();
   }

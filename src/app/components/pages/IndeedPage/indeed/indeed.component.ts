@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { JobService } from "src/app/services/job.service";
+import { SearchIndeedService } from "src/app/services/search-indeed.service";
 
 @Component({
   selector: "app-indeed",
@@ -17,31 +17,8 @@ export class IndeedComponent implements OnInit {
   };
   isLoading: boolean = false;
 
-  constructor(private jobService: JobService) {}
+  constructor(public _indeedSearch: SearchIndeedService) {}
 
-  previousPage() {
-    this.clearPositions;
-    this.isLoading = true;
-    this.query["page"] > 20
-      ? (this.query["page"] -= 20)
-      : (this.query["page"] = 20);
-    this.searchJobsFromIndeed({ preventDefault: () => null });
-  }
-  nextPage() {
-    this.clearPositions;
-    this.isLoading = true;
-    this.query["page"] += 20;
-    this.searchJobsFromIndeed({ preventDefault: () => null });
-  }
-  selectPage(page) {
-    this.clearPositions;
-    this.isLoading = true;
-    this.query["page"] = page * 20;
-    this.searchJobsFromIndeed({ preventDefault: () => null });
-  }
-  clearPositions() {
-    this.positions = [];
-  }
   getValue(value) {
     return this.query[value];
   }
@@ -58,7 +35,7 @@ export class IndeedComponent implements OnInit {
     this.isLoading = true;
 
     let query = this.query;
-    this.jobService.searchJobsFromIndeed(query).subscribe(
+    this._indeedSearch.searchJobsFromIndeed(query).subscribe(
       (data) => {
         let positions = data["positions"];
         let last20Positions = positions.slice(
@@ -74,7 +51,7 @@ export class IndeedComponent implements OnInit {
     );
   }
   getJobsFromIndeed() {
-    this.jobService.getJobsFromIndeed().subscribe(
+    this._indeedSearch.getJobsFromIndeed().subscribe(
       (data) => {
         this.positions = data["positions"];
         console.log(data);

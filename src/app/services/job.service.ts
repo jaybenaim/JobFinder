@@ -29,13 +29,6 @@ export class JobService {
     return this.http.post(this.endpoint + "/api/jobs/remoteok", { query });
   }
 
-  getJobsFromIndeed() {
-    return this.http.get(this.endpoint + "/api/jobs/indeed");
-  }
-  searchJobsFromIndeed(query) {
-    return this.http.post(this.endpoint + "/api/jobs/indeed", { query });
-  }
-
   getJobsFromLinkedIn() {
     return this.http.get(this.endpoint + "/api/jobs/linked-in");
   }
