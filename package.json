@@ -65,7 +65,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-prebuild": "node ./buildScript.js",
+    "heroku-postbuild": "node ./buildScript.js",
     "deploy": "npm run build;git push origin master;git push heroku master"
   },
   "proxy": "http://localhost:3001",
