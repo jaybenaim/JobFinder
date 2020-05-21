@@ -1765,72 +1765,6 @@ var IndeedComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/pages/jobPage/jobs/jobs-routing.module.ts":
-/*!**********************************************************************!*\
-  !*** ./src/app/components/pages/jobPage/jobs/jobs-routing.module.ts ***!
-  \**********************************************************************/
-/*! exports provided: JobsRoutingModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JobsRoutingModule", function() { return JobsRoutingModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
-/* harmony import */ var _jobs_linked_in_linked_in_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../jobs/linked-in/linked-in.component */ "./src/app/components/jobs/linked-in/linked-in.component.ts");
-/* harmony import */ var _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../jobs/all-jobs/all-jobs.component */ "./src/app/components/jobs/all-jobs/all-jobs.component.ts");
-/* harmony import */ var _jobs_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./jobs.component */ "./src/app/components/pages/jobPage/jobs/jobs.component.ts");
-/* harmony import */ var _remoteokPage_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../remoteokPage/remoteok/remoteok.component */ "./src/app/components/pages/remoteokPage/remoteok/remoteok.component.ts");
-/* harmony import */ var _indeedPage_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../indeedPage/indeed/indeed.component */ "./src/app/components/pages/indeedPage/indeed/indeed.component.ts");
-
-
-
-
-
-
-
-
-
-var routes = [
-    { path: "", component: _jobs_component__WEBPACK_IMPORTED_MODULE_4__["JobsComponent"] },
-    {
-        path: "jobs/all-jobs",
-        component: _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_3__["AllJobsComponent"],
-    },
-    {
-        path: "jobs/remoteok",
-        component: _remoteokPage_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_5__["RemoteokComponent"],
-    },
-    {
-        path: "jobs/indeed",
-        component: _indeedPage_indeed_indeed_component__WEBPACK_IMPORTED_MODULE_6__["IndeedComponent"],
-    },
-    {
-        path: "jobs/linked-in",
-        component: _jobs_linked_in_linked_in_component__WEBPACK_IMPORTED_MODULE_2__["LinkedInComponent"],
-    },
-];
-var JobsRoutingModule = /** @class */ (function () {
-    function JobsRoutingModule() {
-    }
-    JobsRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: JobsRoutingModule });
-    JobsRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function JobsRoutingModule_Factory(t) { return new (t || JobsRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] });
-    return JobsRoutingModule;
-}());
-
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](JobsRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] }); })();
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](JobsRoutingModule, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
-        args: [{
-                imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
-                exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]],
-            }]
-    }], null, null); })();
-
-
-/***/ }),
-
 /***/ "./src/app/components/pages/jobPage/jobs/jobs.component.ts":
 /*!*****************************************************************!*\
   !*** ./src/app/components/pages/jobPage/jobs/jobs.component.ts ***!
@@ -1901,6 +1835,66 @@ var JobsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/pages/jobs-routing.module.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/components/pages/jobs-routing.module.ts ***!
+  \*********************************************************/
+/*! exports provided: JobsRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JobsRoutingModule", function() { return JobsRoutingModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _jobs_linked_in_linked_in_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../jobs/linked-in/linked-in.component */ "./src/app/components/jobs/linked-in/linked-in.component.ts");
+/* harmony import */ var _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../jobs/all-jobs/all-jobs.component */ "./src/app/components/jobs/all-jobs/all-jobs.component.ts");
+/* harmony import */ var _jobPage_jobs_jobs_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./jobPage/jobs/jobs.component */ "./src/app/components/pages/jobPage/jobs/jobs.component.ts");
+/* harmony import */ var _remoteokPage_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./remoteokPage/remoteok/remoteok.component */ "./src/app/components/pages/remoteokPage/remoteok/remoteok.component.ts");
+
+
+
+
+
+
+
+
+var routes = [
+    { path: "", component: _jobPage_jobs_jobs_component__WEBPACK_IMPORTED_MODULE_4__["JobsComponent"] },
+    {
+        path: "jobs/all-jobs",
+        component: _jobs_all_jobs_all_jobs_component__WEBPACK_IMPORTED_MODULE_3__["AllJobsComponent"],
+    },
+    {
+        path: "jobs/remoteok",
+        component: _remoteokPage_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_5__["RemoteokComponent"],
+    },
+    {
+        path: "jobs/linked-in",
+        component: _jobs_linked_in_linked_in_component__WEBPACK_IMPORTED_MODULE_2__["LinkedInComponent"],
+    },
+];
+var JobsRoutingModule = /** @class */ (function () {
+    function JobsRoutingModule() {
+    }
+    JobsRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: JobsRoutingModule });
+    JobsRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function JobsRoutingModule_Factory(t) { return new (t || JobsRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] });
+    return JobsRoutingModule;
+}());
+
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](JobsRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](JobsRoutingModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
+                exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]],
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
 /***/ "./src/app/components/pages/jobs.module.ts":
 /*!*************************************************!*\
   !*** ./src/app/components/pages/jobs.module.ts ***!
@@ -1920,7 +1914,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _save_job_save_job_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../save-job/save-job.component */ "./src/app/components/save-job/save-job.component.ts");
 /* harmony import */ var _remoteokPage_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./remoteokPage/remoteok/remoteok.component */ "./src/app/components/pages/remoteokPage/remoteok/remoteok.component.ts");
 /* harmony import */ var _remoteokPage_remoteok_form_remoteok_form_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./remoteokPage/remoteok-form/remoteok-form.component */ "./src/app/components/pages/remoteokPage/remoteok-form/remoteok-form.component.ts");
-/* harmony import */ var _jobPage_jobs_jobs_routing_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./jobPage/jobs/jobs-routing.module */ "./src/app/components/pages/jobPage/jobs/jobs-routing.module.ts");
+/* harmony import */ var _jobs_routing_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./jobs-routing.module */ "./src/app/components/pages/jobs-routing.module.ts");
 /* harmony import */ var _IndeedPage_indeed_result_indeed_result_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./IndeedPage/indeed-result/indeed-result.component */ "./src/app/components/pages/IndeedPage/indeed-result/indeed-result.component.ts");
 /* harmony import */ var _IndeedPage_indeed_pagination_indeed_pagination_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./IndeedPage/indeed-pagination/indeed-pagination.component */ "./src/app/components/pages/IndeedPage/indeed-pagination/indeed-pagination.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
@@ -1943,7 +1937,7 @@ var JobsModule = /** @class */ (function () {
     function JobsModule() {
     }
     JobsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: JobsModule });
-    JobsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function JobsModule_Factory(t) { return new (t || JobsModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _jobPage_jobs_jobs_routing_module__WEBPACK_IMPORTED_MODULE_9__["JobsRoutingModule"]]] });
+    JobsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function JobsModule_Factory(t) { return new (t || JobsModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _jobs_routing_module__WEBPACK_IMPORTED_MODULE_9__["JobsRoutingModule"]]] });
     return JobsModule;
 }());
 
@@ -1955,7 +1949,7 @@ var JobsModule = /** @class */ (function () {
         _IndeedPage_indeed_result_indeed_result_component__WEBPACK_IMPORTED_MODULE_10__["IndeedResultComponent"],
         _save_job_save_job_component__WEBPACK_IMPORTED_MODULE_6__["SaveJobComponent"],
         _remoteokPage_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_7__["RemoteokComponent"],
-        _remoteokPage_remoteok_form_remoteok_form_component__WEBPACK_IMPORTED_MODULE_8__["RemoteokFormComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _jobPage_jobs_jobs_routing_module__WEBPACK_IMPORTED_MODULE_9__["JobsRoutingModule"]] }); })();
+        _remoteokPage_remoteok_form_remoteok_form_component__WEBPACK_IMPORTED_MODULE_8__["RemoteokFormComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _jobs_routing_module__WEBPACK_IMPORTED_MODULE_9__["JobsRoutingModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](JobsModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
@@ -1970,7 +1964,7 @@ var JobsModule = /** @class */ (function () {
                     _remoteokPage_remoteok_remoteok_component__WEBPACK_IMPORTED_MODULE_7__["RemoteokComponent"],
                     _remoteokPage_remoteok_form_remoteok_form_component__WEBPACK_IMPORTED_MODULE_8__["RemoteokFormComponent"],
                 ],
-                imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _jobPage_jobs_jobs_routing_module__WEBPACK_IMPORTED_MODULE_9__["JobsRoutingModule"]],
+                imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _jobs_routing_module__WEBPACK_IMPORTED_MODULE_9__["JobsRoutingModule"]],
                 exports: [],
             }]
     }], null, null); })();
