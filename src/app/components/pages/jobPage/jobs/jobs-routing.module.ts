@@ -26,7 +26,6 @@ const routes: Routes = [
     component: LinkedInComponent,
   },
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
