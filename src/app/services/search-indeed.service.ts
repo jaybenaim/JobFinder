@@ -21,6 +21,17 @@ export class SearchIndeedService {
     ? "https://job-finder-web-scraper.herokuapp.com"
     : "http://localhost:3001";
 
+  getValue(value) {
+    return this.query[value];
+  }
+
+  handleSearchQuery(event) {
+    let name = event.target.name;
+    let value = event.target.value;
+
+    this.query[`${name}`] = value;
+  }
+
   previousPage() {
     this.clearPositions;
     this.isLoading = true;

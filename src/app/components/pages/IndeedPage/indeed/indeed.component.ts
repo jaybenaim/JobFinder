@@ -17,19 +17,17 @@ export class IndeedComponent implements OnInit {
   };
   isLoading: boolean = false;
 
-  constructor(public _indeedSearch: SearchIndeedService) {}
+  constructor(private _indeedSearch: SearchIndeedService) {}
 
-  getValue(value) {
-    return this.query[value];
+  getJobsFromIndeed() {
+    this._indeedSearch.getJobsFromIndeed().subscribe(
+      (data) => {
+        this.positions = data["positions"];
+        console.log(data);
+      },
+      (err) => console.log(err)
+    );
   }
-
-  handleSearchQuery(event) {
-    let name = event.target.name;
-    let value = event.target.value;
-
-    this.query[`${name}`] = value;
-  }
-
   searchJobsFromIndeed(event) {
     event.preventDefault();
     this.isLoading = true;
@@ -48,15 +46,6 @@ export class IndeedComponent implements OnInit {
       (err) => {
         console.log(err);
       }
-    );
-  }
-  getJobsFromIndeed() {
-    this._indeedSearch.getJobsFromIndeed().subscribe(
-      (data) => {
-        this.positions = data["positions"];
-        console.log(data);
-      },
-      (err) => console.log(err)
     );
   }
   ngOnInit(): void {}

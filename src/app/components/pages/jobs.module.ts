@@ -8,13 +8,18 @@ import { SaveJobComponent } from "../save-job/save-job.component";
 import { RemoteokComponent } from "./remoteokPage/remoteok/remoteok.component";
 import { RemoteokFormComponent } from "./remoteokPage/remoteok-form/remoteok-form.component";
 import { JobsRoutingModule } from "./jobs-routing.module";
+import { IndeedComponent } from "./IndeedPage/indeed/indeed.component";
+import { IndeedPaginationComponent } from "./IndeedPage/indeed-pagination/indeed-pagination.component";
+import { IndeedResultComponent } from "./IndeedPage/indeed-result/indeed-result.component";
 
 @NgModule({
   declarations: [
     JobsComponent,
     LinkedInComponent,
     AllJobsComponent,
-
+    IndeedComponent,
+    IndeedPaginationComponent,
+    IndeedResultComponent,
     SaveJobComponent,
     RemoteokComponent,
     RemoteokFormComponent,
