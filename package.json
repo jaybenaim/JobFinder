@@ -25,7 +25,7 @@
     "express": "4.17.1",
     "firebase": "^7.14.3",
     "font-awesome": "^4.7.0",
-    "fs-extra": "9.0.0",
+    "fs-extra": "^9.0.0",
     "http-errors": "1.7.3",
     "morgan": "1.10.0",
     "rxjs": "6.5.5",
