@@ -13,14 +13,13 @@ export class EmailComponent implements OnInit {
     email: "",
     password: "",
   };
-  @Input("hasAcceptedTerms")
-  hasAcceptedTerms: boolean = false;
+  @Input()
+  props: {
+    hasAcceptedTerms: boolean;
+  };
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  isChecked() {
-    return this.hasAcceptedTerms;
-  }
   redirect() {
     return this.authService.isLoggedIn() && this.router.navigate(["/"]);
   }

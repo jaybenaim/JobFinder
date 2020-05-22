@@ -10,7 +10,7 @@ export class AcceptTermsCheckboxComponent implements OnInit {
   @Input()
   props: {
     acceptTerms: Function;
-    checkIfUserAcceptedTerms: Function;
+    hasAcceptedTerms: Boolean;
   };
   constructor() {}
 

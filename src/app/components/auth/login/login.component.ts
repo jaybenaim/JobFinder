@@ -19,15 +19,13 @@ export class LoginComponent implements OnInit {
   props = {
     selection: this.selection,
     acceptTerms: this.acceptTerms,
-    checkIfUserAcceptedTerms: this.checkIfUserAcceptedTerms,
+    hasAcceptedTerms: this.hasAcceptedTerms,
     handleLoginMethodSelection: this.handleLoginMethodSelection,
   };
 
-  checkIfUserAcceptedTerms() {
-    return this.hasAcceptedTerms;
-  }
   acceptTerms() {
     this.hasAcceptedTerms = !this.hasAcceptedTerms;
+    console.log(this.hasAcceptedTerms);
   }
   handleLoginMethodSelection(value: string) {
     this.selection = value;

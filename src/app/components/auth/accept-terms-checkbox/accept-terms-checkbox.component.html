@@ -3,7 +3,7 @@
     id="policy-checkbox"
     type="checkbox"
     aria-label="Checkbox for accepting privacy policy and terms and conditions"
-    [value]="props.checkIfUserAcceptedTerms()"
+    [value]="props.hasAcceptedTerms"
     (change)="handleCheckbox()"
   />
   <span class="accept-terms-checkbox--text">
