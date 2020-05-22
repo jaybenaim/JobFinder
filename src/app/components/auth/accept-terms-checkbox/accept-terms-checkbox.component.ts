@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { AuthService } from "src/app/services/auth.service";
 import { LoginComponent } from "../login/login.component";
 
 @Component({
@@ -10,10 +9,9 @@ import { LoginComponent } from "../login/login.component";
 export class AcceptTermsCheckboxComponent implements OnInit {
   @Input("hasAcceptedTerms")
   hasAcceptedTerms: boolean = false;
-  constructor(private auth: AuthService, private login: LoginComponent) {}
+  constructor(private login: LoginComponent) {}
 
-  handleCheckbox(value: boolean) {
-    console.log(value);
+  handleCheckbox() {
     this.login.acceptTerms();
   }
   ngOnInit(): void {}

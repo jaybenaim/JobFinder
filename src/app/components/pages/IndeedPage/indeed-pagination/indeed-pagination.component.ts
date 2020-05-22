@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { IndeedComponent } from "../indeed/indeed.component";
 
 @Component({
   selector: "app-indeed-pagination",
