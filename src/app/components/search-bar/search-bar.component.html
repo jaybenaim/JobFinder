@@ -20,6 +20,7 @@
         >
           <div class="card">
             <div class="card-body">
+              <app-save-job [position]="position"></app-save-job>
               <a [href]="position.link">
                 <div class="card-title">
                   {{ position.title }}
@@ -59,13 +60,17 @@
       </div>
       <div *ngIf="results['tagsResults'].length >= 1">
         <li *ngFor="let result of results['tagsResults']">
-          <a [href]="result.link">
-            <ul>
-              <li *ngFor="let tag of result.tags">
-                {{ tag }}
-              </li>
-            </ul>
-          </a>
+          <div class="card">
+            <app-save-job [position]="result"></app-save-job>
+            {{ result }}
+            <a [href]="result.link">
+              <ul>
+                <li *ngFor="let tag of result.tags">
+                  {{ tag }}
+                </li>
+              </ul>
+            </a>
+          </div>
         </li>
       </div>
       <div *ngIf="results['websitesResults'].length >= 1">

@@ -182,11 +182,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_auth_email_email_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/auth/email/email.component */ "./src/app/components/auth/email/email.component.ts");
 /* harmony import */ var _components_auth_accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/auth/accept-terms-checkbox/accept-terms-checkbox.component */ "./src/app/components/auth/accept-terms-checkbox/accept-terms-checkbox.component.ts");
 /* harmony import */ var _components_pages_jobs_module__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/pages/jobs.module */ "./src/app/components/pages/jobs.module.ts");
-/* harmony import */ var _components_search_bar_search_bar_module__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/search-bar/search-bar.module */ "./src/app/components/search-bar/search-bar.module.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
-/* harmony import */ var _components_pages_SavedJobsPage_saved_jobs_saved_jobs_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/pages/SavedJobsPage/saved-jobs/saved-jobs.component */ "./src/app/components/pages/SavedJobsPage/saved-jobs/saved-jobs.component.ts");
-
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _components_pages_SavedJobsPage_saved_jobs_saved_jobs_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/pages/SavedJobsPage/saved-jobs/saved-jobs.component */ "./src/app/components/pages/SavedJobsPage/saved-jobs/saved-jobs.component.ts");
 
 
 
@@ -236,7 +234,6 @@ var AppModule = /** @class */ (function () {
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
                 _components_pages_home_home_module__WEBPACK_IMPORTED_MODULE_5__["HomeModule"],
                 _components_pages_jobs_module__WEBPACK_IMPORTED_MODULE_23__["JobsModule"],
-                _components_search_bar_search_bar_module__WEBPACK_IMPORTED_MODULE_24__["SearchBarModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"],
                 angularfire2__WEBPACK_IMPORTED_MODULE_13__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_10__["environment"].firebase, "jobfinder"),
@@ -260,7 +257,6 @@ var AppModule = /** @class */ (function () {
         _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
         _components_pages_home_home_module__WEBPACK_IMPORTED_MODULE_5__["HomeModule"],
         _components_pages_jobs_module__WEBPACK_IMPORTED_MODULE_23__["JobsModule"],
-        _components_search_bar_search_bar_module__WEBPACK_IMPORTED_MODULE_24__["SearchBarModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], angularfire2__WEBPACK_IMPORTED_MODULE_13__["AngularFireModule"], angularfire2_database__WEBPACK_IMPORTED_MODULE_14__["AngularFireDatabaseModule"],
         angularfire2_auth__WEBPACK_IMPORTED_MODULE_15__["AngularFireAuthModule"],
@@ -285,7 +281,6 @@ var AppModule = /** @class */ (function () {
                     _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
                     _components_pages_home_home_module__WEBPACK_IMPORTED_MODULE_5__["HomeModule"],
                     _components_pages_jobs_module__WEBPACK_IMPORTED_MODULE_23__["JobsModule"],
-                    _components_search_bar_search_bar_module__WEBPACK_IMPORTED_MODULE_24__["SearchBarModule"],
                     _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"],
                     _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"],
                     angularfire2__WEBPACK_IMPORTED_MODULE_13__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_10__["environment"].firebase, "jobfinder"),
@@ -305,7 +300,7 @@ var AppModule = /** @class */ (function () {
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]],
             }]
     }], null, null); })();
-_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetComponentScope"](_components_auth_login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"], [_angular_common__WEBPACK_IMPORTED_MODULE_25__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["NgComponentOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["NgTemplateOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["NgSwitchCase"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["NgSwitchDefault"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["NgPlural"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["NgPluralCase"], _angular_router__WEBPACK_IMPORTED_MODULE_26__["RouterOutlet"], _angular_router__WEBPACK_IMPORTED_MODULE_26__["RouterLink"], _angular_router__WEBPACK_IMPORTED_MODULE_26__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_26__["RouterLinkActive"], _angular_router__WEBPACK_IMPORTED_MODULE_26__["ɵangular_packages_router_router_l"], _components_pages_SavedJobsPage_saved_jobs_saved_jobs_component__WEBPACK_IMPORTED_MODULE_27__["SavedJobsComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ɵangular_packages_forms_forms_x"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["RangeValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["SelectMultipleControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["RadioControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["MinLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["MaxLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["PatternValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["CheckboxRequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["EmailValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgModelGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgForm"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormControlDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormGroupName"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormArrayName"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbAccordion"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPanel"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPanelTitle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPanelContent"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPanelHeader"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPanelToggle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbAlert"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbButtonLabel"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbCheckBox"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbRadioGroup"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbRadio"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbCarousel"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbSlide"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbCollapse"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDatepicker"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDatepickerContent"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbInputDatepicker"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDatepickerMonth"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDropdown"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDropdownAnchor"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDropdownToggle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDropdownMenu"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDropdownItem"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNavbar"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNavContent"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNav"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNavItem"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNavLink"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNavOutlet"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPagination"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationEllipsis"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationFirst"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationLast"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationNext"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationNumber"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationPrevious"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPopover"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbProgressbar"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbRating"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTimepicker"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbToast"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbToastHeader"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTooltip"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTypeahead"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbHighlight"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTabset"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTab"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTabContent"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTabTitle"], _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetComponentScope"](_components_auth_login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"], [_angular_common__WEBPACK_IMPORTED_MODULE_24__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["NgComponentOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["NgTemplateOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["NgSwitchCase"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["NgSwitchDefault"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["NgPlural"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["NgPluralCase"], _angular_router__WEBPACK_IMPORTED_MODULE_25__["RouterOutlet"], _angular_router__WEBPACK_IMPORTED_MODULE_25__["RouterLink"], _angular_router__WEBPACK_IMPORTED_MODULE_25__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_25__["RouterLinkActive"], _angular_router__WEBPACK_IMPORTED_MODULE_25__["ɵangular_packages_router_router_l"], _components_pages_SavedJobsPage_saved_jobs_saved_jobs_component__WEBPACK_IMPORTED_MODULE_26__["SavedJobsComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ɵangular_packages_forms_forms_x"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["RangeValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["SelectMultipleControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["RadioControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["MinLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["MaxLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["PatternValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["CheckboxRequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["EmailValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgModelGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["NgForm"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormControlDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormGroupName"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormArrayName"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbAccordion"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPanel"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPanelTitle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPanelContent"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPanelHeader"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPanelToggle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbAlert"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbButtonLabel"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbCheckBox"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbRadioGroup"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbRadio"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbCarousel"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbSlide"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbCollapse"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDatepicker"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDatepickerContent"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbInputDatepicker"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDatepickerMonth"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDropdown"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDropdownAnchor"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDropdownToggle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDropdownMenu"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbDropdownItem"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNavbar"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNavContent"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNav"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNavItem"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNavLink"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbNavOutlet"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPagination"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationEllipsis"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationFirst"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationLast"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationNext"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationNumber"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPaginationPrevious"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbPopover"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbProgressbar"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbRating"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTimepicker"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbToast"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbToastHeader"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTooltip"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTypeahead"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbHighlight"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTabset"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTab"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTabContent"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_20__["NgbTabTitle"], _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
     _components_shell_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_6__["NavBarComponent"],
     _components_shell_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["FooterComponent"],
     _components_auth_login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"],
@@ -313,7 +308,7 @@ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetComponentScope"](_components_
     _components_privacyTerms_terms_and_conditions_terms_and_conditions_component__WEBPACK_IMPORTED_MODULE_17__["TermsAndConditionsComponent"],
     _components_auth_accept_terms_accept_terms_component__WEBPACK_IMPORTED_MODULE_19__["AcceptTermsComponent"],
     _components_auth_email_email_component__WEBPACK_IMPORTED_MODULE_21__["EmailComponent"],
-    _components_auth_accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_22__["AcceptTermsCheckboxComponent"]], [_angular_common__WEBPACK_IMPORTED_MODULE_25__["AsyncPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["UpperCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["LowerCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["JsonPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["SlicePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["TitleCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["I18nPluralPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["I18nSelectPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_25__["KeyValuePipe"]]);
+    _components_auth_accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_22__["AcceptTermsCheckboxComponent"]], [_angular_common__WEBPACK_IMPORTED_MODULE_24__["AsyncPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["UpperCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["LowerCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["JsonPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["SlicePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["TitleCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["I18nPluralPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["I18nSelectPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_24__["KeyValuePipe"]]);
 
 
 /***/ }),
@@ -329,32 +324,22 @@ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetComponentScope"](_components_
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AcceptTermsCheckboxComponent", function() { return AcceptTermsCheckboxComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-/* harmony import */ var src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/auth.service */ "./src/app/services/auth.service.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../login/login.component */ "./src/app/components/auth/login/login.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
-
-
-
-
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 
 
 
 var AcceptTermsCheckboxComponent = /** @class */ (function () {
-    function AcceptTermsCheckboxComponent(auth, login) {
-        this.auth = auth;
-        this.login = login;
-        this.hasAcceptedTerms = false;
+    function AcceptTermsCheckboxComponent() {
     }
-    AcceptTermsCheckboxComponent.prototype.handleCheckbox = function (value) {
-        console.log(value);
-        this.login.acceptTerms();
+    AcceptTermsCheckboxComponent.prototype.handleCheckbox = function () {
+        this.props.acceptTerms();
     };
     AcceptTermsCheckboxComponent.prototype.ngOnInit = function () { };
-    AcceptTermsCheckboxComponent.ɵfac = function AcceptTermsCheckboxComponent_Factory(t) { return new (t || AcceptTermsCheckboxComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"])); };
-    AcceptTermsCheckboxComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AcceptTermsCheckboxComponent, selectors: [["app-accept-terms-checkbox"]], inputs: { hasAcceptedTerms: "hasAcceptedTerms" }, decls: 10, vars: 0, consts: [[1, "accept-terms-checkbox"], ["id", "policy-checkbox", "type", "checkbox", "aria-label", "Checkbox for accepting privacy policy and terms and conditions", 3, "value", "change"], [1, "accept-terms-checkbox--text"], ["routerLink", "/terms-and-conditions", "target", "_blank", "rel", "noopener noreferrer"], ["routerLink", "/privacy", "target", "_blank", "rel", "noopener noreferrer"]], template: function AcceptTermsCheckboxComponent_Template(rf, ctx) { if (rf & 1) {
+    AcceptTermsCheckboxComponent.ɵfac = function AcceptTermsCheckboxComponent_Factory(t) { return new (t || AcceptTermsCheckboxComponent)(); };
+    AcceptTermsCheckboxComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AcceptTermsCheckboxComponent, selectors: [["app-accept-terms-checkbox"]], inputs: { props: "props" }, decls: 10, vars: 1, consts: [[1, "accept-terms-checkbox"], ["id", "policy-checkbox", "type", "checkbox", "aria-label", "Checkbox for accepting privacy policy and terms and conditions", 3, "value", "change"], [1, "accept-terms-checkbox--text"], ["routerLink", "/terms-and-conditions", "target", "_blank", "rel", "noopener noreferrer"], ["routerLink", "/privacy", "target", "_blank", "rel", "noopener noreferrer"]], template: function AcceptTermsCheckboxComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "input", 1);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("value", function AcceptTermsCheckboxComponent_Template_input_value_1_listener() { return ctx.hasAcceptedTerms; })("change", function AcceptTermsCheckboxComponent_Template_input_change_1_listener($event) { return ctx.handleCheckbox($event.target.value); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("change", function AcceptTermsCheckboxComponent_Template_input_change_1_listener() { return ctx.handleCheckbox(); });
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "span", 2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " \u00A0 I agree to the ");
@@ -368,7 +353,10 @@ var AcceptTermsCheckboxComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, ". ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYXV0aC9hY2NlcHQtdGVybXMtY2hlY2tib3gvYWNjZXB0LXRlcm1zLWNoZWNrYm94LmNvbXBvbmVudC5jc3MifQ== */"] });
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", ctx.props.checkIfUserAcceptedTerms());
+        } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYXV0aC9hY2NlcHQtdGVybXMtY2hlY2tib3gvYWNjZXB0LXRlcm1zLWNoZWNrYm94LmNvbXBvbmVudC5jc3MifQ== */"] });
     return AcceptTermsCheckboxComponent;
 }());
 
@@ -379,9 +367,8 @@ var AcceptTermsCheckboxComponent = /** @class */ (function () {
                 templateUrl: "./accept-terms-checkbox.component.html",
                 styleUrls: ["./accept-terms-checkbox.component.css"],
             }]
-    }], function () { return [{ type: src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"] }, { type: _login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] }]; }, { hasAcceptedTerms: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
-            args: ["hasAcceptedTerms"]
+    }], function () { return []; }, { props: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }] }); })();
 
 
@@ -398,12 +385,9 @@ var AcceptTermsCheckboxComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AcceptTermsComponent", function() { return AcceptTermsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../login/login.component */ "./src/app/components/auth/login/login.component.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm5/ng-bootstrap.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
-/* harmony import */ var _accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../accept-terms-checkbox/accept-terms-checkbox.component */ "./src/app/components/auth/accept-terms-checkbox/accept-terms-checkbox.component.ts");
-
-
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm5/ng-bootstrap.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
+/* harmony import */ var _accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../accept-terms-checkbox/accept-terms-checkbox.component */ "./src/app/components/auth/accept-terms-checkbox/accept-terms-checkbox.component.ts");
 
 
 
@@ -416,22 +400,20 @@ function AcceptTermsComponent_div_21_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("hasAcceptedTerms", ctx_r0.login.checkIfUserAcceptedTerms());
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("props", ctx_r0.props);
 } }
 var AcceptTermsComponent = /** @class */ (function () {
-    function AcceptTermsComponent(login) {
-        this.login = login;
-        this.selection = "";
+    function AcceptTermsComponent() {
     }
     AcceptTermsComponent.prototype.handleLoginMethodSelection = function (value) {
-        this.login.handleLoginMethodSelection(value);
+        this.props.handleLoginMethodSelection(value);
     };
     AcceptTermsComponent.prototype.getValue = function () {
-        return this.selection;
+        return this.props.selection;
     };
     AcceptTermsComponent.prototype.ngOnInit = function () { };
-    AcceptTermsComponent.ɵfac = function AcceptTermsComponent_Factory(t) { return new (t || AcceptTermsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"])); };
-    AcceptTermsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AcceptTermsComponent, selectors: [["app-accept-terms"]], inputs: { selection: "selection" }, decls: 22, vars: 1, consts: [[1, "row"], [1, "col"], ["ngbDropdown", "", "id", "login-selection-dropdown", 1, "d-inline-block"], ["ngbDropdownToggle", "", 1, "btn", "btn-outline-primary"], ["ngbDropdownMenu", "", "aria-labelledby", "login-selection-dropdown"], ["value", "Email", "ngbDropdownItem", "", 1, "dropdown-item", "accept-terms--dropdown-item", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-envelope-open"], ["value", "Twitter", "ngbDropdownItem", "", 1, "dropdown-item", "accept-terms--dropdown-item", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-twitter"], ["value", "Facebook", "ngbDropdownItem", "", 1, "dropdown-item", "accept-terms--dropdown-item", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-facebook"], ["value", "Github", "ngbDropdownItem", "", 1, "dropdown-item", "accept-terms--dropdown-item", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-github"], ["value", "Google", "ngbDropdownItem", "", 1, "dropdown-item", "accept-terms--dropdown-item", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-google"], ["id", "accept-terms-checkbox-container", 4, "ngIf"], ["id", "accept-terms-checkbox-container"], [3, "hasAcceptedTerms"]], template: function AcceptTermsComponent_Template(rf, ctx) { if (rf & 1) {
+    AcceptTermsComponent.ɵfac = function AcceptTermsComponent_Factory(t) { return new (t || AcceptTermsComponent)(); };
+    AcceptTermsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AcceptTermsComponent, selectors: [["app-accept-terms"]], inputs: { props: "props" }, decls: 22, vars: 1, consts: [[1, "row"], [1, "col"], ["ngbDropdown", "", "id", "login-selection-dropdown", 1, "d-inline-block"], ["ngbDropdownToggle", "", 1, "btn", "btn-outline-primary"], ["ngbDropdownMenu", "", "aria-labelledby", "login-selection-dropdown"], ["value", "Email", "ngbDropdownItem", "", 1, "dropdown-item", "accept-terms--dropdown-item", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-envelope-open"], ["value", "Twitter", "ngbDropdownItem", "", 1, "dropdown-item", "accept-terms--dropdown-item", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-twitter"], ["value", "Facebook", "ngbDropdownItem", "", 1, "dropdown-item", "accept-terms--dropdown-item", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-facebook"], ["value", "Github", "ngbDropdownItem", "", 1, "dropdown-item", "accept-terms--dropdown-item", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-github"], ["value", "Google", "ngbDropdownItem", "", 1, "dropdown-item", "accept-terms--dropdown-item", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-google"], ["id", "accept-terms-checkbox-container", 4, "ngIf"], ["id", "accept-terms-checkbox-container"], [3, "props"]], template: function AcceptTermsComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -471,8 +453,8 @@ var AcceptTermsComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         } if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](21);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.selection);
-        } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdown"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdownToggle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdownMenu"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdownItem"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_4__["AcceptTermsCheckboxComponent"]], styles: [".accept-terms--dropdown-item[_ngcontent-%COMP%] {\n  width: 233px;\n}\n#accept-terms-checkbox-container[_ngcontent-%COMP%] {\n  max-width: 100%;\n  margin-top: 6%;\n  margin-bottom: 4%;\n  display: inline-block;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9hdXRoL2FjY2VwdC10ZXJtcy9hY2NlcHQtdGVybXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVk7QUFDZDtBQUNBO0VBQ0UsZUFBZTtFQUNmLGNBQWM7RUFDZCxpQkFBaUI7RUFDakIscUJBQXFCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9hdXRoL2FjY2VwdC10ZXJtcy9hY2NlcHQtdGVybXMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5hY2NlcHQtdGVybXMtLWRyb3Bkb3duLWl0ZW0ge1xuICB3aWR0aDogMjMzcHg7XG59XG4jYWNjZXB0LXRlcm1zLWNoZWNrYm94LWNvbnRhaW5lciB7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgbWFyZ2luLXRvcDogNiU7XG4gIG1hcmdpbi1ib3R0b206IDQlO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG4iXX0= */"] });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.props.selection);
+        } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbDropdown"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbDropdownToggle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbDropdownMenu"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbDropdownItem"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _accept_terms_checkbox_accept_terms_checkbox_component__WEBPACK_IMPORTED_MODULE_3__["AcceptTermsCheckboxComponent"]], styles: [".accept-terms--dropdown-item[_ngcontent-%COMP%] {\n  width: 233px;\n}\n#accept-terms-checkbox-container[_ngcontent-%COMP%] {\n  max-width: 100%;\n  margin-top: 6%;\n  margin-bottom: 4%;\n  display: inline-block;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9hdXRoL2FjY2VwdC10ZXJtcy9hY2NlcHQtdGVybXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVk7QUFDZDtBQUNBO0VBQ0UsZUFBZTtFQUNmLGNBQWM7RUFDZCxpQkFBaUI7RUFDakIscUJBQXFCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9hdXRoL2FjY2VwdC10ZXJtcy9hY2NlcHQtdGVybXMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5hY2NlcHQtdGVybXMtLWRyb3Bkb3duLWl0ZW0ge1xuICB3aWR0aDogMjMzcHg7XG59XG4jYWNjZXB0LXRlcm1zLWNoZWNrYm94LWNvbnRhaW5lciB7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgbWFyZ2luLXRvcDogNiU7XG4gIG1hcmdpbi1ib3R0b206IDQlO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG4iXX0= */"] });
     return AcceptTermsComponent;
 }());
 
@@ -483,9 +465,8 @@ var AcceptTermsComponent = /** @class */ (function () {
                 templateUrl: "./accept-terms.component.html",
                 styleUrls: ["./accept-terms.component.css"],
             }]
-    }], function () { return [{ type: _login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"] }]; }, { selection: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
-            args: ["selection"]
+    }], function () { return []; }, { props: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }] }); })();
 
 
@@ -688,6 +669,12 @@ var LoginComponent = /** @class */ (function () {
         };
         this.selection = "";
         this.hasAcceptedTerms = false;
+        this.props = {
+            selection: this.selection,
+            acceptTerms: this.acceptTerms,
+            checkIfUserAcceptedTerms: this.checkIfUserAcceptedTerms,
+            handleLoginMethodSelection: this.handleLoginMethodSelection,
+        };
     }
     LoginComponent.prototype.checkIfUserAcceptedTerms = function () {
         return this.hasAcceptedTerms;
@@ -768,7 +755,7 @@ var LoginComponent = /** @class */ (function () {
         this.redirect();
     };
     LoginComponent.ɵfac = function LoginComponent_Factory(t) { return new (t || LoginComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
-    LoginComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LoginComponent, selectors: [["app-login"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵNgOnChangesFeature"]], decls: 17, vars: 6, consts: [[1, "container"], [1, "login__page"], [1, "row"], [1, "card", "col"], [1, "login__card"], [1, "card-block"], ["name", "userform", "method", "post"], ["formCtrl", "ngForm"], [3, "selection"], [4, "ngIf"], [1, "form-group"], [3, "hasAcceptedTerms"], ["type", "buton", 1, "btn", "btn-block", 3, "disabled", "click"], ["aria-hidden", "true", 1, "fa", "fa-facebook"], ["type", "button", 1, "btn", "btn-block", 3, "disabled", "click"], ["aria-hidden", "true", 1, "fa", "fa-twitter"], ["aria-hidden", "true", 1, "fa", "fa-github"], ["aria-hidden", "true", 1, "fa", "fa-google"]], template: function LoginComponent_Template(rf, ctx) { if (rf & 1) {
+    LoginComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LoginComponent, selectors: [["app-login"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵNgOnChangesFeature"]], decls: 17, vars: 6, consts: [[1, "container"], [1, "login__page"], [1, "row"], [1, "card", "col"], [1, "login__card"], [1, "card-block"], ["name", "userform", "method", "post"], ["formCtrl", "ngForm"], [3, "props"], [4, "ngIf"], [1, "form-group"], [3, "hasAcceptedTerms"], ["type", "buton", 1, "btn", "btn-block", 3, "disabled", "click"], ["aria-hidden", "true", 1, "fa", "fa-facebook"], ["type", "button", 1, "btn", "btn-block", 3, "disabled", "click"], ["aria-hidden", "true", 1, "fa", "fa-twitter"], ["aria-hidden", "true", 1, "fa", "fa-github"], ["aria-hidden", "true", 1, "fa", "fa-google"]], template: function LoginComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -796,7 +783,7 @@ var LoginComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         } if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("selection", ctx.selection);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("props", ctx.props);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.selection === "Email");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
@@ -1056,26 +1043,22 @@ var LinkedInComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IndeedPaginationComponent", function() { return IndeedPaginationComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-/* harmony import */ var src_app_services_search_indeed_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/search-indeed.service */ "./src/app/services/search-indeed.service.ts");
-
-
 
 
 var IndeedPaginationComponent = /** @class */ (function () {
-    function IndeedPaginationComponent(indeedSearch) {
-        this.indeedSearch = indeedSearch;
+    function IndeedPaginationComponent() {
     }
     IndeedPaginationComponent.prototype.previousPage = function () {
-        this.indeedSearch.previousPage();
+        this.props.previousPage();
     };
     IndeedPaginationComponent.prototype.nextPage = function () {
-        this.indeedSearch.nextPage();
+        this.props.nextPage();
     };
     IndeedPaginationComponent.prototype.selectPage = function (page) {
-        this.indeedSearch.selectPage(page);
+        this.props.selectPage(page);
     };
     IndeedPaginationComponent.prototype.getActivePageClass = function (page) {
-        var startAt = this.indeedSearch.query["page"];
+        var startAt = this.props.query["page"];
         var pageNumber = startAt == 20 ? 1 : String(startAt / 20);
         var result = "";
         if (page == pageNumber) {
@@ -1091,8 +1074,8 @@ var IndeedPaginationComponent = /** @class */ (function () {
         return result;
     };
     IndeedPaginationComponent.prototype.ngOnInit = function () { };
-    IndeedPaginationComponent.ɵfac = function IndeedPaginationComponent_Factory(t) { return new (t || IndeedPaginationComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_search_indeed_service__WEBPACK_IMPORTED_MODULE_1__["SearchIndeedService"])); };
-    IndeedPaginationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IndeedPaginationComponent, selectors: [["app-indeed-pagination"]], decls: 37, vars: 20, consts: [[1, "pagination", "justify-content-center"], [1, "page-item"], ["tabindex", "-1", 1, "page-link", 3, "click"], [1, "page-link", 3, "click"], ["tabindex", "+1", 1, "page-link", 3, "click"]], template: function IndeedPaginationComponent_Template(rf, ctx) { if (rf & 1) {
+    IndeedPaginationComponent.ɵfac = function IndeedPaginationComponent_Factory(t) { return new (t || IndeedPaginationComponent)(); };
+    IndeedPaginationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IndeedPaginationComponent, selectors: [["app-indeed-pagination"]], inputs: { props: "props" }, decls: 37, vars: 20, consts: [[1, "pagination", "justify-content-center"], [1, "page-item"], ["tabindex", "-1", 1, "page-link", 3, "click"], [1, "page-link", 3, "click"], ["tabindex", "+1", 1, "page-link", 3, "click"]], template: function IndeedPaginationComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "ul", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "li", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "button", 2);
@@ -1199,7 +1182,9 @@ var IndeedPaginationComponent = /** @class */ (function () {
                 templateUrl: "./indeed-pagination.component.html",
                 styleUrls: ["./indeed-pagination.component.css"],
             }]
-    }], function () { return [{ type: src_app_services_search_indeed_service__WEBPACK_IMPORTED_MODULE_1__["SearchIndeedService"] }]; }, null); })();
+    }], function () { return []; }, { props: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
 
 
 /***/ }),
@@ -1308,15 +1293,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function IndeedComponent_div_29_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Loading...");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function IndeedComponent_div_30_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-indeed-result", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-indeed-result", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var position_r3 = ctx.$implicit;
@@ -1325,7 +1310,7 @@ function IndeedComponent_div_30_div_1_Template(rf, ctx) { if (rf & 1) {
 } }
 function IndeedComponent_div_30_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, IndeedComponent_div_30_div_1_Template, 2, 1, "div", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, IndeedComponent_div_30_div_1_Template, 2, 1, "div", 22);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -1343,18 +1328,43 @@ var IndeedComponent = /** @class */ (function () {
             page: 20,
         };
         this.isLoading = false;
+        this.props = {
+            previousPage: this.previousPage,
+            nextPage: this.nextPage,
+            selectPage: this.selectPage,
+            query: this.query,
+        };
     }
-    IndeedComponent.prototype.handleSearchQuery = function (event) {
-        this._indeedSearch.handleSearchQuery(event);
-    };
     IndeedComponent.prototype.getValue = function (value) {
-        this._indeedSearch.getValue(value);
+        return this.query[value];
     };
-    IndeedComponent.prototype.getCurrentPositions = function () {
-        return this._indeedSearch.positions;
+    IndeedComponent.prototype.handleSearchQuery = function (event) {
+        var name = event.target.name;
+        var value = event.target.value;
+        this.query["" + name] = value;
     };
-    IndeedComponent.prototype.getRequestLoadingStatus = function () {
-        return this._indeedSearch.isLoading;
+    IndeedComponent.prototype.previousPage = function () {
+        this.clearPositions;
+        this.isLoading = true;
+        this.query["page"] > 20
+            ? (this.query["page"] -= 20)
+            : (this.query["page"] = 20);
+        this.searchJobsFromIndeed(this.query);
+    };
+    IndeedComponent.prototype.nextPage = function () {
+        this.clearPositions;
+        this.isLoading = true;
+        this.query["page"] += 20;
+        this.searchJobsFromIndeed(this.query);
+    };
+    IndeedComponent.prototype.selectPage = function (page) {
+        this.clearPositions;
+        this.isLoading = true;
+        this.query["page"] = page * 20;
+        this.searchJobsFromIndeed(this.query);
+    };
+    IndeedComponent.prototype.clearPositions = function () {
+        this.positions = [];
     };
     IndeedComponent.prototype.searchJobsFromIndeed = function (event) {
         var _this = this;
@@ -1372,7 +1382,7 @@ var IndeedComponent = /** @class */ (function () {
     };
     IndeedComponent.prototype.ngOnInit = function () { };
     IndeedComponent.ɵfac = function IndeedComponent_Factory(t) { return new (t || IndeedComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_search_indeed_service__WEBPACK_IMPORTED_MODULE_1__["SearchIndeedService"])); };
-    IndeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IndeedComponent, selectors: [["app-indeed"]], decls: 34, vars: 2, consts: [[1, "container", "indeed__page-container"], [1, "indeed__search-form"], [1, "form-group"], [1, "form-row"], [1, "col"], ["for", "Search by title"], ["type", "text", "id", "searchByTitle", "placeholder", "Search By Title...", "name", "type", 1, "form-control", 3, "value", "change"], ["for", "Search by salary"], ["type", "text", "id", "searchBySalary", "placeholder", "Search By Salary...", "name", "salary", 1, "form-control", 3, "value", "change"], [1, "col-4"], ["for", "Search by City"], ["type", "text", "placeholder", "City", "name", "city", 1, "form-control", 3, "change"], ["for", "Search by Province"], ["type", "text", "placeholder", "Province", "name", "province", 1, "form-control", 3, "change"], [1, "col-12"], ["type", "submit", 1, "btn", "btn-outline-success", "indeed__search-btn", 3, "click"], [1, "row"], ["class", "spinner-border text-success indeed__spinner", "role", "status", 4, "ngIf"], [4, "ngIf"], ["role", "status", 1, "spinner-border", "text-success", "indeed__spinner"], [1, "sr-only"], [4, "ngFor", "ngForOf"], [3, "position"]], template: function IndeedComponent_Template(rf, ctx) { if (rf & 1) {
+    IndeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IndeedComponent, selectors: [["app-indeed"]], decls: 34, vars: 3, consts: [[1, "container", "indeed__page-container"], [1, "indeed__search-form"], [1, "form-group"], [1, "form-row"], [1, "col"], ["for", "Search by title"], ["type", "text", "id", "searchByTitle", "placeholder", "Search By Title...", "name", "type", 1, "form-control", 3, "value", "change"], ["for", "Search by salary"], ["type", "text", "id", "searchBySalary", "placeholder", "Search By Salary...", "name", "salary", 1, "form-control", 3, "value", "change"], [1, "col-4"], ["for", "Search by City"], ["type", "text", "placeholder", "City", "name", "city", 1, "form-control", 3, "change"], ["for", "Search by Province"], ["type", "text", "placeholder", "Province", "name", "province", 1, "form-control", 3, "change"], [1, "col-12"], ["type", "submit", 1, "btn", "btn-outline-success", "indeed__search-btn", 3, "click"], [1, "row"], ["class", "spinner-border text-success indeed__spinner", "role", "status", 4, "ngIf"], [4, "ngIf"], [3, "props"], ["role", "status", 1, "spinner-border", "text-success", "indeed__spinner"], [1, "sr-only"], [4, "ngFor", "ngForOf"], [3, "position"]], template: function IndeedComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h2");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Search Indeed for jobs");
@@ -1433,7 +1443,7 @@ var IndeedComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](30, IndeedComponent_div_30_Template, 2, 1, "div", 18);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 16);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div", 14);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "app-indeed-pagination");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "app-indeed-pagination", 19);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -1442,6 +1452,8 @@ var IndeedComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.isLoading);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.positions && ctx.positions.length >= 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("props", ctx.props);
         } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _indeed_pagination_indeed_pagination_component__WEBPACK_IMPORTED_MODULE_3__["IndeedPaginationComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _indeed_result_indeed_result_component__WEBPACK_IMPORTED_MODULE_4__["IndeedResultComponent"]], styles: [".indeed__page-container[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  margin-top: 2%;\n}\n.indeed__spinner[_ngcontent-%COMP%] {\n  display: flex;\n  margin: 0 auto;\n  width: 60px;\n  height: 60px;\n}\n\n.indeed__search-form[_ngcontent-%COMP%] {\n  padding: 2% 4% 4% 4%;\n}\n.indeed__search-form[_ngcontent-%COMP%]   .form-row[_ngcontent-%COMP%] {\n  margin-top: 2%;\n  margin-bottom: 2%;\n}\n.indeed__search-btn[_ngcontent-%COMP%] {\n  width: 100%;\n  margin-top: 2%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy9JbmRlZWRQYWdlL2luZGVlZC9pbmRlZWQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGNBQWM7QUFDaEI7QUFDQTtFQUNFLGFBQWE7RUFDYixjQUFjO0VBQ2QsV0FBVztFQUNYLFlBQVk7QUFDZDtBQUNBLFNBQVM7QUFDVDtFQUNFLG9CQUFvQjtBQUN0QjtBQUNBO0VBQ0UsY0FBYztFQUNkLGlCQUFpQjtBQUNuQjtBQUVBO0VBQ0UsV0FBVztFQUNYLGNBQWM7QUFDaEI7QUFDQSxhQUFhIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy9JbmRlZWRQYWdlL2luZGVlZC9pbmRlZWQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbmRlZWRfX3BhZ2UtY29udGFpbmVyIGgyIHtcbiAgbWFyZ2luLXRvcDogMiU7XG59XG4uaW5kZWVkX19zcGlubmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIHdpZHRoOiA2MHB4O1xuICBoZWlnaHQ6IDYwcHg7XG59XG4vKiBGb3JtICovXG4uaW5kZWVkX19zZWFyY2gtZm9ybSB7XG4gIHBhZGRpbmc6IDIlIDQlIDQlIDQlO1xufVxuLmluZGVlZF9fc2VhcmNoLWZvcm0gLmZvcm0tcm93IHtcbiAgbWFyZ2luLXRvcDogMiU7XG4gIG1hcmdpbi1ib3R0b206IDIlO1xufVxuXG4uaW5kZWVkX19zZWFyY2gtYnRuIHtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbi10b3A6IDIlO1xufVxuLyogRW5kIGZvcm0gKi9cbiJdfQ== */"] });
     return IndeedComponent;
 }());
@@ -1469,11 +1481,8 @@ var IndeedComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SavedJobsComponent", function() { return SavedJobsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-/* harmony import */ var _services_job_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../services/job.service */ "./src/app/services/job.service.ts");
-/* harmony import */ var src_app_services_save_job_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/save-job.service */ "./src/app/services/save-job.service.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
-
-
+/* harmony import */ var src_app_services_save_job_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/save-job.service */ "./src/app/services/save-job.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
 
 
 
@@ -1543,8 +1552,7 @@ function SavedJobsComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.jobList);
 } }
 var SavedJobsComponent = /** @class */ (function () {
-    function SavedJobsComponent(jobs, _jobService) {
-        this.jobs = jobs;
+    function SavedJobsComponent(_jobService) {
         this._jobService = _jobService;
     }
     SavedJobsComponent.prototype.getSavedJobs = function () {
@@ -1566,25 +1574,10 @@ var SavedJobsComponent = /** @class */ (function () {
             _this.getSavedJobs();
         }, function (err) { return console.log(err); });
     };
-    SavedJobsComponent.prototype.getJobsFromFirebase = function () {
-        var _this = this;
-        var list = [];
-        this.jobs.getJobsFromFirebase().subscribe(function (data) {
-            // Extract the object from its id
-            Object.keys(data).forEach(function (key) {
-                var item = data[key];
-                list.push(item);
-            });
-            _this.jobList = list;
-        }, function (err) {
-            console.log(err);
-            alert("Something went wrong");
-        });
-    };
     SavedJobsComponent.prototype.ngOnInit = function () {
         this.getSavedJobs();
     };
-    SavedJobsComponent.ɵfac = function SavedJobsComponent_Factory(t) { return new (t || SavedJobsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_save_job_service__WEBPACK_IMPORTED_MODULE_2__["SaveJobService"])); };
+    SavedJobsComponent.ɵfac = function SavedJobsComponent_Factory(t) { return new (t || SavedJobsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_save_job_service__WEBPACK_IMPORTED_MODULE_1__["SaveJobService"])); };
     SavedJobsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SavedJobsComponent, selectors: [["app-saved-jobs"]], decls: 3, vars: 1, consts: [[1, "container", "saved-jobs-page"], [4, "ngIf"], [4, "ngFor", "ngForOf"], [1, "card"], [3, "href"], [1, "card-title"], [1, "card-subtitle"], [1, "card-body"], [1, "btn", "btn-outline-danger", 3, "click"], [1, "card-text"]], template: function SavedJobsComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SavedJobsComponent_div_1_Template, 3, 1, "div", 1);
@@ -1593,7 +1586,7 @@ var SavedJobsComponent = /** @class */ (function () {
         } if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.jobList && ctx.jobList.length >= 1);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"]], styles: [".saved-jobs-page[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%] {\n  padding: 4%;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  list-style: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy9TYXZlZEpvYnNQYWdlL3NhdmVkLWpvYnMvc2F2ZWQtam9icy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztBQUNiO0FBQ0E7RUFDRSxnQkFBZ0I7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3BhZ2VzL1NhdmVkSm9ic1BhZ2Uvc2F2ZWQtam9icy9zYXZlZC1qb2JzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2F2ZWQtam9icy1wYWdlIC5jYXJkIHtcbiAgcGFkZGluZzogNCU7XG59XG4uc2F2ZWQtam9icy1wYWdlIHVsIGxpIHtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbn1cbiJdfQ== */"] });
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]], styles: [".saved-jobs-page[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%] {\n  padding: 4%;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  list-style: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy9TYXZlZEpvYnNQYWdlL3NhdmVkLWpvYnMvc2F2ZWQtam9icy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztBQUNiO0FBQ0E7RUFDRSxnQkFBZ0I7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3BhZ2VzL1NhdmVkSm9ic1BhZ2Uvc2F2ZWQtam9icy9zYXZlZC1qb2JzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2F2ZWQtam9icy1wYWdlIC5jYXJkIHtcbiAgcGFkZGluZzogNCU7XG59XG4uc2F2ZWQtam9icy1wYWdlIHVsIGxpIHtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbn1cbiJdfQ== */"] });
     return SavedJobsComponent;
 }());
 
@@ -1604,7 +1597,7 @@ var SavedJobsComponent = /** @class */ (function () {
                 templateUrl: "./saved-jobs.component.html",
                 styleUrls: ["./saved-jobs.component.css"],
             }]
-    }], function () { return [{ type: _services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"] }, { type: src_app_services_save_job_service__WEBPACK_IMPORTED_MODULE_2__["SaveJobService"] }]; }, null); })();
+    }], function () { return [{ type: src_app_services_save_job_service__WEBPACK_IMPORTED_MODULE_1__["SaveJobService"] }]; }, null); })();
 
 
 /***/ }),
@@ -3540,7 +3533,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function SearchBarComponent_div_7_li_2_ul_7_li_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -3550,7 +3543,7 @@ function SearchBarComponent_div_7_li_2_ul_7_li_1_Template(rf, ctx) { if (rf & 1)
 } }
 function SearchBarComponent_div_7_li_2_ul_7_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "ul");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SearchBarComponent_div_7_li_2_ul_7_li_1_Template, 2, 1, "li", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SearchBarComponent_div_7_li_2_ul_7_li_1_Template, 2, 1, "li", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var position_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
@@ -3569,6 +3562,7 @@ function SearchBarComponent_div_7_li_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, SearchBarComponent_div_7_li_2_ul_7_Template, 2, 1, "ul", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "app-save-job", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -3581,11 +3575,13 @@ function SearchBarComponent_div_7_li_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", position_r6.title, " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r5.filters["tags"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("position", position_r6);
 } }
 function SearchBarComponent_div_7_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Job Titles ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, SearchBarComponent_div_7_li_2_Template, 8, 3, "li", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, SearchBarComponent_div_7_li_2_Template, 9, 4, "li", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -3594,7 +3590,7 @@ function SearchBarComponent_div_7_Template(rf, ctx) { if (rf & 1) {
 } }
 function SearchBarComponent_div_8_li_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a", 10);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
@@ -3617,7 +3613,7 @@ function SearchBarComponent_div_8_li_2_Template(rf, ctx) { if (rf & 1) {
 function SearchBarComponent_div_8_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Locations ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, SearchBarComponent_div_8_li_2_Template, 7, 3, "li", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, SearchBarComponent_div_8_li_2_Template, 7, 3, "li", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -3635,7 +3631,7 @@ function SearchBarComponent_div_9_li_1_Template(rf, ctx) { if (rf & 1) {
 } }
 function SearchBarComponent_div_9_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SearchBarComponent_div_9_li_1_Template, 2, 1, "li", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SearchBarComponent_div_9_li_1_Template, 2, 1, "li", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -3655,7 +3651,7 @@ function SearchBarComponent_div_10_li_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 10);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "ul");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, SearchBarComponent_div_10_li_1_li_3_Template, 2, 1, "li", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, SearchBarComponent_div_10_li_1_li_3_Template, 2, 1, "li", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -3668,7 +3664,7 @@ function SearchBarComponent_div_10_li_1_Template(rf, ctx) { if (rf & 1) {
 } }
 function SearchBarComponent_div_10_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SearchBarComponent_div_10_li_1_Template, 4, 2, "li", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SearchBarComponent_div_10_li_1_Template, 4, 2, "li", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -3686,7 +3682,7 @@ function SearchBarComponent_div_11_li_1_Template(rf, ctx) { if (rf & 1) {
 } }
 function SearchBarComponent_div_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SearchBarComponent_div_11_li_1_Template, 2, 1, "li", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SearchBarComponent_div_11_li_1_Template, 2, 1, "li", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -3826,7 +3822,7 @@ var SearchBarComponent = /** @class */ (function () {
         this.getJobs();
     };
     SearchBarComponent.ɵfac = function SearchBarComponent_Factory(t) { return new (t || SearchBarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"])); };
-    SearchBarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SearchBarComponent, selectors: [["app-search-bar"]], decls: 12, vars: 5, consts: [[1, "container", "search-bar-container"], [1, "row"], ["type", "search", "placeholder", "Search...", 1, "search-bar", 3, "input"], [1, "row", "search-bar__locations-container"], [1, "search-bar__positions-results-container"], [4, "ngIf"], ["class", "position-result", 4, "ngFor", "ngForOf"], [1, "position-result"], [1, "card"], [1, "card-body"], [3, "href"], [1, "card-title"], [1, "card-text"], ["class", "tag", 4, "ngFor", "ngForOf"], [1, "tag"], [4, "ngFor", "ngForOf"], [1, "card", "location-card"]], template: function SearchBarComponent_Template(rf, ctx) { if (rf & 1) {
+    SearchBarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SearchBarComponent, selectors: [["app-search-bar"]], decls: 12, vars: 5, consts: [[1, "container", "search-bar-container"], [1, "row"], ["type", "search", "placeholder", "Search...", 1, "search-bar", 3, "input"], [1, "row", "search-bar__locations-container"], [1, "search-bar__positions-results-container"], [4, "ngIf"], ["class", "position-result", 4, "ngFor", "ngForOf"], [1, "position-result"], [1, "card"], [1, "card-body"], [3, "href"], [1, "card-title"], [1, "card-text"], [3, "position"], ["class", "tag", 4, "ngFor", "ngForOf"], [1, "tag"], [4, "ngFor", "ngForOf"], [1, "card", "location-card"]], template: function SearchBarComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "input", 2);
@@ -3869,42 +3865,6 @@ var SearchBarComponent = /** @class */ (function () {
                 styleUrls: ["./search-bar.component.css"],
             }]
     }], function () { return [{ type: src_app_services_job_service__WEBPACK_IMPORTED_MODULE_1__["JobService"] }]; }, null); })();
-
-
-/***/ }),
-
-/***/ "./src/app/components/search-bar/search-bar.module.ts":
-/*!************************************************************!*\
-  !*** ./src/app/components/search-bar/search-bar.module.ts ***!
-  \************************************************************/
-/*! exports provided: SearchBarModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchBarModule", function() { return SearchBarModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
-
-
-
-var SearchBarModule = /** @class */ (function () {
-    function SearchBarModule() {
-    }
-    SearchBarModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: SearchBarModule });
-    SearchBarModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function SearchBarModule_Factory(t) { return new (t || SearchBarModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]] });
-    return SearchBarModule;
-}());
-
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](SearchBarModule, { imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]] }); })();
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SearchBarModule, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
-        args: [{
-                declarations: [],
-                imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
-                exports: [],
-            }]
-    }], null, null); })();
 
 
 /***/ }),
@@ -4383,49 +4343,10 @@ __webpack_require__.r(__webpack_exports__);
 var SearchIndeedService = /** @class */ (function () {
     function SearchIndeedService(http) {
         this.http = http;
-        this.query = {
-            type: "",
-            salary: "",
-            city: "",
-            province: "",
-            page: 20,
-        };
-        this.isLoading = false;
         this.endpoint = !window.location.host.includes("local")
             ? "https://job-finder-web-scraper.herokuapp.com"
             : "http://localhost:3001";
     }
-    SearchIndeedService.prototype.getValue = function (value) {
-        return this.query[value];
-    };
-    SearchIndeedService.prototype.handleSearchQuery = function (event) {
-        var name = event.target.name;
-        var value = event.target.value;
-        this.query["" + name] = value;
-    };
-    SearchIndeedService.prototype.previousPage = function () {
-        this.clearPositions;
-        this.isLoading = true;
-        this.query["page"] > 20
-            ? (this.query["page"] -= 20)
-            : (this.query["page"] = 20);
-        this.searchJobsFromIndeed({ preventDefault: function () { return null; } });
-    };
-    SearchIndeedService.prototype.nextPage = function () {
-        this.clearPositions;
-        this.isLoading = true;
-        this.query["page"] += 20;
-        this.searchJobsFromIndeed({ preventDefault: function () { return null; } });
-    };
-    SearchIndeedService.prototype.selectPage = function (page) {
-        this.clearPositions;
-        this.isLoading = true;
-        this.query["page"] = page * 20;
-        this.searchJobsFromIndeed({ preventDefault: function () { return null; } });
-    };
-    SearchIndeedService.prototype.clearPositions = function () {
-        this.positions = [];
-    };
     SearchIndeedService.prototype.getJobsFromIndeed = function () {
         return this.http.get(this.endpoint + "/api/jobs/indeed");
     };
