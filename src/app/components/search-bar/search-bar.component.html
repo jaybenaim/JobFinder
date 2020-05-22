@@ -62,7 +62,6 @@
         <li *ngFor="let result of results['tagsResults']">
           <div class="card">
             <app-save-job [position]="result"></app-save-job>
-            {{ result }}
             <a [href]="result.link">
               <ul>
                 <li *ngFor="let tag of result.tags">
