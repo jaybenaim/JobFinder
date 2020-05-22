@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
     selection: this.selection,
     acceptTerms: this.acceptTerms,
     checkIfUserAcceptedTerms: this.checkIfUserAcceptedTerms,
+    handleLoginMethodSelection: this.handleLoginMethodSelection,
   };
 
   checkIfUserAcceptedTerms() {

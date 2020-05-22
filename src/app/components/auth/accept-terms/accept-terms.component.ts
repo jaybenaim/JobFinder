@@ -12,12 +12,13 @@ export class AcceptTermsComponent implements OnInit {
     selection: string;
     acceptTerms: Function;
     checkIfUserAcceptedTerms: Function;
+    handleLoginMethodSelection: Function;
   };
 
-  constructor(public login: LoginComponent) {}
+  constructor() {}
 
   handleLoginMethodSelection(value: any) {
-    this.login.handleLoginMethodSelection(value);
+    this.props.handleLoginMethodSelection(value);
   }
   getValue() {
     return this.props.selection;
