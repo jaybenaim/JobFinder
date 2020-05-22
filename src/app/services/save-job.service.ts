@@ -8,7 +8,7 @@ import { AuthService } from "./auth.service";
 export class SaveJobService {
   constructor(private http: HttpClient, private _auth: AuthService) {}
   endpoint = "https://jobfinder-95e75.firebaseio.com/";
-  userId = this._auth.getUser().uid;
+  userId = this._auth.getUser() !== null ? this._auth.getUser().uid : "guest";
 
   saveJob(job) {
     // save job to firebase user
