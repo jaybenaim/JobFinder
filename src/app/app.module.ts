@@ -24,14 +24,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { EmailComponent } from "./components/auth/email/email.component";
 import { AcceptTermsCheckboxComponent } from "./components/auth/accept-terms-checkbox/accept-terms-checkbox.component";
 import { JobsModule } from "./components/pages/jobs.module";
-import { SaveJobComponent } from "./components/save-job/save-job.component";
-import { HomeComponent } from "./components/pages/home/home.component";
 import { SavedJobsComponent } from "./components/pages/SavedJobsPage/saved-jobs/saved-jobs.component";
-import { SearchBarComponent } from "./components/search-bar/search-bar.component";
-import { SearchBarFilterComponent } from "./components/search-bar-filter/search-bar-filter.component";
-import { IndeedComponent } from "./components/pages/IndeedPage/indeed/indeed.component";
-import { IndeedPaginationComponent } from "./components/pages/IndeedPage/indeed-pagination/indeed-pagination.component";
-import { IndeedResultComponent } from "./components/pages/IndeedPage/indeed-result/indeed-result.component";
 
 @NgModule({
   declarations: [
@@ -44,14 +37,7 @@ import { IndeedResultComponent } from "./components/pages/IndeedPage/indeed-resu
     AcceptTermsComponent,
     EmailComponent,
     AcceptTermsCheckboxComponent,
-    SaveJobComponent,
-    HomeComponent,
     SavedJobsComponent,
-    SearchBarComponent,
-    SearchBarFilterComponent,
-    IndeedComponent,
-    IndeedPaginationComponent,
-    IndeedResultComponent,
   ],
   imports: [
     BrowserModule,
