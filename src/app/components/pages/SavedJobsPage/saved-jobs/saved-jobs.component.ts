@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { JobService } from "../../../../services/job.service";
+import { Component, OnInit } from "@angular/core";
 import { SaveJobService } from "src/app/services/save-job.service";
 
 @Component({
@@ -9,7 +8,7 @@ import { SaveJobService } from "src/app/services/save-job.service";
 })
 export class SavedJobsComponent implements OnInit {
   jobList: any;
-  constructor(private jobs: JobService, private _jobService: SaveJobService) {}
+  constructor(private _jobService: SaveJobService) {}
 
   getSavedJobs() {
     let jobs = <any>[];
@@ -37,24 +36,7 @@ export class SavedJobsComponent implements OnInit {
       (err) => console.log(err)
     );
   }
-  getJobsFromFirebase() {
-    let list = <any>[];
-    this.jobs.getJobsFromFirebase().subscribe(
-      (data) => {
-        // Extract the object from its id
-        Object.keys(data).forEach((key: Extract<keyof typeof data, string>) => {
-          const item = data[key];
-          list.push(item);
-        });
-        this.jobList = list;
-      },
-      (err) => {
-        console.log(err);
 
-        alert("Something went wrong");
-      }
-    );
-  }
   ngOnInit(): void {
     this.getSavedJobs();
   }
