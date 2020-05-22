@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { SearchIndeedService } from "src/app/services/search-indeed.service";
+import { Component, OnInit, Input } from "@angular/core";
+import { IndeedComponent } from "../indeed/indeed.component";
 
 @Component({
   selector: "app-indeed-pagination",
@@ -7,19 +7,26 @@ import { SearchIndeedService } from "src/app/services/search-indeed.service";
   styleUrls: ["./indeed-pagination.component.css"],
 })
 export class IndeedPaginationComponent implements OnInit {
-  constructor(public indeedSearch: SearchIndeedService) {}
+  constructor() {}
+  @Input()
+  props: {
+    previousPage: Function;
+    nextPage: Function;
+    selectPage: Function;
+    query: string;
+  };
 
   previousPage() {
-    this.indeedSearch.previousPage();
+    this.props.previousPage();
   }
   nextPage() {
-    this.indeedSearch.nextPage();
+    this.props.nextPage();
   }
   selectPage(page) {
-    this.indeedSearch.selectPage(page);
+    this.props.selectPage(page);
   }
   getActivePageClass(page) {
-    let startAt = this.indeedSearch.query["page"];
+    let startAt = this.props.query["page"];
     let pageNumber = startAt == 20 ? 1 : String(startAt / 20);
     let result = "";
 

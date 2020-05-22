@@ -5,56 +5,12 @@ import { HttpClient } from "@angular/common/http";
   providedIn: "root",
 })
 export class SearchIndeedService {
-  positions: any;
-  query: object = {
-    type: "",
-    salary: "",
-    city: "",
-    province: "",
-    page: 20,
-  };
-  isLoading: boolean = false;
-
   constructor(private http: HttpClient) {}
 
   endpoint = !window.location.host.includes("local")
     ? "https://job-finder-web-scraper.herokuapp.com"
     : "http://localhost:3001";
 
-  getValue(value) {
-    return this.query[value];
-  }
-
-  handleSearchQuery(event) {
-    let name = event.target.name;
-    let value = event.target.value;
-
-    this.query[`${name}`] = value;
-  }
-
-  previousPage() {
-    this.clearPositions;
-    this.isLoading = true;
-    this.query["page"] > 20
-      ? (this.query["page"] -= 20)
-      : (this.query["page"] = 20);
-    this.searchJobsFromIndeed({ preventDefault: () => null });
-  }
-  nextPage() {
-    this.clearPositions;
-    this.isLoading = true;
-    this.query["page"] += 20;
-    this.searchJobsFromIndeed({ preventDefault: () => null });
-  }
-  selectPage(page) {
-    this.clearPositions;
-    this.isLoading = true;
-    this.query["page"] = page * 20;
-    this.searchJobsFromIndeed({ preventDefault: () => null });
-  }
-  clearPositions() {
-    this.positions = [];
-  }
   getJobsFromIndeed() {
     return this.http.get(this.endpoint + "/api/jobs/indeed");
   }

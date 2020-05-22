@@ -18,15 +18,44 @@ export class IndeedComponent implements OnInit {
   isLoading: boolean = false;
 
   constructor(private _indeedSearch: SearchIndeedService) {}
+  props = {
+    previousPage: this.previousPage,
+    nextPage: this.nextPage,
+    selectPage: this.selectPage,
+    query: this.query,
+  };
+  getValue(value) {
+    return this.query[value];
+  }
 
-  getJobsFromIndeed() {
-    this._indeedSearch.getJobsFromIndeed().subscribe(
-      (data) => {
-        this.positions = data["positions"];
-        console.log(data);
-      },
-      (err) => console.log(err)
-    );
+  handleSearchQuery(event) {
+    let name = event.target.name;
+    let value = event.target.value;
+
+    this.query[`${name}`] = value;
+  }
+  previousPage() {
+    this.clearPositions;
+    this.isLoading = true;
+    this.query["page"] > 20
+      ? (this.query["page"] -= 20)
+      : (this.query["page"] = 20);
+    this.searchJobsFromIndeed(this.query);
+  }
+  nextPage() {
+    this.clearPositions;
+    this.isLoading = true;
+    this.query["page"] += 20;
+    this.searchJobsFromIndeed(this.query);
+  }
+  selectPage(page) {
+    this.clearPositions;
+    this.isLoading = true;
+    this.query["page"] = page * 20;
+    this.searchJobsFromIndeed(this.query);
+  }
+  clearPositions() {
+    this.positions = [];
   }
   searchJobsFromIndeed(event) {
     event.preventDefault();
