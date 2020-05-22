@@ -7,11 +7,11 @@
             <form name="userform" method="post" #formCtrl="ngForm">
               <h3>Login Below</h3>
               <app-accept-terms [props]="props"></app-accept-terms>
-              <div *ngIf="selection === 'Email'">
+              <div *ngIf="props.selection === 'Email'">
                 <app-email [hasAcceptedTerms]="hasAcceptedTerms"></app-email>
               </div>
               <div class="form-group">
-                <div *ngIf="selection === 'Facebook'">
+                <div *ngIf="props.selection === 'Facebook'">
                   <button
                     type="buton"
                     class="btn btn-block"
@@ -22,7 +22,7 @@
                     Login with Facebook
                   </button>
                 </div>
-                <div *ngIf="selection === 'Twitter'">
+                <div *ngIf="props.selection === 'Twitter'">
                   <button
                     type="button"
                     class="btn btn-block"
@@ -33,7 +33,7 @@
                     Login with Twitter
                   </button>
                 </div>
-                <div *ngIf="selection === 'Github'">
+                <div *ngIf="props.selection === 'Github'">
                   <button
                     type="button"
                     class="btn btn-block"
@@ -44,7 +44,7 @@
                     Login with Github
                   </button>
                 </div>
-                <div *ngIf="selection === 'Google'">
+                <div *ngIf="props.selection === 'Google'">
                   <button
                     type="button"
                     class="btn btn-block"

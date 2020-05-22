@@ -28,8 +28,8 @@
     class="btn btn-primary btn-block"
     style="margin-bottom: 20px;"
     (click)="signInWithEmail()"
-    [disabled]="!user.email || !user.password || !isChecked()"
+    [disabled]="!user.email || !user.password || !hasAcceptedTerms"
   >
-    Login with Email
+    Login with Email {{ hasAcceptedTerms }}
   </button>
 </div>

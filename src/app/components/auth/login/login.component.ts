@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
   }
   handleLoginMethodSelection(value: string) {
     this.selection = value;
-    // switch handle send to auth method
   }
   signInWithEmail() {
     this.authService
