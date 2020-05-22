@@ -16,6 +16,12 @@ export class LoginComponent implements OnInit {
   hasAcceptedTerms: boolean = false;
 
   constructor(private authService: AuthService, private router: Router) {}
+  props = {
+    selection: this.selection,
+    acceptTerms: this.acceptTerms,
+    checkIfUserAcceptedTerms: this.checkIfUserAcceptedTerms,
+  };
+
   checkIfUserAcceptedTerms() {
     return this.hasAcceptedTerms;
   }

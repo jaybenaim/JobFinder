@@ -7,8 +7,12 @@ import { LoginComponent } from "../login/login.component";
   styleUrls: ["./accept-terms.component.css"],
 })
 export class AcceptTermsComponent implements OnInit {
-  @Input("selection")
-  selection: string = "";
+  @Input()
+  props: {
+    selection: string;
+    acceptTerms: Function;
+    checkIfUserAcceptedTerms: Function;
+  };
 
   constructor(public login: LoginComponent) {}
 
@@ -16,7 +20,7 @@ export class AcceptTermsComponent implements OnInit {
     this.login.handleLoginMethodSelection(value);
   }
   getValue() {
-    return this.selection;
+    return this.props.selection;
   }
   ngOnInit(): void {}
 }

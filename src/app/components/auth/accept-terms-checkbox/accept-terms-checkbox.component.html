@@ -3,8 +3,8 @@
     id="policy-checkbox"
     type="checkbox"
     aria-label="Checkbox for accepting privacy policy and terms and conditions"
-    (value)="(hasAcceptedTerms)"
-    (change)="handleCheckbox($event.target.value)"
+    [value]="props.checkIfUserAcceptedTerms()"
+    (change)="handleCheckbox()"
   />
   <span class="accept-terms-checkbox--text">
     &nbsp; I agree to the

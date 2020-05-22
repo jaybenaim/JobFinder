@@ -48,10 +48,8 @@
       </div>
     </div>
 
-    <div *ngIf="selection" id="accept-terms-checkbox-container">
-      <app-accept-terms-checkbox
-        [hasAcceptedTerms]="login.checkIfUserAcceptedTerms()"
-      ></app-accept-terms-checkbox>
+    <div *ngIf="props.selection" id="accept-terms-checkbox-container">
+      <app-accept-terms-checkbox [props]="props"></app-accept-terms-checkbox>
     </div>
   </div>
 </div>

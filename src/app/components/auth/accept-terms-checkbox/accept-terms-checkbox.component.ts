@@ -7,12 +7,15 @@ import { LoginComponent } from "../login/login.component";
   styleUrls: ["./accept-terms-checkbox.component.css"],
 })
 export class AcceptTermsCheckboxComponent implements OnInit {
-  @Input("hasAcceptedTerms")
-  hasAcceptedTerms: boolean = false;
-  constructor(private login: LoginComponent) {}
+  @Input()
+  props: {
+    acceptTerms: Function;
+    checkIfUserAcceptedTerms: Function;
+  };
+  constructor() {}
 
   handleCheckbox() {
-    this.login.acceptTerms();
+    this.props.acceptTerms();
   }
   ngOnInit(): void {}
 }
