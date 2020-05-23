@@ -1,6 +1,36 @@
+.saved-jobs-page {
+  display: grid;
+}
 .saved-jobs-page .card {
   padding: 4%;
+  margin-bottom: 3%;
+}
+.saved-jobs-page ul {
+  padding: 0;
 }
 .saved-jobs-page ul li {
   list-style: none;
+}
+@media (max-width: 450px) {
+  .saved-jobs-page {
+    grid-template-columns: 1fr;
+    padding-top: 5%;
+  }
+  .saved-jobs-page .left-panel {
+    text-align: center;
+  }
+  .saved-jobs-page .results {
+    margin-top: 5%;
+  }
+}
+@media (min-width: 451px) {
+  .saved-jobs-page {
+    grid-template-columns: 2fr 10fr;
+  }
+  .saved-jobs-page .left-panel {
+    grid-column: 1;
+  }
+  .saved-jobs-page .results {
+    grid-column: 2;
+  }
 }

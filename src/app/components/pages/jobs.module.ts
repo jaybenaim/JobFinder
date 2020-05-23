@@ -14,6 +14,7 @@ import { IndeedComponent } from "./IndeedPage/indeed/indeed.component";
 import { IndeedPaginationComponent } from "./IndeedPage/indeed-pagination/indeed-pagination.component";
 import { IndeedResultComponent } from "./IndeedPage/indeed-result/indeed-result.component";
 import { HomeComponent } from "./home/home.component";
+import { SavedJobResultComponent } from './SavedJobsPage/saved-job-result/saved-job-result.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HomeComponent } from "./home/home.component";
     IndeedPaginationComponent,
     IndeedResultComponent,
     HomeComponent,
+    SavedJobResultComponent,
   ],
   imports: [CommonModule, JobsRoutingModule],
   exports: [],

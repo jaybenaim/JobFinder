@@ -1,31 +1,34 @@
-<div class="container saved-jobs-page">
-  <div *ngIf="jobList && jobList.length >= 1">
-    <ul>
-      <li *ngFor="let job of jobList">
-        <div class="card">
-          <a [href]="job.link">
-            <div class="card-title">
-              {{ job.title }}
+<div class="container-fluid saved-jobs-page">
+  <div class="left-panel">{{ jobList && jobList.length }} jobs saved</div>
+  <div class="results">
+    <div *ngIf="jobList && jobList.length >= 1">
+      <ul>
+        <li *ngFor="let job of jobList">
+          <div class="card">
+            <a [href]="job.link">
+              <div class="card-title">
+                {{ job.title }}
+              </div>
+              <div class="card-subtitle">
+                {{ job.salary }}
+              </div>
+            </a>
+            <div class="card-body">
+              <ul *ngIf="job.requirements && job.requirements.length >= 1">
+                <li *ngFor="let requirement of job.requirements">
+                  <div class="card-text">
+                    {{ requirement }}
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div class="card-subtitle">
-              {{ job.salary }}
-            </div>
-          </a>
-          <div class="card-body">
-            <ul *ngIf="job.requirements && job.requirements.length >= 1">
-              <li *ngFor="let requirement of job.requirements">
-                <div class="card-text">
-                  {{ requirement }}
-                </div>
-              </li>
-            </ul>
+            <button class="btn btn-outline-danger" (click)="removeJob(job.id)">
+              Remove from saved jobs
+            </button>
           </div>
-          <button class="btn btn-outline-danger" (click)="removeJob(job.id)">
-            Remove from saved jobs
-          </button>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 <div></div>
