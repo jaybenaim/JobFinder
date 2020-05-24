@@ -1,4 +1,5 @@
 <div class="container linked-in__page-container">
+  <h1>Search Linked In for Jobs</h1>
   <app-linked-in-form
     [searchJobsFromLinkedIn]="searchJobsFromLinkedIn"
   ></app-linked-in-form>
@@ -18,10 +19,15 @@
     <div class="col-12">
       <div *ngIf="positions && positions.length >= 1">
         <div *ngFor="let position of positions">
-          <div class="card">
+          <div class="card linked-in__result">
             <div class="card-body">
               <div class="card-title">
-                <a [href]="position.link" class="primary-font">
+                <a
+                  [href]="position.link"
+                  class="primary-font"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {{ position.title }}
                 </a>
                 <app-save-job [position]="position"></app-save-job>
