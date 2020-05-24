@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { LinkedInComponent } from "../jobs/linked-in/linked-in.component";
+import { LinkedInComponent } from "./linkedInPage/linked-in/linked-in.component";
 import { AllJobsComponent } from "../jobs/all-jobs/all-jobs.component";
 import { JobsComponent } from "./jobPage/jobs/jobs.component";
 import { RemoteokComponent } from "./remoteokPage/remoteok/remoteok.component";
