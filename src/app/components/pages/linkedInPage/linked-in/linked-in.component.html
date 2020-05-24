@@ -1,20 +1,35 @@
-<button (click)="getJobsFromLinkedIn()">
-  Get All from Linked In
-</button>
-<div *ngIf="positions && positions.length >= 1">
-  {{ positions.length }} jobs available
+<div class="container linked-in__page-container">
+  <app-linked-in-form
+    [searchJobsFromLinkedIn]="searchJobsFromLinkedIn"
+  ></app-linked-in-form>
 
-  <button (click)="minimize()">Minimize</button>
-  <div *ngIf="positions && positions.length >= 1">
-    <div *ngFor="let position of positions">
-      <a [href]="position.link" rel="noopener noreferrer" target="_blank">
-        {{ position.title }}
-      </a>
+  <div class="row">
+    <div class="col-12">
+      <div
+        *ngIf="isLoading"
+        class="spinner-border text-success linked-in__spinner"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
   </div>
-</div>
-<div class="container linked-in-page">
   <div class="row">
-    <app-linked-in-form></app-linked-in-form>
+    <div class="col-12">
+      <div *ngIf="positions && positions.length >= 1">
+        <div *ngFor="let position of positions">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">
+                <a [href]="position.link" class="primary-font">
+                  {{ position.title }}
+                </a>
+                <app-save-job [position]="position"></app-save-job>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

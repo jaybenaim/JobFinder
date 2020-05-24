@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { JobService } from "src/app/services/job.service";
+import { SearchLinkedInService } from "src/app/services/search-linked-in.service";
 
 @Component({
   selector: "app-linked-in",
@@ -7,21 +7,26 @@ import { JobService } from "src/app/services/job.service";
   styleUrls: ["./linked-in.component.css"],
 })
 export class LinkedInComponent implements OnInit {
-  positions: any[] = [];
+  positions: any;
+  isLoading: boolean = false;
 
-  constructor(private jobs: JobService) {}
+  constructor(private _linkedIn: SearchLinkedInService) {}
 
   minimize() {
     this.positions = [];
   }
-  getJobsFromLinkedIn() {
-    this.jobs.getJobsFromLinkedIn().subscribe(
+
+  searchJobsFromLinkedIn = (query: string) => {
+    this.isLoading = true;
+
+    this._linkedIn.searchJobsFromLinkedIn(query).subscribe(
       (data) => {
-        let positions = data["positions"].map((p: any, i: number) => p);
-        this.positions = positions;
+        this.isLoading = false;
+        this.positions = data["positions"];
       },
       (err) => console.log(err)
     );
-  }
+  };
+
   ngOnInit(): void {}
 }

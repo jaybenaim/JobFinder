@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { SearchLinkedInService } from "src/app/services/search-linked-in.service";
 
 @Component({
@@ -8,26 +8,21 @@ import { SearchLinkedInService } from "src/app/services/search-linked-in.service
 })
 export class LinkedInFormComponent implements OnInit {
   query: string = "";
-  isLoading: boolean = false;
 
+  // constructor() {}
   constructor(private _linkedIn: SearchLinkedInService) {}
+
+  @Input()
+  searchJobsFromLinkedIn: Function;
+
   handleSearchQuery(value) {
     this.query = value;
   }
-  searchJobsFromLinkedIn(event) {
+  searchJobs(event) {
     event.preventDefault();
-    this.isLoading = true;
 
-    this._linkedIn.searchJobsFromLinkedIn(this.query).subscribe(
-      (data) => {
-        this.isLoading = false;
-
-        console.log(data);
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
+    // this.searchJobsFromLinkedIn(this.query);
   }
+
   ngOnInit(): void {}
 }
