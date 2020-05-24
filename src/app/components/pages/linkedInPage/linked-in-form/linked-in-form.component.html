@@ -1,0 +1,26 @@
+<form class="container linked-in__search-form" (submit)="searchJobs($event)">
+  <div class="form-group">
+    <div class="form-row">
+      <label for="Search by title">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="searchByTitle"
+        placeholder="Search By Title..."
+        name="type"
+        [value]="query"
+        (change)="handleSearchQuery($event.target.value)"
+      />
+    </div>
+
+    <div class="form-row">
+      <button
+        type="submit"
+        class="btn btn-outline-success indeed__search-btn"
+        (click)="searchJobsFromLinkedIn(query)"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+</form>

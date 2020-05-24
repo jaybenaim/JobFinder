@@ -2,22 +2,26 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 
 // https://www.linkedin.com/jobs/search/?geoId=100025096&keywords=web%20developer&location=Toronto%2C%20Ontario%2C%20Canada
-
+// https://www.linkedin.com/jobs/search/?keywords=web%20developer
 const webDeveloperQuery =
   "https://www.linkedin.com/jobs/search/?geoId=100025096&keywords=web%20developer&location=Toronto%2C%20Ontario%2C%20Canada";
-const domain = "https://www.linkedin.com";
+const domain = "https://www.linkedin.com/jobs";
 const siteUrl = webDeveloperQuery;
 
 const positions = new Set();
 const locations = new Set();
 
-const fetchData = async () => {
-  const result = await axios.get(siteUrl);
+const buildQuery = (query) => {
+  return domain + "/search/?keywords=" + encodeURI(query);
+};
+const fetchData = async (query) => {
+  let url = buildQuery(query);
+  const result = await axios.get(url);
   return cheerio.load(result.data);
 };
 
-const getResults = async () => {
-  const $ = await fetchData();
+const getResults = async (query) => {
+  const $ = await fetchData(query);
   siteName = "Linked In";
   description = $("title").text();
 

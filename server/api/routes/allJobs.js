@@ -35,5 +35,10 @@ router.get("/linked-in", async (req, res) => {
   const results = await getResultsFromLinkedIn();
   res.status(200).send(results);
 });
+router.post("/linked-in", async (req, res) => {
+  // const results = allJobs.linkedIn;
+  const results = await getResultsFromLinkedIn(req.body.query);
+  res.status(200).send(results);
+});
 
 module.exports = router;
