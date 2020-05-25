@@ -6,10 +6,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class SearchLinkedInService {
   constructor(private http: HttpClient) {}
-
-  endpoint = !window.location.host.includes("local")
-    ? "https://job-finder-web-scraper.herokuapp.com"
-    : "http://localhost:3001";
+  endpoint = "https://job-finder-web-scraper.herokuapp.com";
 
   getJobsFromLinkedIn() {
     return this.http.get(this.endpoint + "/api/jobs/linked-in");
