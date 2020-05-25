@@ -5,11 +5,25 @@
   padding: 4%;
   margin-bottom: 3%;
 }
+.saved-jobs-page .card-title,
+.saved-jobs-page .card-subtitle {
+  color: #28a745;
+}
+.saved-jobs-page .card a:hover {
+  text-decoration: none;
+}
 .saved-jobs-page ul {
   padding: 0;
 }
 .saved-jobs-page ul li {
   list-style: none;
+}
+.saved-jobs-page .fa-heart:hover {
+  color: #f03935;
+}
+.saved-jobs-page .confirm-delete {
+  width: 100%;
+  margin: 5% auto;
 }
 @media (max-width: 450px) {
   .saved-jobs-page {
@@ -26,6 +40,7 @@
 @media (min-width: 451px) {
   .saved-jobs-page {
     grid-template-columns: 2fr 10fr;
+    padding-top: 5%;
   }
   .saved-jobs-page .left-panel {
     grid-column: 1;

@@ -8,6 +8,9 @@ import { SaveJobService } from "src/app/services/save-job.service";
 })
 export class SavedJobsComponent implements OnInit {
   jobList: any;
+  jobId: string;
+  confirmedDelete: boolean = false;
+
   constructor(private _jobService: SaveJobService) {}
 
   getSavedJobs() {
@@ -28,15 +31,19 @@ export class SavedJobsComponent implements OnInit {
       (err) => console.log(err)
     );
   }
-  removeJob(id) {
-    this._jobService.removeJob(id).subscribe(
+  removeJob() {
+    this._jobService.removeJob(this.jobId).subscribe(
       (data) => {
         this.getSavedJobs();
+        this.confirmedDelete = false;
       },
       (err) => console.log(err)
     );
   }
-
+  confirmDelete(id) {
+    this.confirmedDelete = true;
+    this.jobId = id;
+  }
   ngOnInit(): void {
     this.getSavedJobs();
   }

@@ -1,10 +1,26 @@
 <div class="container-fluid saved-jobs-page">
-  <div class="left-panel">{{ jobList && jobList.length }} jobs saved</div>
+  <div class="left-panel">
+    <div class="card">
+      <div class="card-body">{{ jobList && jobList.length }} jobs saved</div>
+    </div>
+  </div>
   <div class="results">
     <div *ngIf="jobList && jobList.length >= 1">
       <ul>
         <li *ngFor="let job of jobList">
           <div class="card">
+            <div (click)="confirmDelete(job.id)">
+              <span
+                ><i class="fa fa-heart float-right secondary-font"></i
+              ></span>
+              <span
+                *ngIf="confirmedDelete && jobId === job.id"
+                class="btn btn-outline-danger confirm-delete"
+                (click)="removeJob()"
+              >
+                Confirm Delete
+              </span>
+            </div>
             <a [href]="job.link">
               <div class="card-title">
                 {{ job.title }}
@@ -22,9 +38,6 @@
                 </li>
               </ul>
             </div>
-            <button class="btn btn-outline-danger" (click)="removeJob(job.id)">
-              Remove from saved jobs
-            </button>
           </div>
         </li>
       </ul>
