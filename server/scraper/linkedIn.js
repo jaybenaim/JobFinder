@@ -12,7 +12,9 @@ const positions = new Set();
 const locations = new Set();
 
 const buildQuery = (query) => {
-  return domain + "/search/?keywords=" + encodeURI(query);
+  let validQuery = query ? encodeURI(query) : "";
+
+  return domain + "/search/?keywords=" + validQuery;
 };
 const fetchData = async (query) => {
   let url = buildQuery(query);
