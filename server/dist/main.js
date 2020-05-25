@@ -4553,7 +4553,9 @@ __webpack_require__.r(__webpack_exports__);
 var SearchLinkedInService = /** @class */ (function () {
     function SearchLinkedInService(http) {
         this.http = http;
-        this.endpoint = "https://job-finder-web-scraper.herokuapp.com";
+        this.endpoint = !window.location.host.includes("local")
+            ? "https://job-finder-web-scraper.herokuapp.com"
+            : "http://localhost:3001";
     }
     SearchLinkedInService.prototype.getJobsFromLinkedIn = function () {
         return this.http.get(this.endpoint + "/api/jobs/linked-in");
