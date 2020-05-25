@@ -2085,7 +2085,7 @@ var LinkedInComponent = /** @class */ (function () {
         var _this = this;
         this._linkedIn = _linkedIn;
         this.isLoading = false;
-        this.searchJobsFromLinkedIn = function (query) {
+        this.searchJobs = function (query) {
             _this.isLoading = true;
             _this._linkedIn.searchJobsFromLinkedIn(query).subscribe(function (data) {
                 _this.isLoading = false;
@@ -2117,7 +2117,7 @@ var LinkedInComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         } if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("searchJobsFromLinkedIn", ctx.searchJobsFromLinkedIn);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("searchJobsFromLinkedIn", ctx.searchJobs);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.isLoading);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
@@ -4553,9 +4553,7 @@ __webpack_require__.r(__webpack_exports__);
 var SearchLinkedInService = /** @class */ (function () {
     function SearchLinkedInService(http) {
         this.http = http;
-        this.endpoint = !window.location.host.includes("local")
-            ? "https://job-finder-web-scraper.herokuapp.com"
-            : "http://localhost:3001";
+        this.endpoint = "https://job-finder-web-scraper.herokuapp.com";
     }
     SearchLinkedInService.prototype.getJobsFromLinkedIn = function () {
         return this.http.get(this.endpoint + "/api/jobs/linked-in");
