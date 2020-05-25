@@ -1384,50 +1384,63 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function SavedJobsComponent_div_4_li_2_ul_8_li_1_Template(rf, ctx) { if (rf & 1) {
+function SavedJobsComponent_div_6_li_2_span_5_Template(rf, ctx) { if (rf & 1) {
+    var _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SavedJobsComponent_div_6_li_2_span_5_Template_span_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6); var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3); return ctx_r5.removeJob(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Confirm Delete ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function SavedJobsComponent_div_6_li_2_ul_12_li_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    var requirement_r5 = ctx.$implicit;
+    var requirement_r8 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", requirement_r5, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", requirement_r8, " ");
 } }
-function SavedJobsComponent_div_4_li_2_ul_8_Template(rf, ctx) { if (rf & 1) {
+function SavedJobsComponent_div_6_li_2_ul_12_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "ul");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SavedJobsComponent_div_4_li_2_ul_8_li_1_Template, 3, 1, "li", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SavedJobsComponent_div_6_li_2_ul_12_li_1_Template, 3, 1, "li", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var job_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", job_r2.requirements);
 } }
-function SavedJobsComponent_div_4_li_2_Template(rf, ctx) { if (rf & 1) {
-    var _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+function SavedJobsComponent_div_6_li_2_Template(rf, ctx) { if (rf & 1) {
+    var _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SavedJobsComponent_div_6_li_2_Template_div_click_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11); var job_r2 = ctx.$implicit; var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r10.confirmDelete(job_r2.id); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "span");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "i", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, SavedJobsComponent_div_6_li_2_span_5_Template, 2, 0, "span", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, SavedJobsComponent_div_4_li_2_ul_8_Template, 2, 1, "ul", 3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "button", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SavedJobsComponent_div_4_li_2_Template_button_click_9_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8); var job_r2 = ctx.$implicit; var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r7.removeJob(job_r2.id); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Remove from saved jobs ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, SavedJobsComponent_div_6_li_2_ul_12_Template, 2, 1, "ul", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var job_r2 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r1.confirmedDelete && ctx_r1.jobId === job_r2.id);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", job_r2.link, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", job_r2.title, " ");
@@ -1436,10 +1449,10 @@ function SavedJobsComponent_div_4_li_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", job_r2.requirements && job_r2.requirements.length >= 1);
 } }
-function SavedJobsComponent_div_4_Template(rf, ctx) { if (rf & 1) {
+function SavedJobsComponent_div_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "ul");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, SavedJobsComponent_div_4_li_2_Template, 11, 4, "li", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, SavedJobsComponent_div_6_li_2_Template, 13, 5, "li", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -1450,6 +1463,7 @@ function SavedJobsComponent_div_4_Template(rf, ctx) { if (rf & 1) {
 var SavedJobsComponent = /** @class */ (function () {
     function SavedJobsComponent(_jobService) {
         this._jobService = _jobService;
+        this.confirmedDelete = false;
     }
     SavedJobsComponent.prototype.getSavedJobs = function () {
         var _this = this;
@@ -1464,32 +1478,41 @@ var SavedJobsComponent = /** @class */ (function () {
             _this.jobList = jobs;
         }, function (err) { return console.log(err); });
     };
-    SavedJobsComponent.prototype.removeJob = function (id) {
+    SavedJobsComponent.prototype.removeJob = function () {
         var _this = this;
-        this._jobService.removeJob(id).subscribe(function (data) {
+        this._jobService.removeJob(this.jobId).subscribe(function (data) {
             _this.getSavedJobs();
+            _this.confirmedDelete = false;
         }, function (err) { return console.log(err); });
+    };
+    SavedJobsComponent.prototype.confirmDelete = function (id) {
+        this.confirmedDelete = true;
+        this.jobId = id;
     };
     SavedJobsComponent.prototype.ngOnInit = function () {
         this.getSavedJobs();
     };
     SavedJobsComponent.ɵfac = function SavedJobsComponent_Factory(t) { return new (t || SavedJobsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_save_job_service__WEBPACK_IMPORTED_MODULE_1__["SaveJobService"])); };
-    SavedJobsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SavedJobsComponent, selectors: [["app-saved-jobs"]], decls: 6, vars: 2, consts: [[1, "container-fluid", "saved-jobs-page"], [1, "left-panel"], [1, "results"], [4, "ngIf"], [4, "ngFor", "ngForOf"], [1, "card"], [3, "href"], [1, "card-title"], [1, "card-subtitle"], [1, "card-body"], [1, "btn", "btn-outline-danger", 3, "click"], [1, "card-text"]], template: function SavedJobsComponent_Template(rf, ctx) { if (rf & 1) {
+    SavedJobsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SavedJobsComponent, selectors: [["app-saved-jobs"]], decls: 8, vars: 2, consts: [[1, "container-fluid", "saved-jobs-page"], [1, "left-panel"], [1, "card"], [1, "card-body"], [1, "results"], [4, "ngIf"], [4, "ngFor", "ngForOf"], [3, "click"], [1, "fa", "fa-heart", "float-right", "secondary-font"], ["class", "btn btn-outline-danger confirm-delete", 3, "click", 4, "ngIf"], [3, "href"], [1, "card-title"], [1, "card-subtitle"], [1, "btn", "btn-outline-danger", "confirm-delete", 3, "click"], [1, "card-text"]], template: function SavedJobsComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, SavedJobsComponent_div_4_Template, 3, 1, "div", 3);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "div");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, SavedJobsComponent_div_6_Template, 3, 1, "div", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "div");
         } if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", ctx.jobList && ctx.jobList.length, " jobs saved");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.jobList && ctx.jobList.length >= 1);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]], styles: [".saved-jobs-page[_ngcontent-%COMP%] {\n  display: grid;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%] {\n  padding: 4%;\n  margin-bottom: 3%;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%] {\n  padding: 0;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  list-style: none;\n}\n@media (max-width: 450px) {\n  .saved-jobs-page[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n    padding-top: 5%;\n  }\n  .saved-jobs-page[_ngcontent-%COMP%]   .left-panel[_ngcontent-%COMP%] {\n    text-align: center;\n  }\n  .saved-jobs-page[_ngcontent-%COMP%]   .results[_ngcontent-%COMP%] {\n    margin-top: 5%;\n  }\n}\n@media (min-width: 451px) {\n  .saved-jobs-page[_ngcontent-%COMP%] {\n    grid-template-columns: 2fr 10fr;\n  }\n  .saved-jobs-page[_ngcontent-%COMP%]   .left-panel[_ngcontent-%COMP%] {\n    grid-column: 1;\n  }\n  .saved-jobs-page[_ngcontent-%COMP%]   .results[_ngcontent-%COMP%] {\n    grid-column: 2;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy9TYXZlZEpvYnNQYWdlL3NhdmVkLWpvYnMvc2F2ZWQtam9icy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtBQUNmO0FBQ0E7RUFDRSxXQUFXO0VBQ1gsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxVQUFVO0FBQ1o7QUFDQTtFQUNFLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0U7SUFDRSwwQkFBMEI7SUFDMUIsZUFBZTtFQUNqQjtFQUNBO0lBQ0Usa0JBQWtCO0VBQ3BCO0VBQ0E7SUFDRSxjQUFjO0VBQ2hCO0FBQ0Y7QUFDQTtFQUNFO0lBQ0UsK0JBQStCO0VBQ2pDO0VBQ0E7SUFDRSxjQUFjO0VBQ2hCO0VBQ0E7SUFDRSxjQUFjO0VBQ2hCO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3BhZ2VzL1NhdmVkSm9ic1BhZ2Uvc2F2ZWQtam9icy9zYXZlZC1qb2JzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2F2ZWQtam9icy1wYWdlIHtcbiAgZGlzcGxheTogZ3JpZDtcbn1cbi5zYXZlZC1qb2JzLXBhZ2UgLmNhcmQge1xuICBwYWRkaW5nOiA0JTtcbiAgbWFyZ2luLWJvdHRvbTogMyU7XG59XG4uc2F2ZWQtam9icy1wYWdlIHVsIHtcbiAgcGFkZGluZzogMDtcbn1cbi5zYXZlZC1qb2JzLXBhZ2UgdWwgbGkge1xuICBsaXN0LXN0eWxlOiBub25lO1xufVxuQG1lZGlhIChtYXgtd2lkdGg6IDQ1MHB4KSB7XG4gIC5zYXZlZC1qb2JzLXBhZ2Uge1xuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyO1xuICAgIHBhZGRpbmctdG9wOiA1JTtcbiAgfVxuICAuc2F2ZWQtam9icy1wYWdlIC5sZWZ0LXBhbmVsIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIH1cbiAgLnNhdmVkLWpvYnMtcGFnZSAucmVzdWx0cyB7XG4gICAgbWFyZ2luLXRvcDogNSU7XG4gIH1cbn1cbkBtZWRpYSAobWluLXdpZHRoOiA0NTFweCkge1xuICAuc2F2ZWQtam9icy1wYWdlIHtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDJmciAxMGZyO1xuICB9XG4gIC5zYXZlZC1qb2JzLXBhZ2UgLmxlZnQtcGFuZWwge1xuICAgIGdyaWQtY29sdW1uOiAxO1xuICB9XG4gIC5zYXZlZC1qb2JzLXBhZ2UgLnJlc3VsdHMge1xuICAgIGdyaWQtY29sdW1uOiAyO1xuICB9XG59XG4iXX0= */"] });
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]], styles: [".saved-jobs-page[_ngcontent-%COMP%] {\n  display: grid;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%] {\n  padding: 4%;\n  margin-bottom: 3%;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   .card-title[_ngcontent-%COMP%], .saved-jobs-page[_ngcontent-%COMP%]   .card-subtitle[_ngcontent-%COMP%] {\n  color: #28a745;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  text-decoration: none;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%] {\n  padding: 0;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  list-style: none;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   .fa-heart[_ngcontent-%COMP%]:hover {\n  color: #f03935;\n}\n.saved-jobs-page[_ngcontent-%COMP%]   .confirm-delete[_ngcontent-%COMP%] {\n  width: 100%;\n  margin: 5% auto;\n}\n@media (max-width: 450px) {\n  .saved-jobs-page[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n    padding-top: 5%;\n  }\n  .saved-jobs-page[_ngcontent-%COMP%]   .left-panel[_ngcontent-%COMP%] {\n    text-align: center;\n  }\n  .saved-jobs-page[_ngcontent-%COMP%]   .results[_ngcontent-%COMP%] {\n    margin-top: 5%;\n  }\n}\n@media (min-width: 451px) {\n  .saved-jobs-page[_ngcontent-%COMP%] {\n    grid-template-columns: 2fr 10fr;\n    padding-top: 5%;\n  }\n  .saved-jobs-page[_ngcontent-%COMP%]   .left-panel[_ngcontent-%COMP%] {\n    grid-column: 1;\n  }\n  .saved-jobs-page[_ngcontent-%COMP%]   .results[_ngcontent-%COMP%] {\n    grid-column: 2;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy9TYXZlZEpvYnNQYWdlL3NhdmVkLWpvYnMvc2F2ZWQtam9icy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtBQUNmO0FBQ0E7RUFDRSxXQUFXO0VBQ1gsaUJBQWlCO0FBQ25CO0FBQ0E7O0VBRUUsY0FBYztBQUNoQjtBQUNBO0VBQ0UscUJBQXFCO0FBQ3ZCO0FBQ0E7RUFDRSxVQUFVO0FBQ1o7QUFDQTtFQUNFLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UsY0FBYztBQUNoQjtBQUNBO0VBQ0UsV0FBVztFQUNYLGVBQWU7QUFDakI7QUFDQTtFQUNFO0lBQ0UsMEJBQTBCO0lBQzFCLGVBQWU7RUFDakI7RUFDQTtJQUNFLGtCQUFrQjtFQUNwQjtFQUNBO0lBQ0UsY0FBYztFQUNoQjtBQUNGO0FBQ0E7RUFDRTtJQUNFLCtCQUErQjtJQUMvQixlQUFlO0VBQ2pCO0VBQ0E7SUFDRSxjQUFjO0VBQ2hCO0VBQ0E7SUFDRSxjQUFjO0VBQ2hCO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3BhZ2VzL1NhdmVkSm9ic1BhZ2Uvc2F2ZWQtam9icy9zYXZlZC1qb2JzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2F2ZWQtam9icy1wYWdlIHtcbiAgZGlzcGxheTogZ3JpZDtcbn1cbi5zYXZlZC1qb2JzLXBhZ2UgLmNhcmQge1xuICBwYWRkaW5nOiA0JTtcbiAgbWFyZ2luLWJvdHRvbTogMyU7XG59XG4uc2F2ZWQtam9icy1wYWdlIC5jYXJkLXRpdGxlLFxuLnNhdmVkLWpvYnMtcGFnZSAuY2FyZC1zdWJ0aXRsZSB7XG4gIGNvbG9yOiAjMjhhNzQ1O1xufVxuLnNhdmVkLWpvYnMtcGFnZSAuY2FyZCBhOmhvdmVyIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuLnNhdmVkLWpvYnMtcGFnZSB1bCB7XG4gIHBhZGRpbmc6IDA7XG59XG4uc2F2ZWQtam9icy1wYWdlIHVsIGxpIHtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbn1cbi5zYXZlZC1qb2JzLXBhZ2UgLmZhLWhlYXJ0OmhvdmVyIHtcbiAgY29sb3I6ICNmMDM5MzU7XG59XG4uc2F2ZWQtam9icy1wYWdlIC5jb25maXJtLWRlbGV0ZSB7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW46IDUlIGF1dG87XG59XG5AbWVkaWEgKG1heC13aWR0aDogNDUwcHgpIHtcbiAgLnNhdmVkLWpvYnMtcGFnZSB7XG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7XG4gICAgcGFkZGluZy10b3A6IDUlO1xuICB9XG4gIC5zYXZlZC1qb2JzLXBhZ2UgLmxlZnQtcGFuZWwge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgfVxuICAuc2F2ZWQtam9icy1wYWdlIC5yZXN1bHRzIHtcbiAgICBtYXJnaW4tdG9wOiA1JTtcbiAgfVxufVxuQG1lZGlhIChtaW4td2lkdGg6IDQ1MXB4KSB7XG4gIC5zYXZlZC1qb2JzLXBhZ2Uge1xuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMmZyIDEwZnI7XG4gICAgcGFkZGluZy10b3A6IDUlO1xuICB9XG4gIC5zYXZlZC1qb2JzLXBhZ2UgLmxlZnQtcGFuZWwge1xuICAgIGdyaWQtY29sdW1uOiAxO1xuICB9XG4gIC5zYXZlZC1qb2JzLXBhZ2UgLnJlc3VsdHMge1xuICAgIGdyaWQtY29sdW1uOiAyO1xuICB9XG59XG4iXX0= */"] });
     return SavedJobsComponent;
 }());
 
