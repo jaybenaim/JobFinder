@@ -25,6 +25,9 @@
   width: 100%;
   margin: 5% auto;
 }
+.saved-jobs-page .job-filter:hover {
+  cursor: pointer;
+}
 @media (max-width: 450px) {
   .saved-jobs-page {
     grid-template-columns: 1fr;

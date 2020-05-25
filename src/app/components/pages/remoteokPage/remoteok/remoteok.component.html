@@ -44,14 +44,14 @@
           <div *ngIf="showPositions">
             <li *ngFor="let position of positions">
               <div class="card">
+                <app-save-job [position]="position"></app-save-job>
+
                 <a
                   href="{{ position.link }}"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <div class="card-title result-item">
-                    <app-save-job [position]="position"></app-save-job>
-
                     {{ position.title }}
                   </div>
                 </a>

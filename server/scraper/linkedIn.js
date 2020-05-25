@@ -6,7 +6,7 @@ const cheerio = require("cheerio");
 const webDeveloperQuery =
   "https://www.linkedin.com/jobs/search/?geoId=100025096&keywords=web%20developer&location=Toronto%2C%20Ontario%2C%20Canada";
 const domain = "https://www.linkedin.com/jobs";
-const siteUrl = webDeveloperQuery;
+let siteUrl = webDeveloperQuery;
 
 const positions = new Set();
 const locations = new Set();

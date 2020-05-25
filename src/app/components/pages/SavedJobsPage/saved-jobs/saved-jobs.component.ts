@@ -7,7 +7,8 @@ import { SaveJobService } from "src/app/services/save-job.service";
   styleUrls: ["./saved-jobs.component.css"],
 })
 export class SavedJobsComponent implements OnInit {
-  jobList: any;
+  allJobs: any;
+  filteredJobs: any;
   jobId: string;
   confirmedDelete: boolean = false;
 
@@ -26,7 +27,8 @@ export class SavedJobsComponent implements OnInit {
             }
           );
 
-        this.jobList = jobs;
+        this.allJobs = jobs;
+        this.filteredJobs = jobs;
       },
       (err) => console.log(err)
     );
@@ -44,6 +46,16 @@ export class SavedJobsComponent implements OnInit {
     this.confirmedDelete = true;
     this.jobId = id;
   }
+  filterJobs(filter) {
+    if (filter === "allJobs") {
+      this.filteredJobs = this.allJobs;
+    } else {
+      this.filteredJobs = this.allJobs.filter((job: object) =>
+        job["link"].includes(filter)
+      );
+    }
+  }
+
   ngOnInit(): void {
     this.getSavedJobs();
   }

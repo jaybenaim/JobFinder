@@ -1,13 +1,33 @@
 <div class="container-fluid saved-jobs-page">
   <div class="left-panel">
     <div class="card">
-      <div class="card-body">{{ jobList && jobList.length }} jobs saved</div>
+      <div class="card-body">{{ allJobs && allJobs.length }} jobs saved</div>
+    </div>
+    <div class="card">
+      <div class="card-body job-filter" (click)="filterJobs('allJobs')">
+        All
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body job-filter" (click)="filterJobs('remoteok')">
+        Remote Ok
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body job-filter" (click)="filterJobs('indeed')">
+        Indeed
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body job-filter" (click)="filterJobs('linkedIn')">
+        Linked In
+      </div>
     </div>
   </div>
   <div class="results">
-    <div *ngIf="jobList && jobList.length >= 1">
+    <div *ngIf="filteredJobs && filteredJobs.length >= 1">
       <ul>
-        <li *ngFor="let job of jobList">
+        <li *ngFor="let job of filteredJobs">
           <div class="card">
             <div (click)="confirmDelete(job.id)">
               <span
