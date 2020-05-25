@@ -12,7 +12,7 @@ const positions = new Set();
 const locations = new Set();
 
 const buildQuery = (query) => {
-  let validQuery = query ? encodeURI(query) : "";
+  let validQuery = query ? encodeURI(query) : "developer";
   const domain = "https://www.linkedin.com/jobs";
   return domain + "/search/?keywords=" + validQuery;
 };

@@ -11,24 +11,7 @@ const allJobsRouter = require("./api/routes/allJobs");
 
 const app = express();
 
-const whitelist = [
-  "http://localhost:3000",
-  "http://localhost:3001",
-  "https://job-finder-web-scraper.herokuapp.com/",
-];
-
-const corsOptions = {
-  credentials: true,
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
