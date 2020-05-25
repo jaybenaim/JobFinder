@@ -16,6 +16,7 @@ const buildQuery = (query) => {
 };
 const fetchData = async (query) => {
   let url = buildQuery(query);
+  siteUrl = url;
   const result = await axios.get(url);
   return cheerio.load(result.data);
 };
