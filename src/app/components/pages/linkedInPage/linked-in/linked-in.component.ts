@@ -16,7 +16,7 @@ export class LinkedInComponent implements OnInit {
     this.positions = [];
   }
 
-  searchJobsFromLinkedIn = (query: string) => {
+  searchJobs = (query: string) => {
     this.isLoading = true;
 
     this._linkedIn.searchJobsFromLinkedIn(query).subscribe(

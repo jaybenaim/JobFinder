@@ -13,9 +13,10 @@ const locations = new Set();
 
 const buildQuery = (query) => {
   let validQuery = query ? encodeURI(query) : "";
-
+  const domain = "https://www.linkedin.com/jobs";
   return domain + "/search/?keywords=" + validQuery;
 };
+
 const fetchData = async (query) => {
   let url = buildQuery(query);
   siteUrl = url;
