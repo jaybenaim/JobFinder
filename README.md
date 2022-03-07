@@ -9,3 +9,5 @@ Automation - Updates every 6 hours to keep results fresh.
 Give it a try on https://job-finder-web-scraper.herokuapp.com/ 
 
 Built by Jacob Benaim
+
+Favourites
