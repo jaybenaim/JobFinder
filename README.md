@@ -10,4 +10,4 @@ Give it a try on https://job-finder-web-scraper.herokuapp.com/
 
 Built by Jacob Benaim
 
-Favourites
+
