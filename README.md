@@ -1,13 +1,33 @@
-Web scraper using Angular, Node.js, Google Firebase Auth. 
+---
+title: JobFinder
+description: Compile all your job applications in one place
+date: "2022-04-07"
+repository: /jaybenaim/JobFinder
+published: false
+---
 
-Search through Indeed, Linked In, and Remote OK, Or search by title to search them all at once. 
+Job crawler where a user can compile a list of jobs from multiple job platforms, and real-time job boards including Indeed, LinkedIn, and RemoteOK
 
-JSON file created with manipulated scraped data to handle loading speeds. 
+![Preview](https://jaybenaim.github.io/new-portfolio/img/hacker-hunter.jpg)
 
-Automation - Updates every 6 hours to keep results fresh. 
+## Features
 
-Give it a try on https://job-finder-web-scraper.herokuapp.com/ 
+- **Automated Job Refreshing:** Keep your job listings up to date with automated job refreshing.
+- **Live Search:** Search for jobs in real-time and save them to your favorites.
 
-Built by Jacob Benaim
+## Built with
 
+JobFinder is built using the following technologies:
 
+### Front-end
+
+- [Angular](https://angular.io/): A platform for building mobile and desktop web applications.
+
+### Back-end
+
+- [Cheerio](https://cheerio.js.org/): A fast, flexible, and lean implementation of core jQuery for the server. Used for getting recent job postings from multiple platforms.
+- [Firebase](https://firebase.google.com/): A cloud-based platform by Google that provides services for building and managing web and mobile applications. We are using Firebase's Firestore as the database for storing stock prices so we can grab them incrementally.
+
+### Authentication
+
+- [Firebase Authentication](https://firebase.google.com/docs/auth): Firebase's authentication service that provides easy-to-use authentication for our web app. We support authentication with email & password and OAuth providers like Google.
